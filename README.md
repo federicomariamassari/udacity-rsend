@@ -42,3 +42,5 @@ Launch the world file in Gazebo to load both the world and the plugin:
 $ cd /home/$whoami/workspace/udacity-rsend/projects/p1/world
 $ gazebo my_world
 ```
+
+Add this path in Gazebo to insert additional instances of the models into the world: `/home/$whoami/workspace/udacity-rsend/projects/p1/model`
