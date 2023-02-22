@@ -33,7 +33,7 @@ __[Link to code](/projects/p1)__
 
 We suppose the project resides at address `/home/$whoami/workspace/udacity-rsend/projects/p1`, with `$whoami` the username of the current user (verify on console).
 
-```console
+```bash
 cd /home/$whoami/workspace/udacity-rsend/projects/p1
 mkdir build
 cd build/
@@ -44,7 +44,7 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/$whoami/workspace/udacity-
 
 Launch the world file in Gazebo to load both the world and the plugin (on console):
 
-```console
+```bash
 cd /home/$whoami/workspace/udacity-rsend/projects/p1/world
 gazebo my_world
 ```
