@@ -48,3 +48,7 @@ $ gazebo my_world
 ### Add Custom Models in Gazebo
 
 Add path `/home/$whoami/workspace/udacity-rsend/projects/p1/model` in Gazebo to insert additional instances of the models into the world.
+
+### Output
+
+<td align="center"><img align="center" src="./projects/p1/img/img2.png"/></td>
