@@ -24,3 +24,21 @@ To build the environment for this initial project, to be completed within the fi
     <td align="center"><img align="center" src="./projects/p1/img/img1.png"/></td>
   </tr>
 </table>
+
+### How to Build the Project
+We suppose the project resides at address `/home/$whoami/workspace/udacity-rsend/projects/p1`, with `$whoami` the username of the current user (verify on console).
+
+```console
+$ cd /home/$whoami/workspace/udacity-rsend/projects/p1
+$ mkdir build
+$ cd build/
+$ cmake ../
+$ make
+$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/$whoami/workspace/udacity-rsend/projects/p1/build
+```
+
+Launch the world file in Gazebo to load both the world and the plugin:
+```console
+$ cd /home/$whoami/workspace/udacity-rsend/projects/p1/world
+$ gazebo my_world
+```
