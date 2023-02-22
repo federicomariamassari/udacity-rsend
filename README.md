@@ -37,10 +37,10 @@ $ make
 $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/$whoami/workspace/udacity-rsend/projects/p1/build
 ```
 
-Launch the world file in Gazebo to load both the world and the plugin:
+Launch the world file in Gazebo to load both the world and the plugin (on console):
 ```console
 $ cd /home/$whoami/workspace/udacity-rsend/projects/p1/world
 $ gazebo my_world
 ```
 
-Add this path in Gazebo to insert additional instances of the models into the world: `/home/$whoami/workspace/udacity-rsend/projects/p1/model`
+Add path `/home/$whoami/workspace/udacity-rsend/projects/p1/model` in Gazebo to insert additional instances of the models into the world.
