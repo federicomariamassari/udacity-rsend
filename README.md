@@ -16,6 +16,8 @@ __Acquired familiarity with:__ Gazebo, Ubuntu on VM.
 ### Overview
 _Simulate a robotic environment with Gazebo and deploy your robot in it. Create basic C++ plugins that interact with the world._
 
+To build the environment for this initial project, to be completed within the first week of enrollment, I drew inspiration from my current home. All model CADs (computer-aided designs) are created from scratch, building upon the basic components Gazebo provides (cube, cylinder, sphere) and experimenting with colour as well as translation and rotation features. The resulting world is quite realistic and unique, although some components (such as the kitchen block) are a bit heavy.
+
 <table>
   <tr>
     <td align="center"><img align="center" src="./projects/p1/img/img0.png"/></td>
