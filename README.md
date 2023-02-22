@@ -7,7 +7,9 @@ My Udacity Robotics Software Engineer Nanodegree projects, in C++.
 * ROS Noetic Desktop-Full Install on Ubuntu (http://wiki.ros.org/noetic/Installation/Ubuntu)
 * Gazebo Classic 11.0 (https://classic.gazebosim.org/tutorials?tut=install_ubuntu&cat=install)
 
-## P1 Build My World
+# Core Projects
+
+## Project 1: Build My World
 
 __Acquired familiarity with:__ Gazebo, Ubuntu on VM.
 
