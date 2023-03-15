@@ -63,7 +63,7 @@ __Acquired familiarity with:__ ROS (Robot Operating System), Catkin.
 
 ### Overview
 
-_Design a robot, house it inside your custom world, and program it to chase white balls using ROS._
+_Design a robot, house it inside your custom world, and program it to chase a white ball using ROS._
 
 __[Link to code](/projects/p2/catkin_ws/src)__
 
