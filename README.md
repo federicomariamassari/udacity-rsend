@@ -58,3 +58,6 @@ gazebo my_world
 Add path `/home/$whoami/workspace/udacity-rsend/projects/p1/model` in Gazebo to insert additional instances of the models into the world.
 
 ## [Project 2: Go Chase It!](/projects/p2/p2-go-chase-it.md)
+
+_Design a robot, house it inside your custom world, and program it to chase white balls using ROS._
+
