@@ -61,3 +61,6 @@ Add path `/home/$whoami/workspace/udacity-rsend/projects/p1/model` in Gazebo to 
 
 _Design a robot, house it inside your custom world, and program it to chase white balls using ROS._
 
+__Acquired familiarity with:__ ROS (Robot Operating System) framework, catkin.
+
+__[Link to code](/projects/p2/catkin/src)__
