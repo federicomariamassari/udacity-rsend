@@ -65,4 +65,4 @@ __Acquired familiarity with:__ ROS (Robot Operating System) framework, Catkin.
 
 __[Link to code](/projects/p2/catkin_ws/src)__
 
-<video src="./projects/p2/mov/go-chase-it.mp4" width=180/>
+<video src="./projects/p2/mov/go-chase-it.mp4" width=180></video>
