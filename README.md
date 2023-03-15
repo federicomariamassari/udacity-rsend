@@ -63,4 +63,4 @@ _Design a robot, house it inside your custom world, and program it to chase whit
 
 __Acquired familiarity with:__ ROS (Robot Operating System) framework, catkin.
 
-__[Link to code](/projects/p2/catkin/src)__
+__[Link to code](/projects/p2/catkin_ws/src)__
