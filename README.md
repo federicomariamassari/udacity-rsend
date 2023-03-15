@@ -67,7 +67,7 @@ __[Link to code](/projects/p2/catkin_ws/src)__
 
 <table>
   <tr>
-    <td align="center"><img align="center" src="./projects/p2/img/img0.png" width="500" height="500"/></td>
-    <td align="center"><img align="center" src="./projects/p2/img/img1.png" width="500" height="500"/></td>
+    <td align="center"><img align="center" src="./projects/p2/img/img0.png" width="500"/></td>
+    <td align="center"><img align="center" src="./projects/p2/img/img1.png" width="500"/></td>
   </tr>
 </table>
