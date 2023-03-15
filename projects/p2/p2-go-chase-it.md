@@ -1,5 +1,7 @@
 # Project 2: Go Chase It!
 
+## Setup
+
 ### First Terminal
 
 ```bash
@@ -26,3 +28,11 @@ roslaunch my_robot world.launch
 source devel/setup.bash
 rosrun rqt_image_view rqt_image_view
 ```
+
+`my_robot_config.rviz` inside `/home/$whoami/workspace/catkin_ws/src/my_robot`.
+
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./img/img2.png"/></td>
+  </tr>
+</table>
