@@ -65,6 +65,9 @@ __Acquired familiarity with:__ ROS (Robot Operating System) framework, Catkin.
 
 __[Link to code](/projects/p2/catkin_ws/src)__
 
-![My video](./projects/p2/mov/go-chase-it.mp4)
-
-<video src="./projects/p2/mov/go-chase-it.mp4"></video>
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./projects/p2/img/img0.png"/></td>
+    <td align="center"><img align="center" src="./projects/p2/img/img1.png"/></td>
+  </tr>
+</table>
