@@ -59,7 +59,7 @@ Add path `/home/$whoami/workspace/udacity-rsend/projects/p1/model` in Gazebo to 
 
 ## [Project 2: Go Chase It!](/projects/p2/p2-go-chase-it.md)
 
-__Acquired familiarity with:__ ROS (Robot Operating System), Catkin.
+__Acquired familiarity with:__ ROS (Robot Operating System), Catkin package management.
 
 ### Overview
 

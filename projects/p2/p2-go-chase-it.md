@@ -51,13 +51,11 @@ You would need multiple open terminals to run this project:
 
 ### First Terminal
 
-You must have `roscore` running in order for ROS nodes to communicate [1]. This step can be bypassed if `roslaunch` command is invoked, as the latter also calls `roscore` under the hood.
-
 ```bash
 roscore
 ```
 
-Among the others, the `roscore` command will start up:
+You must have `roscore` running in order for ROS nodes to communicate [1]. This step can be bypassed if the `roslaunch` command is invoked, as the latter also calls `roscore` under the hood. Among the others, the `roscore` command will start up:
 
 - a __ROS Master__, which manages and maintains a registry of all active nodes on a system, and allows them to locate one another and communicate via message passing (Pub/Sub); and
 - a __Parameter Server__ (hosted by the ROS Master), which stores parameters and configuration values that are shared among the running nodes.
@@ -68,6 +66,8 @@ Among the others, the `roscore` command will start up:
 source devel/setup.bash
 roslaunch ball_chaser ball_chaser.launch
 ```
+
+These commands will launch the "ball chaser" plugin, 
 
 ### Third Terminal
 
