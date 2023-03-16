@@ -35,13 +35,13 @@
 
 ## Building the Project
 
-Step into directory `catkin_ws`, then run command:
+Step into directory `catkin_ws` and run command:
 
 ```bash
 catkin_make
 ```
 
-Among the others, this will create folders `build` and `devel`, the latter containing script `setup.bash` which must be sourced in every new terminal in order to run the project.
+This will create folders `build` and `devel`, the latter containing script `setup.bash`, which needs to be sourced in every new terminal window in order to run ROS-related commands.
 
 ## Running the Project
 
