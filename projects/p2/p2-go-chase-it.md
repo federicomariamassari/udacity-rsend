@@ -74,16 +74,8 @@ source devel/setup.bash
 rosrun rqt_image_view rqt_image_view
 ```
 
-<table>
-  <tr>
-    <td align="center"><img align="center" src="./img/img2.png"/></td>
-  </tr>
-</table>
+![My world](./img/img2.png)
 
 `my_robot_config.rviz` inside `/home/$whoami/workspace/catkin_ws/src/my_robot`.
 
-<table>
-  <tr>
-    <td align="center"><img align="center" src="./img/img3.png"/></td>
-  </tr>
-</table>
+![RViz Lidar View](./img/img3.png)
