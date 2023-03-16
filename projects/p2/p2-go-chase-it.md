@@ -2,13 +2,16 @@
 
 Perception, decision making, actuation.
 
+![](./img/mov1.gif)
+
 ## Project Structure
 
-To build the tree structure:
+To build the tree structure (Linux):
 ```bash
 sudo apt install tree
 ```
 
+Then `cd` to the target directory and run:
 ```bash
 tree
 ```
@@ -44,8 +47,12 @@ tree
                 └── my_new_world.world
 ```
 
-* `catkin_ws` is the Catkin workspace, a top-level directory in which packages are both installed and modified. Catkin packages are in turn directories containing a variety of resources (e.g., source code for nodes, useful scripts, configuration files);
-* Available packages are `ball_chaser` and `my_robot`, each containing a CMakeLists.txt file with build instructions and a package.xml file with information about the package itself.
+* `catkin_ws` is the Catkin workspace, a top-level directory in which Catkin packages are both installed and modified. These are in turn directories containing a variety of resources (e.g., source code for nodes, useful scripts, configuration files);
+* Included packages for this project are `ball_chaser` and `my_robot`, each containing a CMakeLists.txt file with build instructions and a package.xml file with information about the package itself.
+* `my_new_world.world` uses XML file format to describe all elements with respect to the Gazebo environment.
+* `.launch` files, also in XML, which allow to launch multiple nodes simultaneously.
+* 
+
 
 ## Building the Project
 
