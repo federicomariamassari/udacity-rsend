@@ -35,7 +35,13 @@
 
 ## Building the Project
 
-Change directory to `/home/$whoami/workspace/catkin_ws`, then run command `catkin_make`. This will create directories `build` and `devel`, containing most importantly `setup.bash` required to run the project.
+Change directory to `/home/$whoami/workspace/catkin_ws`, then run command:
+
+```bash
+catkin_make
+```
+
+This will create directories `build` and `devel`, the latter containing `setup.bash`, which has to be sourced to run the project.
 
 ## Running the Project
 
