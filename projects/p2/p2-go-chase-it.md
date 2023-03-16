@@ -1,5 +1,7 @@
 # Project 2: Go Chase It!
 
+## Project Structure
+
 ```bash
 .
 └── catkin_ws
@@ -31,7 +33,11 @@
                 └── my_new_world.world
 ```
 
-## Setup
+## Building the Project
+
+Change directory to `/home/$whoami/workspace/catkin_ws`, then run command `catkin_make`. This will create directories `build` and `devel`, containing most importantly `setup.bash` required to run the project.
+
+## Running the Project
 
 ### First Terminal
 
