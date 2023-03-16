@@ -4,6 +4,15 @@ Perception, decision making, actuation.
 
 ## Project Structure
 
+To build the tree structure:
+```bash
+sudo apt install tree
+```
+
+```bash
+tree
+```
+
 ```bash
 .
 └── catkin_ws
@@ -34,6 +43,9 @@ Perception, decision making, actuation.
                 ├── empty.world
                 └── my_new_world.world
 ```
+
+* `catkin_ws` is the Catkin workspace, a top-level directory in which packages are both installed and modified. Catkin packages are in turn directories containing a variety of resources (e.g., source code for nodes, useful scripts, configuration files);
+* Available packages are `ball_chaser` and `my_robot`, each containing a CMakeLists.txt file with build instructions and a package.xml file with information about the package itself.
 
 ## Building the Project
 
