@@ -1,5 +1,7 @@
 # Project 2: Go Chase It!
 
+Perception, decision making, actuation.
+
 ## Project Structure
 
 ```bash
@@ -49,9 +51,16 @@ You would need multiple open terminals to run this project:
 
 ### First Terminal
 
+You must have `roscore` running in order for ROS nodes to communicate [1]. This step can be bypassed if `roslaunch` command is invoked, as the latter also calls `roscore` under the hood.
+
 ```bash
 roscore
 ```
+
+Among the others, the `roscore` command will start up:
+
+- a __ROS Master__, which manages and maintains a registry of all active nodes on a system, and allows them to locate one another and communicate via message passing (Pub/Sub); and
+- a __Parameter Server__ (hosted by the ROS Master), which stores parameters and configuration values that are shared among the running nodes.
 
 ### Second Terminal
 
@@ -79,3 +88,7 @@ rosrun rqt_image_view rqt_image_view
 `my_robot_config.rviz` inside `/home/$whoami/workspace/catkin_ws/src/my_robot`.
 
 ![RViz Lidar View](./img/img3.png)
+
+# Resources
+
+1. http://wiki.ros.org/roscore
