@@ -29,7 +29,7 @@ __[Link to code](/projects/p1)__
   </tr>
 </table>
 
-### How to Build the Project
+### How to Build and Run the Project
 
 We suppose the project resides at address `/home/$whoami/workspace/udacity-rsend/projects/p1`, with `$whoami` the username of the current user (verify on console).
 
@@ -65,7 +65,7 @@ __Acquired familiarity with:__ ROS (Robot Operating System), Catkin.
 
 _Design a robot, house it inside your custom world, and program it to chase a white ball using ROS._
 
-Since the objective of this project was to chase an object, I designed a brand new world with enough space for a robot to roam around. The four-wheeled robot has a skid-steer design, which makes reaching the target white ball a much easier task. The robot veers and moves towards the object whenever it detects a white pixel {R=255, G=255, B=255}, while it stands still whenever this is not (or no longer) the case. The ball-chasing logic is a ROS node in C++.
+Since the objective of this project was to chase an object, I designed a brand new world with enough space for a robot to roam around. The four-wheeled robot has a skid-steer design, which makes reaching the target white ball a much easier task. The robot veers and moves towards the object whenever it detects a white pixel {R=255, G=255, B=255}, while it stands still whenever this is not (or it is no longer) the case. The ball-chasing logic is a ROS node in C++.
 
 __[Link to code](/projects/p2/catkin_ws/src)__
 
@@ -75,3 +75,7 @@ __[Link to code](/projects/p2/catkin_ws/src)__
     <td align="center"><img align="center" src="./projects/p2/img/img1.png" width="500"/></td>
   </tr>
 </table>
+
+### How to Build and Run the Project
+
+Step into directory `catkin_ws` and run command `catkin_make` to build the project.
