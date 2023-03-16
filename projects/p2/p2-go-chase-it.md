@@ -45,6 +45,8 @@ This will create directories `build` and `devel`, the latter containing `setup.b
 
 ## Running the Project
 
+You would need multiple open terminals to run this project:
+
 ### First Terminal
 
 ```bash
