@@ -1,5 +1,36 @@
 # Project 2: Go Chase It!
 
+```bash
+.
+└── catkin_ws
+    └── src
+        ├── ball_chaser
+        │   ├── CMakeLists.txt
+        │   ├── launch
+        │   │   └── ball_chaser.launch
+        │   ├── package.xml
+        │   ├── src
+        │   │   ├── drive_bot.cpp
+        │   │   └── process_image.cpp
+        │   └── srv
+        │       └── DriveToTarget.srv
+        └── my_robot
+            ├── CMakeLists.txt
+            ├── launch
+            │   ├── robot_description.launch
+            │   └── world.launch
+            ├── meshes
+            │   └── hokuyo.dae
+            ├── my_robot_config.rviz
+            ├── package.xml
+            ├── urdf
+            │   ├── my_robot.gazebo
+            │   └── my_robot.xacro
+            └── worlds
+                ├── empty.world
+                └── my_new_world.world
+```
+
 ## Setup
 
 ### First Terminal
