@@ -79,3 +79,5 @@ __[Link to code](/projects/p2/catkin_ws/src)__
 ### How to Build and Run the Project
 
 Step into folder `catkin_ws` and execute command `catkin_make` to build the project. Follow the instructions in the project README to run.
+
+![](./projects/p2/img/mov2.gif)
