@@ -78,8 +78,15 @@ __[Link to code](/projects/p2/catkin_ws/src)__
 
 ### How to Build and Run the Project
 
-Step into folder `catkin_ws` and execute command `catkin_make` to build the project. Follow the instructions in the project README to run.
+Step into the Catkin workspace and execute `catkin_make` to build the project. Run following the instructions in the dedicated README file.
+
+```bash
+cd /home/$whoami/workspace/udacity-rsend/projects/p2/catkin_ws
+catkin_make
+```
 
 ### Output
 
-![](./projects/p2/img/mov4.gif)
+The Gazebo environment showcasing the ball-chasing logic appears on the LHS of the screen. Received camera image (top) and lidar scan (bottom) are on the RHS.
+
+![](./projects/p2/img/mov1.gif)

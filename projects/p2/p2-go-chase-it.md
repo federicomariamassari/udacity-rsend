@@ -2,7 +2,7 @@
 
 Perception, decision making, actuation.
 
-![](./img/mov1.gif)
+!['Go Chase It!' Animated GIF](./img/mov2.gif)
 
 ## Project Structure
 
@@ -102,7 +102,7 @@ source devel/setup.bash
 rosrun rqt_image_view rqt_image_view
 ```
 
-![My world](./img/img2.png)
+![My World](./img/img2.png)
 
 `my_robot_config.rviz` inside `/home/$whoami/workspace/catkin_ws/src/my_robot`.
 
