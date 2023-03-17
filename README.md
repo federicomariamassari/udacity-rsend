@@ -87,6 +87,6 @@ catkin_make
 
 ### Output
 
-The Gazebo environment showcasing the ball-chasing logic appears on the LHS of the screen. Received camera image (top) and lidar scan (bottom) are on the RHS.
+The Gazebo environment showcasing the ball-chasing logic appears on the LHS of the screen. Received camera images (top) and lidar scan (bottom) are on the RHS.
 
 ![](./projects/p2/img/mov1.gif)
