@@ -12,7 +12,7 @@ Perception, decision making, actuation.
 
 ## Project Structure
 
-Below is the directory structure tree [1] for the project:
+Below is the directory structure tree [1] for the project. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages: `ball_chaser`, containing  the ball-chasing logic (white pixel detection and robot motion) and `my_robot`, holding the robot design (URDF: Unified Robot Description Format), the Gazebo world, as well as launch and configuration files.
 
 ```bash
 .
@@ -44,8 +44,6 @@ Below is the directory structure tree [1] for the project:
                 ├── empty.world
                 └── my_new_world.world
 ```
-
-`catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages: `ball_chaser`, containing  the ball-chasing logic (white pixel detection and robot motion) and `my_robot`, holding the robot design (URDF: Unified Robot Description Format), the Gazebo world, as well as launch and configuration files.
 
 ## Building the Project
 
@@ -80,7 +78,7 @@ source devel/setup.bash
 roslaunch ball_chaser ball_chaser.launch
 ```
 
-These commands will launch the "ball chaser" plugin, 
+This last command will trigger the ball-chasing logic comprising a client node that subscribes to, and analyzes, the robot's camera images, and a server node that publishes to the robot's wheel and drives it around if a white ball is detected. The node will be ready for incoming data until the Gazebo world containing the robot is spawned.
 
 ### Third Terminal
 
@@ -88,6 +86,10 @@ These commands will launch the "ball chaser" plugin,
 source devel/setup.bash
 roslaunch my_robot world.launch
 ```
+
+This will launch the Gazebo world, the robot at coordinates (x=0, y=0, z=0), and RViz.
+
+For each camera image received, the `ball_chaser` node will now start to publish 
 
 ### Fourth Terminal
 
