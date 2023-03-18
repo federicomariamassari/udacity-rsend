@@ -12,7 +12,7 @@ Perception, decision making, actuation.
 
 ## Project Structure
 
-Below is the directory structure tree [1] for the project. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages: `ball_chaser`, containing  the ball-chasing logic (white pixel detection and robot motion) and `my_robot`, holding the robot design (URDF: Unified Robot Description Format), the Gazebo world, as well as launch and configuration files.
+Below is the directory structure tree [1] for the project. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages: `ball_chaser`, which contains  the ball-chasing logic (white pixel detection and robot motion), and `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, as well as launch and configuration files.
 
 ```bash
 .
@@ -78,7 +78,7 @@ source devel/setup.bash
 roslaunch ball_chaser ball_chaser.launch
 ```
 
-This last command will trigger the ball-chasing logic comprising a client node that subscribes to, and analyzes, the robot's camera images, and a server node that publishes to the robot's wheel and drives it around if a white ball is detected. The node will be ready for incoming data until the Gazebo world containing the robot is spawned.
+This last command will trigger the ball-chasing logic comprising a client node that subscribes to, and analyzes, the robot's camera images, and a server node that publishes to the robot's wheels and drives the robot around if a white ball is detected. The node will be ready for incoming data until the Gazebo world containing our little friend is spawned.
 
 ### Third Terminal
 
@@ -87,9 +87,7 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-This will launch the Gazebo world, the robot at coordinates (x=0, y=0, z=0), and RViz.
-
-For each camera image received, the `ball_chaser` node will now start to publish 
+This will launch the Gazebo world, the robot at coordinates (x=0, y=0, z=0), and the RViz visualization widget. To setup RViz, click on "File" > "Open Config (Ctrl+O)" and locate `my_robot_config.rviz` (inside `my_robot` directory): a camera view, the robot, and a lidar point cloud view will appear on the screen. Also, for each camera image received the `ball_chaser` node will now start to publish velocities to the robot's wheel (check the output on the second terminal).
 
 ### Fourth Terminal
 
@@ -98,11 +96,16 @@ source devel/setup.bash
 rosrun rqt_image_view rqt_image_view
 ```
 
+This command will spawn an additional (from the robot's point of view), which is easier to navigate than the instance contained in RViz.
+
 ![My World](./img/img2.png)
 
 `my_robot_config.rviz` inside `/home/$whoami/workspace/catkin_ws/src/my_robot`.
 
 ![RViz Lidar View](./img/img3.png)
+
+## Brief Logic
+
 
 # Resources
 
