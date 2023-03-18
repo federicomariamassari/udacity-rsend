@@ -1,20 +1,18 @@
 # Project 2: Go Chase It!
 
+
+
+For this project
+
+In this second project I programmed a robot chasing a white ball using ROS.
+
 Perception, decision making, actuation.
 
 !['Go Chase It!' Animated GIF](./img/mov2.gif)
 
 ## Project Structure
 
-To build the tree structure (Linux):
-```bash
-sudo apt install tree
-```
-
-Then `cd` to the target directory and run:
-```bash
-tree
-```
+Below is the directory structure tree [1] for the project:
 
 ```bash
 .
@@ -47,22 +45,17 @@ tree
                 └── my_new_world.world
 ```
 
-* `catkin_ws` is the Catkin workspace, a top-level directory in which Catkin packages are both installed and modified. These are in turn directories containing a variety of resources (e.g., source code for nodes, useful scripts, configuration files);
-* Included packages for this project are `ball_chaser` and `my_robot`, each containing a CMakeLists.txt file with build instructions and a package.xml file with information about the package itself.
-* `my_new_world.world` uses XML file format to describe all elements with respect to the Gazebo environment.
-* `.launch` files, also in XML, which allow to launch multiple nodes simultaneously.
-* 
-
+`catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages: `ball_chaser`, containing  the ball-chasing logic (white pixel detection and robot motion) and `my_robot`, holding the robot design (URDF: Unified Robot Description Format), the Gazebo world, as well as launch and configuration files.
 
 ## Building the Project
 
-Step into directory `catkin_ws` and run command:
+Inside directory `catkin_ws` run command:
 
 ```bash
 catkin_make
 ```
 
-This will create folders `build` and `devel`, the latter containing script `setup.bash`, which needs to be sourced in every new terminal window in order to run ROS-related commands.
+Among the others, this will create folders `build` and `devel` - the latter containing `setup.bash`, which you may need to source in each new terminal window in order to run ROS-related commands.
 
 ## Running the Project
 
@@ -74,10 +67,11 @@ You would need multiple open terminals to run this project:
 roscore
 ```
 
-You must have `roscore` running in order for ROS nodes to communicate [1]. This step can be bypassed if the `roslaunch` command is invoked, as the latter also calls `roscore` under the hood. Among the others, the `roscore` command will start up:
+You must have `roscore` running in order for ROS nodes to interact [2]. This step is recommended even though it can be bypassed if the `roslaunch` command is invoked (as the latter also calls `roscore` under the hood). Among the others, `roscore` will start up:
 
-- a __ROS Master__, which manages and maintains a registry of all active nodes on a system, and allows them to locate one another and communicate via message passing (Pub/Sub); and
-- a __Parameter Server__ (hosted by the ROS Master), which stores parameters and configuration values that are shared among the running nodes.
+- The __ROS Master__, which manages and maintains a registry of all active nodes on a system, and allows them to locate one another and communicate via message passing (Topics: Pub/Sub) and through services (Services: request/response);
+
+- A __Parameter Server__ (hosted by the ROS Master), which stores parameter and configuration values shared among the running nodes.
 
 ### Second Terminal
 
@@ -110,4 +104,5 @@ rosrun rqt_image_view rqt_image_view
 
 # Resources
 
-1. http://wiki.ros.org/roscore
+1. Install via `sudo apt install tree` (Linux), then step into the desired directory and run `tree`.
+2. http://wiki.ros.org/roscore
