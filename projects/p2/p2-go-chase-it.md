@@ -8,6 +8,8 @@ In this second project I programmed a robot chasing a white ball using ROS.
 
 Perception, decision making, actuation.
 
+__Figure 1: The Ball-Chasing Robot__
+
 !['Go Chase It!' Animated GIF](./img/mov2.gif)
 
 ## Project Structure
@@ -96,11 +98,9 @@ source devel/setup.bash
 rosrun rqt_image_view rqt_image_view
 ```
 
-This command will spawn an additional (from the robot's point of view), which is easier to navigate than the instance contained in RViz.
+This command will spawn an additional instance of the camera view, but easier to handle than the one embedded in RViz.
 
 ![My World](./img/img2.png)
-
-`my_robot_config.rviz` inside `/home/$whoami/workspace/catkin_ws/src/my_robot`.
 
 ![RViz Lidar View](./img/img3.png)
 
