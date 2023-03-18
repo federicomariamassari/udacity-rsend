@@ -9,7 +9,6 @@ In this second project I programmed a robot chasing a white ball using ROS.
 Perception, decision making, actuation.
 
 __Figure 1: The Ball-Chasing Robot__
-
 !['Go Chase It!' Animated GIF](./img/mov2.gif)
 
 ## Project Structure
@@ -100,8 +99,10 @@ rosrun rqt_image_view rqt_image_view
 
 This command will spawn an additional instance of the camera view, but easier to handle than the one embedded in RViz.
 
-![My World](./img/img2.png)
+__Figure 2: The Gazebo World__
+![The Gazebo World](./img/img2.png)
 
+__Figure 3: The Lidar Point-Cloud Scan__
 ![RViz Lidar View](./img/img3.png)
 
 ## Brief Logic
