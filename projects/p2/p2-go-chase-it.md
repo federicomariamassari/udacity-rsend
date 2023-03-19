@@ -1,11 +1,5 @@
 # Project 2: Go Chase It!
 
-
-
-For this project
-
-In this second project I programmed a robot chasing a white ball using ROS.
-
 Perception, decision making, actuation.
 
 __Figure 1: The Ball-Chasing Robot__
@@ -66,7 +60,7 @@ You would need multiple open terminals to run this project:
 roscore
 ```
 
-You must have `roscore` running in order for ROS nodes to interact [2]. This step is recommended even though it can be bypassed if the `roslaunch` command is invoked (as the latter also calls `roscore` under the hood). Among the others, `roscore` will start up:
+You must have `roscore` running in order for ROS nodes to interact. This step is recommended even though it can be bypassed if the `roslaunch` command is invoked (as the latter also calls `roscore` under the hood). Among the others, `roscore` will start up:
 
 - The __ROS Master__, which manages and maintains a registry of all active nodes on a system, and allows them to locate one another and communicate via message passing (Topics: Pub/Sub) and through services (Services: request/response);
 
@@ -88,7 +82,7 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-This will launch the Gazebo world, the robot at coordinates (x=0, y=0, z=0), and the RViz visualization widget. To setup RViz, click on "File" > "Open Config (Ctrl+O)" and locate `my_robot_config.rviz` (inside `my_robot` directory): a camera view, the robot, and a lidar point cloud scan will appear on the screen. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
+This will launch the Gazebo world, the robot at coordinates (x=0, y=0, z=0), and the RViz visualization widget. To setup RViz, click on "File" > "Open Config (Ctrl+O)" and locate `my_robot_config.rviz` (inside `my_robot` directory): a camera view, the robot, and a lidar point-cloud scan will appear on the screen. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
 
 ### Fourth Terminal
 
@@ -102,13 +96,9 @@ This command will spawn an additional instance of the camera view, but easier to
 __Figure 2: The Gazebo World__
 ![The Gazebo World](./img/img2.png)
 
-__Figure 3: The Lidar Point-Cloud Scan__
+__Figure 3: The Lidar Point-Cloud Scan in RViz__
 ![RViz Lidar View](./img/img3.png)
-
-## Brief Logic
-
 
 # Resources
 
 1. Install via `sudo apt install tree` (Linux), then step into the desired directory and run `tree`.
-2. http://wiki.ros.org/roscore
