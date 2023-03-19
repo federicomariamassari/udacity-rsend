@@ -48,7 +48,7 @@ Below is the directory structure tree [1] for the project. `catkin_ws` is the Ca
 
 ## Building the Project
 
-Inside directory `catkin_ws` run command:
+Step into `catkin_ws` and run:
 
 ```bash
 catkin_make
@@ -79,7 +79,7 @@ source devel/setup.bash
 roslaunch ball_chaser ball_chaser.launch
 ```
 
-This last command will trigger the ball-chasing logic comprising a client node that subscribes to, and analyzes, the robot's camera images, and a server node that publishes to the robot's wheels and drives the robot around if a white ball is detected. The node will be ready for incoming data until the Gazebo world containing our little friend is spawned.
+This last command will trigger the ball-chasing logic comprising a client node that subscribes to, and analyzes, the robot's camera images, and a server node that publishes to the robot's wheels and drives the robot around if a white ball is detected. The node will be waiting for incoming data until the Gazebo world containing our little friend is spawned.
 
 ### Third Terminal
 
@@ -88,7 +88,7 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-This will launch the Gazebo world, the robot at coordinates (x=0, y=0, z=0), and the RViz visualization widget. To setup RViz, click on "File" > "Open Config (Ctrl+O)" and locate `my_robot_config.rviz` (inside `my_robot` directory): a camera view, the robot, and a lidar point cloud view will appear on the screen. Also, for each camera image received the `ball_chaser` node will now start to publish velocities to the robot's wheel (check the output on the second terminal).
+This will launch the Gazebo world, the robot at coordinates (x=0, y=0, z=0), and the RViz visualization widget. To setup RViz, click on "File" > "Open Config (Ctrl+O)" and locate `my_robot_config.rviz` (inside `my_robot` directory): a camera view, the robot, and a lidar point cloud scan will appear on the screen. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
 
 ### Fourth Terminal
 
