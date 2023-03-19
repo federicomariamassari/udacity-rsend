@@ -93,6 +93,8 @@ rosrun rqt_image_view rqt_image_view
 
 This command will spawn an additional instance of the camera view, but easier to handle than the one embedded in RViz.
 
+## Code Logic
+
 __Figure 2: The Gazebo World__
 ![The Gazebo World](./img/img2.png)
 
