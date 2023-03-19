@@ -1,3 +1,5 @@
+[Home](../../README.md) | Next: 
+
 # Project 2: Go Chase It!
 
 Perception, decision making, actuation.
