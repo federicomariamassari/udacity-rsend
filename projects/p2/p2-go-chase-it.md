@@ -1,4 +1,4 @@
-[Home](../../README.md) | Next: 
+[Home](../../README.md) | Next: [Where Am I?]()
 
 # Project 2: Go Chase It!
 
@@ -9,7 +9,10 @@ __Figure 1: The Ball-Chasing Robot__
 
 ## Project Structure
 
-Below is the directory structure tree [1] for the project. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages: `ball_chaser`, which contains  the ball-chasing logic (white pixel detection and robot motion), and `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, as well as launch and configuration files.
+Below is the directory structure tree [1] for the project. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages:
+
+* `ball_chaser`, which contains  the ball-chasing logic (white pixel detection and robot motion);
+* `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, and the launch and configuration files.
 
 ```bash
 .
