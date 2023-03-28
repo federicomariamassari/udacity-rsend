@@ -11,7 +11,7 @@ __Figure 1: The Ball-Chasing Robot__
 
 Below is the directory structure tree [1] for the project. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages:
 
-* `ball_chaser`, which contains  the ball-chasing logic (white pixel detection and robot motion);
+* `ball_chaser`, which contains  the ball-chasing logic (white pixel detection and robot motion); and
 * `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, and the launch and configuration files.
 
 ```bash
