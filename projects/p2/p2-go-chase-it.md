@@ -57,7 +57,7 @@ Among the others, this will create folders `build` and `devel` - the latter cont
 
 ## Running the Project
 
-You would need multiple open terminals to run this project:
+You would need multiple open terminals to run this project; later in Project 3 I will combine all these commands together in a single `.launch` file, to minimize inconveniences.
 
 ### First Terminal
 
