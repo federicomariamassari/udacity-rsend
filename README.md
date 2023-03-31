@@ -65,7 +65,7 @@ __Acquired familiarity with:__ ROS (Robot Operating System), Catkin package mana
 
 _Design a robot, house it inside your custom world, and program it to chase a white ball using ROS._
 
-Since the goal of this project was to chase an object, I designed a brand new world with enough space for a robot to roam around. The four-wheeled robot has a skid-steer design, which makes reaching the target white ball a much easier task. The robot veers and moves towards the object whenever it detects a white pixel {R=255, G=255, B=255}, while it stands still whenever this is not (or it is no longer) the case. The ball-chasing logic is a ROS node in C++.
+Since the goal of this project was to chase an object, I designed a brand new world with enough space for a robot to roam around. The four-wheeled robot has a skid-steer design, which makes reaching the target white ball a much easier task. The robot veers and moves towards the object whenever it detects a white pixel {R=255, G=255, B=255}, while it stands still whenever this is not (or it is no longer) the case. The ball-chasing logic is a ROS node in C++. See the companion README file for additional information.
 
 __[Link to code](/projects/p2/catkin_ws/src)__
 
