@@ -92,3 +92,5 @@ The Gazebo environment showcasing the ball-chasing logic appears on the LHS of t
 ![](./projects/p2/img/mov1.gif)
 
 ## Project 3: Where Am I?
+
+![](./projects/p3/img/mov1.gif)
