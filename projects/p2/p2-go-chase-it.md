@@ -30,12 +30,13 @@ Below is the directory structure tree [1] for the project. `catkin_ws` is the Ca
         │       └── DriveToTarget.srv
         └── my_robot
             ├── CMakeLists.txt
+            ├── config
+            │   └── ball_chaser_config.rviz
             ├── launch
             │   ├── robot_description.launch
             │   └── world.launch
             ├── meshes
             │   └── hokuyo.dae
-            ├── my_robot_config.rviz
             ├── package.xml
             ├── urdf
             │   ├── my_robot.gazebo
