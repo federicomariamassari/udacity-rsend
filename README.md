@@ -93,4 +93,10 @@ The Gazebo environment showcasing the ball-chasing logic appears on the LHS of t
 
 ## Project 3: Where Am I?
 
+### Overview
+
+_Localize your robot based on known map and pose using Adaptive Monte Carlo Localization (AMCL)._
+
+Inclusion of enough, adequately-spaced landmarks or geometric features was necessary for the robot to quickly identify its surroundings and move from start to goal, so I decided to rearrange the furniture in my virtual room for this purpose (adding a brand new Blender-made coffee table in the process).
+
 ![](./projects/p3/img/mov1.gif)
