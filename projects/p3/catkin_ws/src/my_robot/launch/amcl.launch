@@ -62,7 +62,7 @@
 
     <!-- Laser model parameters -->
 
-    <!-- 120 was found to be the most stable in terms  -->
+    <!-- 120 was found to be the most stable -->
     <param name="laser_max_beams" value="120"/>
 
     <param name="laser_z_hit" value="0.95"/>
@@ -72,10 +72,10 @@
     <!-- Odometry model parameters -->
 
     <!-- Reduce default odom_alpha* parameters to assume low noise in odometry [1]. -->
-    <param name="odom_alpha1" value="0.05"/>
-    <param name="odom_alpha2" value="0.05"/>
-    <param name="odom_alpha3" value="0.05"/>
-    <param name="odom_alpha4" value="0.05"/>
+    <param name="odom_alpha1" value="0.005"/>
+    <param name="odom_alpha2" value="0.005"/>
+    <param name="odom_alpha3" value="0.005"/>
+    <param name="odom_alpha4" value="0.005"/>
 
   </node>
 

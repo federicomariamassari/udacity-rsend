@@ -2,7 +2,7 @@ controller_frequency: 10
 
 TrajectoryPlannerROS:
   max_vel_x: 1.0
-  min_vel_x: -0.1  # To allow for reverse gear
+  min_vel_x: -0.1 # To allow for reverse gear
 
   max_vel_theta: 1.5707
   min_in_place_vel_theta: 0.314
@@ -23,4 +23,4 @@ TrajectoryPlannerROS:
 
   holonomic_robot: false
 
-  meter_scoring: true  # To suppress warnings
+  meter_scoring: true # To suppress warning
