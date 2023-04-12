@@ -110,7 +110,7 @@ __[Link to code](/projects/p3/catkin_ws/src)__
 
 ### How to Build and Run the Project
 
-
+Change directory to the Catkin folder and build the project. Run following the instructions in the dedicated README file.
 
 ### Output
 
