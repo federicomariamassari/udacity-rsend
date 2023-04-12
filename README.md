@@ -101,6 +101,17 @@ In this project, our skid-steer friend is interfaced with the Adaptive Monte Car
 
 __[Link to code](/projects/p3/catkin_ws/src)__
 
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./projects/p3/img/img0.png" width="500"/></td>
+    <td align="center"><img align="center" src="./projects/p3/img/img1.png" width="500"/></td>
+  </tr>
+</table>
+
+### How to Build and Run the Project
+
+
+
 ### Output
 
 Components for AMCL (arrow particles, lidar point-cloud scan and superimposed map) and 2d navigation (global plan in blue, local plan in green) are displayed in the below RViz window. Notice how quickly the arrow particles converge once the robot successfully localizes itself.
