@@ -1,4 +1,4 @@
-[Home](../../README.md) | Next: [Where Am I?]()
+[Home](../../README.md) | Next: [Where Am I?](projects/p3/p3-where-am-i.md)
 
 # Project 2: Go Chase It!
 
