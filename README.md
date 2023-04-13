@@ -95,7 +95,7 @@ The Gazebo environment showcasing the ball-chasing logic appears on the LHS of t
 
 ### Overview
 
-_Localize your robot based on known map and pose using Adaptive Monte Carlo Localization (AMCL)._
+_Localize your robot based on known map and initial pose using Adaptive Monte Carlo Localization (AMCL)._
 
 In this project, our skid-steer friend is interfaced with the Adaptive Monte Carlo Localization algorithm in ROS so that its position can be estimated as it travels through a predefined set of waypoints in my house. Inclusion of enough, adequately-spaced landmarks or geometric features was necessary for the robot to quickly identify its surroundings and move from start to goal, so I rearranged the furniture in the room and added a brand new coffee table. Calibration of parameters for AMCL and 2d navigation was particularly challenging and is still not perfect even at project completion. Most of the latter step was done in RViz, using the `rqt_reconfigure` plugin to dynamically tune the target variables.
 
