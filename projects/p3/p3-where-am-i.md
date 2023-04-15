@@ -2,5 +2,5 @@
 
 # Project 3: Where Am I?
 
-__Figure 1: The Refurbished Environment__
+__Figure 1: The Rearranged Environment__
 !['Where Am I?' Animated GIF](./img/img2.png)
