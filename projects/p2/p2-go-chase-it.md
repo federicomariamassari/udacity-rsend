@@ -137,7 +137,11 @@ The `ball_chaser` package has two C++ nodes:
 
 ### Image Processing
 
-The (uncompressed) images published by topic `/camera/rgb/image_raw` are the content of message `sensor_msgs/Image.msg`. Each image received by the client is then passed to callback function `process_image_callback` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L31)), which contains the ball-chasing logic. The ([API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)) for `sensor_msgs/Image.msg` provides useful information on the image structure, which is a matrix of byte data.
+The (uncompressed) images published by topic `/camera/rgb/image_raw` are the contents of message `sensor_msgs/Image.msg`. Each image received by the client is then passed to callback function `process_image_callback` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L31)), which holds the ball-chasing logic. From the official ([API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)) documentation for `sensor_msgs/Image.msg` an image is a matrix of byte data with total size $rows \times step$.
+
+
+
+Three bytes form a pixel (RGB), the first one being the top-left of the picture.
 
 ## Resources
 
