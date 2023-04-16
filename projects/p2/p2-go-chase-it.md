@@ -114,8 +114,10 @@ This command will spawn an additional instance of the camera view, but easier to
 
 ## Code Logic
 
+The RQt (ROS Qt "cute" framework) graph for the project appears in Figure 5:
+
 __Figure 5: RQT Graph__
-![RQT Graph](./img/img4.png)
+![RQt Graph](./img/img4.png)
 
 # Resources
 
