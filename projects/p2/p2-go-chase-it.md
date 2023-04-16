@@ -97,7 +97,7 @@ This will launch the Gazebo world [Figure 3], the robot at the origin (x=0, y=0,
 
 In RViz a camera view, the robot, and a lidar point-cloud scan will appear on the screen [Figure 4]. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
 
-__Figure 3: The Gazebo World__
+__Figure 3: The Gazebo World Holding the Robot__
 ![The Gazebo World](./img/img2.png)
 
 __Figure 4: The Camera View and Lidar Point-Cloud Scan in RViz__
