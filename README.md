@@ -114,6 +114,6 @@ Change directory to the Catkin folder and build the project. Run following the i
 
 ### Output
 
-Components for AMCL (arrow particles, lidar point-cloud scan and superimposed map) and 2d navigation (global plan in blue, local plan in green) are displayed in the below RViz window. Notice how quickly the arrow particles converge once the robot successfully localizes itself.
+Components for AMCL (arrow particle cloud, lidar scan and superimposed map) and 2d navigation (global plan in blue, local plan in green) are displayed in the below RViz window. Notice how quickly the arrow particles converge once the robot successfully localizes itself.
 
 ![](./projects/p3/img/mov1.gif)

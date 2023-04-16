@@ -9,11 +9,12 @@ __Figure 1: The Ball-Chasing Robot__
 
 ## Project Structure
 
-Below is the directory structure tree [1] for the project. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed. This project includes two packages:
+The directory structure tree [1] for the project appears below [Figure 2]. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed; it includes two packages:
 
-* `ball_chaser`, which contains  the ball-chasing logic (white pixel detection and robot motion); and
+* `ball_chaser`, which contains the ball-chasing logic (white pixel detection and robot motion);
 * `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, and the launch and configuration files.
 
+__Figure 2: Directory Structure Tree__
 ```bash
 .
 └── catkin_ws
@@ -48,17 +49,17 @@ Below is the directory structure tree [1] for the project. `catkin_ws` is the Ca
 
 ## Building the Project
 
-Inside `catkin_ws` run:
+Step into `catkin_ws` and run:
 
 ```bash
 catkin_make
 ```
 
-Among the others, this will create folders `build` and `devel` - the latter containing `setup.bash`, which you may need to source in each new terminal window in order to run ROS-related commands.
+Among the others, this command will create folders `build` and `devel`, the latter containing the `setup.bash` script which you may need to source in each new terminal window in order to run ROS-related commands.
 
 ## Running the Project
 
-You would need multiple open terminals to run this project; later in Project 3, I will combine all these commands together in a single `.launch` file to minimize inconveniences.
+To run the project you would need multiple open terminals; later in Project 3, all commands will be added to a single `.launch` file to minimize inconveniences.
 
 ### First Terminal
 
@@ -88,7 +89,16 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-This will launch the Gazebo world, the robot at the origin (x=0, y=0, z=0), and the RViz visualization widget. To setup RViz, click on "File" > "Open Config (Ctrl+O)" and locate `my_robot_config.rviz` (inside `my_robot` directory): a camera view, the robot, and a lidar point-cloud scan will appear on the screen. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
+This will launch the Gazebo world, the robot at the origin (x=0, y=0, z=0), and the RViz (ROS Visualization) widget with custom configuration based on below line from `world.launch`:
+
+```xml
+<node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/config/ball_chaser_config.rviz"/>
+```
+
+In RViz a camera view, the robot, and a lidar point-cloud scan will appear on the screen [Figure 3]. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
+
+__Figure 3: The Lidar Point-Cloud Scan in RViz__
+![RViz Lidar View](./img/img3.png)
 
 ### Fourth Terminal
 
@@ -103,9 +113,6 @@ This command will spawn an additional instance of the camera view, but easier to
 
 __Figure 2: The Gazebo World__
 ![The Gazebo World](./img/img2.png)
-
-__Figure 3: The Lidar Point-Cloud Scan in RViz__
-![RViz Lidar View](./img/img3.png)
 
 # Resources
 
