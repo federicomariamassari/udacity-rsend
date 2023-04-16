@@ -128,9 +128,9 @@ __Figure 5: RQt Graph__
 
 The `ball_chaser` package has two C++ nodes:
 
-* Client node `/process_image` subscribes to the robot's camera images (`/camera/rgb/image_raw`) ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L92)), analysing each of them to determine the position of the white ball. Once such position is determined, the client requests a service (`/ball_chaser/command_robot`) ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L89)) to drive the robot left, center, or right;
+* Client node `/process_image` subscribes to the robot's camera images `/camera/rgb/image_raw` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L92)), analysing each of them to determine the position of the white ball. Once such position is determined, the client requests service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L89)) to drive the robot left, center, or right;
 
-* Server node `/drive_bot` provides service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L45)) to drive the robot around controlling its linear x and angular z velocities.
+* Server node `/drive_bot` provides service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L45)) to drive the robot around controlling its linear x and angular z velocities. The service publishes a message containing the velocities to the wheel joints through the `/cmd_vel` topic ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L42)).
 
 # Resources
 
