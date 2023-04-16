@@ -112,6 +112,11 @@ rosrun rqt_image_view rqt_image_view
 
 This command will spawn an additional instance of the camera view, but easier to handle than the one embedded in RViz.
 
+## Code Logic
+
+__Figure 5: RQT Graph__
+![RQT Graph](./img/img4.png)
+
 # Resources
 
 1. Install via `sudo apt install tree` (Linux), then step into the desired directory and run `tree`.
