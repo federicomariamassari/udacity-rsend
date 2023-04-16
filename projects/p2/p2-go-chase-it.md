@@ -124,7 +124,7 @@ rosrun rqt_graph rqt_graph
 Then, once inside the GUI, set "Nodes/Topics (all)", "Group" equal to 1 (to nest Namespace boxes once), and unhide `/tf` (Transformation Tree).
 
 __Figure 5: RQt Graph__
-![RQt Graph](./img/img4.png)
+![RQt Graph](./img/img4.svg)
 
 The `ball_chaser` package has two C++ nodes:
 
