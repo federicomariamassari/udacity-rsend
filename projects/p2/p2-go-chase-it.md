@@ -114,7 +114,12 @@ This command will spawn an additional instance of the camera view, but easier to
 
 ## Code Logic
 
-The RQt (ROS Qt "cute" framework) graph for the project appears in Figure 5:
+The RQt (ROS Qt "cute" framework) graph for the project appears in Figure 5. To reproduce the same, run below commands in an additional terminal instance, then once inside the GUI set "Nodes/Topics (all)", "Group" equal to 1 (to nest Namespace boxes once), and unhide `/tf` (Transformation Tree).
+
+```bash
+source devel/setup.bash
+rosrun rqt_graph rqt_graph
+```
 
 __Figure 5: RQT Graph__
 ![RQt Graph](./img/img4.png)
