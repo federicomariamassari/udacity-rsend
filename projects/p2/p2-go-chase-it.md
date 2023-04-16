@@ -9,7 +9,7 @@ __Figure 1: The Ball-Chasing Robot__
 
 ## Project Structure
 
-The directory structure tree [1] for the project appears in Figure 2. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed; it includes two packages:
+The directory structure tree [1] for the project appears in Figure 2. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed; it includes two of them:
 
 * `ball_chaser`, which contains the ball-chasing logic (white pixel detection and robot motion);
 * `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, and the launch and configuration files.
@@ -89,15 +89,18 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-This will launch the Gazebo world, the robot at the origin (x=0, y=0, z=0), and the RViz (ROS Visualization) widget with custom configuration based on below line from `world.launch`:
+This will launch the Gazebo world [Figure 3], the robot at the origin (x=0, y=0, z=0), and the RViz (ROS Visualization) widget with custom configuration based on below line from `world.launch`:
 
 ```xml
 <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/config/ball_chaser_config.rviz"/>
 ```
 
-In RViz a camera view, the robot, and a lidar point-cloud scan will appear on the screen [Figure 3]. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
+In RViz a camera view, the robot, and a lidar point-cloud scan will appear on the screen [Figure 4]. Also, for each camera image received the `ball_chaser` node will now start publishing velocities to the robot's wheels (check the output on the second terminal).
 
-__Figure 3: The Lidar Point-Cloud Scan in RViz__
+__Figure 3: The Gazebo World__
+![The Gazebo World](./img/img2.png)
+
+__Figure 4: The Camera View and Lidar Point-Cloud Scan in RViz__
 ![RViz Lidar View](./img/img3.png)
 
 ### Fourth Terminal
@@ -108,11 +111,6 @@ rosrun rqt_image_view rqt_image_view
 ```
 
 This command will spawn an additional instance of the camera view, but easier to handle than the one embedded in RViz.
-
-## Code Logic
-
-__Figure 2: The Gazebo World__
-![The Gazebo World](./img/img2.png)
 
 # Resources
 
