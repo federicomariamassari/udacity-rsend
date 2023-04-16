@@ -117,6 +117,12 @@ This command will spawn an additional instance of the camera view, but easier to
 
 ### Nodes
 
+The `ball_chaser` package has two C++ nodes:
+
+* Client node `/process_image` subscribes to the robot's camera images `/camera/rgb/image_raw` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L92)), analysing each of them to determine the position of the white ball. Once such position is determined, the client requests service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L89)) to drive the robot left, center, or right;
+
+* Server node `/drive_bot` provides service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L45)) to drive the robot around controlling its linear x and angular z velocities. The service publishes a message containing the velocities to the wheel joints through the `/cmd_vel` topic ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L42)).
+
 The RQt (ROS Qt "cute" framework) graph for the project appears in Figure 5. To reproduce the same, run below commands in an additional terminal instance:
 
 ```bash
@@ -129,17 +135,11 @@ Then, once inside the GUI, set "Nodes/Topics (all)", "Group" equal to 1 (to nest
 __Figure 5: RQt Graph__
 ![RQt Graph](./img/img4.png)
 
-The `ball_chaser` package has two C++ nodes:
-
-* Client node `/process_image` subscribes to the robot's camera images `/camera/rgb/image_raw` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L92)), analysing each of them to determine the position of the white ball. Once such position is determined, the client requests service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L89)) to drive the robot left, center, or right;
-
-* Server node `/drive_bot` provides service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L45)) to drive the robot around controlling its linear x and angular z velocities. The service publishes a message containing the velocities to the wheel joints through the `/cmd_vel` topic ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L42)).
-
 ### Image Processing
 
 Topic `/camera/rgb/image_raw` publishes the (uncompressed) images as contents of message `sensor_msgs/Image.msg`. Each image is then received by the client and passed to callback function `process_image_callback` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L31)), which holds the ball-chasing logic.
 
-From the ([official API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)) documentation for `sensor_msgs/Image.msg` an image is a matrix of byte data with total size $rows \times step$. $step$ is 3 times the number of columns because each column holds three bytes forming an RGB pixel (the first one being at the top-left corner of the picture). Since the ball is the only purely white {R=255, G=255, B=255} object in the world, the robot moves if and only if any of the ball's pixels come into its sight, and stands still (or halts) otherwise. In the code, the screen is divided into three vertical sections (left, middle, right) and the robot veers accordingly depending on which side of the screen the ball is detected [Figure 6].
+From the [official API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) documentation for `sensor_msgs/Image.msg` an image is a matrix of byte data with total size $rows \times step$. $step$ is 3 times the number of columns because each column holds three bytes forming an RGB pixel (the first one being at the top-left corner of the picture). Since the ball is the only purely white {R=255, G=255, B=255} object in the world, the robot moves if and only if any of the ball's pixels come into its sight, and stands still (or halts) otherwise. In the code, the screen is divided into three vertical sections (left, middle, right) and the robot veers accordingly depending on which side of the screen the ball is detected [Figure 6].
 
 __Figure 6: Ball Detection and Chasing__
 ![Ball-chasing logic Animated GIF](./img/mov3.gif)
