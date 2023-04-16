@@ -9,7 +9,7 @@ __Figure 1: The Ball-Chasing Robot__
 
 ## Project Structure
 
-The directory structure tree [1] for the project appears below [Figure 2]. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed; it includes two packages:
+The directory structure tree [1] for the project appears in Figure 2. `catkin_ws` is the Catkin workspace, the top-level directory where packages are managed; it includes two packages:
 
 * `ball_chaser`, which contains the ball-chasing logic (white pixel detection and robot motion);
 * `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, and the launch and configuration files.
@@ -49,13 +49,13 @@ __Figure 2: Directory Structure Tree__
 
 ## Building the Project
 
-Step into `catkin_ws` and run:
+With `catkin_ws` as current directory, run:
 
 ```bash
 catkin_make
 ```
 
-Among the others, this command will create folders `build` and `devel`, the latter containing the `setup.bash` script which you may need to source in each new terminal window in order to run ROS-related commands.
+Among the others, this command will create folders `build` and `devel`, the latter containing the `setup.bash` script which you may need to source in each new terminal window in order to run ROS-related statements.
 
 ## Running the Project
 
@@ -69,9 +69,9 @@ roscore
 
 You must have `roscore` running in order for ROS nodes to interact. This step is recommended even though it can be bypassed if the `roslaunch` command is invoked (as the latter also calls `roscore` under the hood). Among the other tasks, `roscore` will start up:
 
-- The __ROS Master__, which manages and maintains a registry of all active nodes on a system, and allows them to locate one another and communicate via message passing (Topics: Pub/Sub) and through services (Services: Request/Response);
+* The __ROS Master__, which manages and maintains a registry of all active nodes on a system, and allows them to locate one another and communicate via message passing (Topics: Pub/Sub) and through services (Services: Request/Response);
 
-- A __Parameter Server__ (hosted by the ROS Master), which stores parameter and configuration values shared among the running nodes.
+* A __Parameter Server__ (hosted by the ROS Master), which stores parameter and configuration values shared among the running nodes.
 
 ### Second Terminal
 
