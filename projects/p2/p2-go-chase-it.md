@@ -15,6 +15,7 @@ The directory structure tree [1] for the project appears in Figure 2. `catkin_ws
 * `my_robot`, which holds the robot design (URDF: Unified Robot Description Format), the Gazebo world, and the launch and configuration files.
 
 __Figure 2: Directory Structure Tree__
+
 ```bash
 .
 └── catkin_ws
@@ -132,6 +133,10 @@ The `ball_chaser` package has two C++ nodes:
 
 * Server node `/drive_bot` provides service `/ball_chaser/command_robot` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L45)) to drive the robot around controlling its linear x and angular z velocities. The service publishes a message containing the velocities to the wheel joints through the `/cmd_vel` topic ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/drive_bot.cpp#L42)).
 
-# Resources
+### Image Processing
 
-1. Install via `sudo apt install tree` (Linux), then step into the desired directory and run `tree`.
+The (uncompressed) images published by topic `/camera/rgb/image_raw` are the content of message `sensor_msgs/Image.msg` ([API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)). Each received image is passed to callback function `process_image_callback` which contains the actual ball-chasing logic ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L31)).
+
+## Resources
+
+1. Install via `sudo apt install tree` (Ubuntu), then step into the desired directory and run `tree`.
