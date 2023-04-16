@@ -139,7 +139,10 @@ The `ball_chaser` package has two C++ nodes:
 
 Topic `/camera/rgb/image_raw` publishes the (uncompressed) images as contents of message `sensor_msgs/Image.msg`. Each image is then received by the client and passed to callback function `process_image_callback` ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L31)), which holds the ball-chasing logic.
 
-From the ([official API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)) documentation for `sensor_msgs/Image.msg` an image is a matrix of byte data with total size $rows \times step$. $step$ is 3 times the number of columns because each column holds three bytes forming an RGB pixel (the first one being at the top-left corner of the picture). Since the ball is the only purely white {R=255, G=255, B=255} object in the world, the robot moves if and only if any of the ball's pixels come into its sight, and stands still (or halts) otherwise.
+From the ([official API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)) documentation for `sensor_msgs/Image.msg` an image is a matrix of byte data with total size $rows \times step$. $step$ is 3 times the number of columns because each column holds three bytes forming an RGB pixel (the first one being at the top-left corner of the picture). Since the ball is the only purely white {R=255, G=255, B=255} object in the world, the robot moves if and only if any of the ball's pixels come into its sight, and stands still (or halts) otherwise. In the code, the screen is divided into three vertical sections (left, middle, right) and the robot veers accordingly depending on which side of the screen the ball is detected [Figure 6].
+
+__Figure 6: Ball Detection and Chasing__
+![Ball-chasing logic Animated GIF](./img/mov3.gif)
 
 ## Resources
 
