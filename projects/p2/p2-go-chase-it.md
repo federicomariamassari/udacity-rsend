@@ -115,6 +115,8 @@ This command will spawn an additional instance of the camera view, but easier to
 
 ## Code Logic
 
+### Nodes
+
 The RQt (ROS Qt "cute" framework) graph for the project appears in Figure 5. To reproduce the same, run below commands in an additional terminal instance:
 
 ```bash
@@ -135,7 +137,7 @@ The `ball_chaser` package has two C++ nodes:
 
 ### Image Processing
 
-The (uncompressed) images published by topic `/camera/rgb/image_raw` are the content of message `sensor_msgs/Image.msg` ([API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)). Each received image is passed to callback function `process_image_callback` which contains the actual ball-chasing logic ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L31)).
+The (uncompressed) images published by topic `/camera/rgb/image_raw` are the content of message `sensor_msgs/Image.msg` (see [API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html)). Each received image is passed to callback function `process_image_callback` which contains the actual ball-chasing logic ([code](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/p2/catkin_ws/src/ball_chaser/src/process_image.cpp#L31)). The `Image.msg`
 
 ## Resources
 
