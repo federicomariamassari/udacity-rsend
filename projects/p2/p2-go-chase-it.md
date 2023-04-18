@@ -152,9 +152,9 @@ From the [official API](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/
 __Figure 6: Ball Detection and Chasing__
 ![Ball-chasing logic Animated GIF](./img/mov3.gif)
 
-### The Robot
+### Robot Mechanics
 
-Robot configurations are included in folder `urdf`. 
+Robot configurations are included in folder `urdf`. The robot has a _skid-steer_ design, as opposed to the default _differential drive_. In skid-steer, a caster is replaced by two driving wheels.
 
 ## Resources
 
