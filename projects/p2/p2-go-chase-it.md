@@ -2,6 +2,8 @@
 
 # Project 2: Go Chase It!
 
+## Overview
+
 For this project, my very first using ROS (the Robot Operating System), I created a brand new robot, housed it in a redesigned Gazebo world, and coded a C++ node to allow the robot to chase detected white balls inside the environment [Figure 1].
 
 The node implements all steps of an autonomous system: perception, decision making, and actuation. The robot continuously receives image data (perception), decides whether and where to move based of what it sees (decision making) and, finally, performs the action (actuation).
