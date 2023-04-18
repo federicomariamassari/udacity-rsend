@@ -115,7 +115,7 @@ This command will spawn an additional instance of the camera view, but easier to
 
 ## Code Logic
 
-### Nodes
+### RQt Graph
 
 The RQt (ROS Qt "cute" framework) graph for the project appears in Figure 5. To reproduce the same, run below commands in an additional terminal instance:
 
@@ -128,6 +128,8 @@ Then, once inside the GUI, set "Nodes/Topics (all)", "Group" equal to 1 (to nest
 
 __Figure 5: RQt Graph__
 ![RQt Graph](./img/img4.png)
+
+### Nodes
 
 The `ball_chaser` package has two C++ nodes:
 
