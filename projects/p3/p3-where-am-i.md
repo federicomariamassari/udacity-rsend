@@ -4,3 +4,6 @@
 
 __Figure 1: The Rearranged Environment__
 !['Where Am I?' Animated GIF](./img/img2.png)
+
+__Figure 2: Global and Local Costmaps__
+![](./img/mov6.gif)
