@@ -23,7 +23,7 @@ __Figure 1: The Rearranged Environment__
             <td rowspan=9>Overall Filter Parameters</td>
             <td><code>min_particles</code></td>
             <td><code>500</code></td>
-            <td>To reduce computational burden once the robot is localised. [1]</td>
+            <td>To reduce computational burden once the robot is localised [1].</td>
         </tr>
         <tr>
             <td><code>max_particles</code></td>
@@ -33,7 +33,7 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>kld_err</code></td>
             <td><code>0.01</code></td>
-            <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable. [1]</td>
+            <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable [1].</td>
         </tr>
         <tr>
             <td><code>kld_z</code></td>
@@ -42,7 +42,7 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>update_min_d</code></td>
             <td><code>0.05</code></td>
-            <td rowspan=2>Minimum translational and rotational distances travelled before triggering parameters update.</td>
+            <td rowspan=2>Minimum translational (5 cm) and rotational (π/24 radians) distances to travel before triggering a parameter update.</td>
         </tr>
         <tr>
             <td><code>update_min_a</code></td>
@@ -68,12 +68,12 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>laser_max_beams</code></td>
             <td><code>120</code></td>
-            <td>This value was found to give the most stable results.</td>
+            <td>Empirically, this values gives the most stable results in terms of aligning laser scan with map landmark edges.</td>
         </tr>
         <tr>
             <td><code>laser_z_hit</code></td>
             <td><code>0.95</code></td>
-            <td rowspan=2>Suggested values [3] to enable recovery mode.</td>
+            <td rowspan=2>Kept small to assume low measurement noise [1].</td>
         </tr>
         <tr>
             <td><code>laser_z_rand</code></td>
@@ -82,13 +82,31 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>laser_likelihood_max_dist</code></td>
             <td><code>4.0</code></td>
+            <td>Increasing distance for obstacle inflation following [1].</td>
             <td></td>
         </tr>
         <tr>
-            <td rowspan=1>Odometry Model Parameters</td>
+            <td rowspan=5>Odometry Model Parameters</td>
             <td><code>odom_model_type</code></td>
             <td><code>diff</code></td>
             <td>Adopted for skid-steer robots [2].</td>
+        </tr>
+        <tr>
+            <td><code>odom_alpha1</code></td>
+            <td><code>0.005</code></td>
+            <td rowspan=4>Reduce default <code>odom_alpha*</code> parameters to assume low noise in odometry data [1].</td>
+        </tr>
+        <tr>
+            <td><code>odom_alpha2</code></td>
+            <td><code>0.005</code></td>
+        </tr>
+        <tr>
+            <td><code>odom_alpha3</code></td>
+            <td><code>0.005</code></td>
+        </tr>
+        <tr>
+            <td><code>odom_alpha4</code></td>
+            <td><code>0.005</code></td>
         </tr>
     </tbody>
 </table>
@@ -103,3 +121,5 @@ __Figure 2: Global and Local Costmaps__
 [1] Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision)
 
 [2] McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
+
+[3] [AMCL (Noetic) Official Documentation](http://wiki.ros.org/amcl?distro=noetic)
