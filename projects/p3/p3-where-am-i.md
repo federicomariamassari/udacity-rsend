@@ -73,7 +73,7 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>laser_z_hit</code></td>
             <td><code>0.95</code></td>
-            <td rowspan=2>Kept small to assume low measurement noise [1].</td>
+            <td rowspan=2>Keep randomness small to assume low measurement noise [1].</td>
         </tr>
         <tr>
             <td><code>laser_z_rand</code></td>
@@ -123,12 +123,10 @@ __Figure 1: The Rearranged Environment__
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4>Costmap Common Parameters</td>
-        </tr>
-        <tr>
+            <td rowspan=3>Costmap Common Parameters</td>
             <td><code>robot_radius</code></td>
             <td><code>0.3</code></td>
-            <td>Enough to prevent bumping into corners while allowing some degree of movement.</td>
+            <td>Enough to prevent bumping into corners while allowing for some degree of movement.</td>
         </tr>
         <tr>
             <td><code>inflation_radius</code></td>
@@ -138,6 +136,9 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>cost_scaling_factor</code></td>
             <td><code>2.58</code></td>
+        </tr>
+        <tr>
+            <td rowspan=2>Base Local Planner Parameters</td>
         </tr>
     </tbody>
 </table>
