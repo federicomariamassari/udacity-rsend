@@ -63,9 +63,7 @@ __Figure 1: The Rearranged Environment__
             <td>Rotate initial pose mean (yaw) 90° clockwise (-π/2 radians) to align with map.</td>
         </tr>
         <tr>
-            <td rowspan=5>Laser Model Parameters</td>
-        </tr>
-        <tr>
+            <td rowspan=4>Laser Model Parameters</td>
             <td><code>laser_max_beams</code></td>
             <td><code>120</code></td>
             <td>Empirically, this values gives the most stable results in terms of aligning laser scan with map landmark edges.</td>
@@ -139,6 +137,14 @@ __Figure 1: The Rearranged Environment__
         </tr>
         <tr>
             <td rowspan=2>Base Local Planner Parameters</td>
+            <td><code>min_vel_x</code></td>
+            <td><code>-1</code></td>
+            <td>To allow for reverse gear.</td>
+        </tr>
+        <tr>
+            <td><code>meter_scoring</code></td>
+            <td><code>true</code></td>
+            <td>To suppress command line warning.</td>
         </tr>
     </tbody>
 </table>
