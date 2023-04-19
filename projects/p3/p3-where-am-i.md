@@ -10,6 +10,7 @@ __Figure 1: The Rearranged Environment__
 ### AMCL
 
 |__Parameter__|__Value__|__Default__|__Explanation__|
+|-----------------|------|----------------|:-------------------------|
 |`odom_model_type`|`diff`|`diff-corrected`|For skid-steer robots [2].|
 
 ### Move Base
