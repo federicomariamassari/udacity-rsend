@@ -17,6 +17,10 @@ Also, since inclusion of a good number of adequately-spaced landmarks was necess
 __Figure 1: The Rearranged Environment__
 !['Where Am I?' Animated GIF](./img/img2.png)
 
+## Project Structure
+
+Figure 2 highlights the directory structure tree for the project. Particularly relevant are file `amcl.launch` and folder `config` holding, respectively, calibrated parameters for AMCL and 2D planning. Also, `maps` contains the environment map required for localization and generated via `pgm_map_creator`. This package __does not__ work with ROS Noetic, so the map was generated online in the provided Udacity workspace, and later downloaded for use in my virtual machine.
+
 __Figure 2: Directory Structure Tree__
 
 ```bash
@@ -47,6 +51,24 @@ __Figure 2: Directory Structure Tree__
             └── worlds
                 ├── empty.world
                 └── my_world.world
+```
+
+## Building and Running the Project
+
+As usual, `catkin_make` builds the project. To run, spawn two terminal windows.
+
+### First Terminal
+
+```bash
+source devel/setup.bash
+roslaunch my_robot world.launch
+```
+
+### Second Terminal
+
+```bash
+source devel/setup.bash
+roslaunch my_robot amcl.launch
 ```
 
 ## Parameter Configuration
