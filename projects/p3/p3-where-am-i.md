@@ -93,6 +93,8 @@ This useful command allows to dynamically (re-)calibrate parameters on the fly.
 
 ## Parameter Configuration
 
+The ROS [navigation stack](http://wiki.ros.org/navigation?distro=noetic) has lots of parameters that can be tuned to enhance the performance of the algorithms. Only included in the tables below are the parameters I experimented with. Others are available in the official documentation.
+
 ### AMCL
 
 <table>
@@ -101,7 +103,7 @@ This useful command allows to dynamically (re-)calibrate parameters on the fly.
             <th>Type</th>
             <th>Parameter</th>
             <th>Value</th>
-            <th>Explanation</th>
+            <th>Rationale</th>
         </tr>
     </thead>
     <tbody>
@@ -202,7 +204,7 @@ This useful command allows to dynamically (re-)calibrate parameters on the fly.
             <th>Type</th>
             <th>Parameter</th>
             <th>Value</th>
-            <th>Explanation</th>
+            <th>Rationale</th>
         </tr>
     </thead>
     <tbody>
