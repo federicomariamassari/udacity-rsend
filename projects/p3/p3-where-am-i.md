@@ -20,7 +20,7 @@ __Figure 1: The Rearranged Environment__
     </thead>
     <tbody>
         <tr>
-            <td rowspan=8>Overall Filter Parameters</td>
+            <td rowspan=9>Overall Filter Parameters</td>
             <td><code>min_particles</code></td>
             <td><code>500</code></td>
             <td>To reduce computational burden once the robot is localised. [1]</td>
@@ -56,6 +56,11 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>recovery_alpha_fast</code></td>
             <td><code>0.1</code></td>
+        </tr>
+        <tr>
+            <td><code>initial_pose_a</code></td>
+            <td><code>-1.570796</code></td>
+            <td rowspan=2>Rotate initial pose mean (yaw) 90° clockwise (-π/2 radians) to align with map.</td>
         </tr>
         <tr>
             <td rowspan=1>Laser Model Parameters</td>
