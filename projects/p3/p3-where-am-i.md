@@ -123,7 +123,7 @@ __Figure 1: The Rearranged Environment__
     </thead>
     <tbody>
         <tr>
-            <td rowspan=3>Costmap Common Parameters</td>
+            <td rowspan=4>Costmap Common Parameters</td>
         </tr>
         <tr>
             <td><code>robot_radius</code></td>
