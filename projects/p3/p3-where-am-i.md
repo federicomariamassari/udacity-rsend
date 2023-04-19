@@ -5,6 +5,38 @@
 __Figure 1: The Rearranged Environment__
 !['Where Am I?' Animated GIF](./img/img2.png)
 
+__Figure 2: Directory Structure Tree__
+
+```bash
+.
+└── catkin_ws
+    └── src
+        └── my_robot
+            ├── CMakeLists.txt
+            ├── config
+            │   ├── base_local_planner_params.yaml
+            │   ├── costmap_common_params.yaml
+            │   ├── global_costmap_params.yaml
+            │   ├── local_costmap_params.yaml
+            │   └── whereami_config.rviz
+            ├── launch
+            │   ├── amcl.launch
+            │   ├── robot_description.launch
+            │   └── world.launch
+            ├── maps
+            │   ├── map.pgm
+            │   └── map.yaml
+            ├── meshes
+            │   └── hokuyo.dae
+            ├── package.xml
+            ├── urdf
+            │   ├── my_robot.gazebo
+            │   └── my_robot.xacro
+            └── worlds
+                ├── empty.world
+                └── my_world.world
+```
+
 ## Parameter Configuration
 
 ### AMCL
@@ -138,7 +170,7 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td rowspan=2>Base Local Planner Parameters</td>
             <td><code>min_vel_x</code></td>
-            <td><code>-1</code></td>
+            <td><code>-0.1</code></td>
             <td>To allow for reverse gear.</td>
         </tr>
         <tr>
