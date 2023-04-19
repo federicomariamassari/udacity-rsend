@@ -2,6 +2,18 @@
 
 # Project 3: Where Am I?
 
+## Overview
+
+This third project is about localization and 2D navigation.
+
+__Localization__ is a robot's ability to establish its own position and orientation using a known map of an environment, laser scan, and  odometry data [1]. In this assignment, the robot is interfaced with the Adaptive Monte Carlo Localization (AMCL) algorithm, which uses a dynamically-adjusting particle filter representing a distribution of likely states for the robot. AMCL is widely used in robotics due to its computational efficiency: the robot reduces the number of total particles as it navigates the environment, senses its objects via lidar, and becomes more confident about its position; otherwise it generates, and gives weight to, more particles in random places.
+
+__2D navigation__ is the ability to produce a safe path from start to goal for the robot to execute, based on odometry and sensor data, as well as local and global costmaps [2].
+
+In order to improve the outcome for both exercises, several parameters had to be tuned.
+
+Since inclusion of a good number of adequately-spaced landmarks is needed for the robot to quickly orient itself and safely move from place to place, I rearranged the furniture in the Gazebo environment from Project 2 [Figure 1].
+
 __Figure 1: The Rearranged Environment__
 !['Where Am I?' Animated GIF](./img/img2.png)
 
@@ -55,7 +67,7 @@ __Figure 2: Directory Structure Tree__
             <td rowspan=9>Overall Filter Parameters</td>
             <td><code>min_particles</code></td>
             <td><code>500</code></td>
-            <td>To reduce computational burden once the robot is localised [1].</td>
+            <td>To reduce computational burden once the robot is localised [2].</td>
         </tr>
         <tr>
             <td><code>max_particles</code></td>
@@ -65,7 +77,7 @@ __Figure 2: Directory Structure Tree__
         <tr>
             <td><code>kld_err</code></td>
             <td><code>0.01</code></td>
-            <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable [1].</td>
+            <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable [2].</td>
         </tr>
         <tr>
             <td><code>kld_z</code></td>
@@ -83,7 +95,7 @@ __Figure 2: Directory Structure Tree__
         <tr>
             <td><code>recovery_alpha_slow</code></td>
             <td><code>0.001</code></td>
-            <td rowspan=2>Suggested values [3] to enable recovery mode.</td>
+            <td rowspan=2>Suggested values [4] to enable recovery mode.</td>
         </tr>
         <tr>
             <td><code>recovery_alpha_fast</code></td>
@@ -103,7 +115,7 @@ __Figure 2: Directory Structure Tree__
         <tr>
             <td><code>laser_z_hit</code></td>
             <td><code>0.95</code></td>
-            <td rowspan=2>Keep randomness small to assume low measurement noise [1].</td>
+            <td rowspan=2>Keep randomness small to assume low measurement noise [2].</td>
         </tr>
         <tr>
             <td><code>laser_z_rand</code></td>
@@ -112,18 +124,18 @@ __Figure 2: Directory Structure Tree__
         <tr>
             <td><code>laser_likelihood_max_dist</code></td>
             <td><code>4.0</code></td>
-            <td>Increase distance for obstacle inflation [1].</td>
+            <td>Increase distance for obstacle inflation (to 4 meters) [2].</td>
         </tr>
         <tr>
             <td rowspan=5>Odometry Model Parameters</td>
             <td><code>odom_model_type</code></td>
             <td><code>diff</code></td>
-            <td>Adopted for skid-steer robots [2].</td>
+            <td>Adopted for skid-steer robots [3].</td>
         </tr>
         <tr>
             <td><code>odom_alpha1</code></td>
             <td><code>0.005</code></td>
-            <td rowspan=4>Reduce default <code>odom_alpha*</code> parameters to assume low noise in odometry data [1].</td>
+            <td rowspan=4>Reduce default <code>odom_alpha*</code> parameters to assume low noise in odometry data [2].</td>
         </tr>
         <tr>
             <td><code>odom_alpha2</code></td>
@@ -161,7 +173,7 @@ __Figure 2: Directory Structure Tree__
         <tr>
             <td><code>inflation_radius</code></td>
             <td><code>1.75</code></td>
-            <td rowspan=2>With this combination the robot tends to move in the middle of obstacles [1].</td>
+            <td rowspan=2>With this combination the robot tends to move in the middle of obstacles [2].</td>
         </tr>
         <tr>
             <td><code>cost_scaling_factor</code></td>
@@ -186,8 +198,10 @@ __Figure 2: Global and Local Costmaps__
 
 ## Resources
 
+[1] [Monte Carlo Localization, Mathworks](https://www.mathworks.com/help/nav/ug/monte-carlo-localization-algorithm.html)
+
 [1] Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision)
 
 [2] McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
 
-[3] [AMCL (Noetic) Official Documentation](http://wiki.ros.org/amcl?distro=noetic)
+[3] [AMCL Official Documentation (Noetic)](http://wiki.ros.org/amcl?distro=noetic)
