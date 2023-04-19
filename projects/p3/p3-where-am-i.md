@@ -60,10 +60,29 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>initial_pose_a</code></td>
             <td><code>-1.570796</code></td>
-            <td rowspan=2>Rotate initial pose mean (yaw) 90° clockwise (-π/2 radians) to align with map.</td>
+            <td>Rotate initial pose mean (yaw) 90° clockwise (-π/2 radians) to align with map.</td>
         </tr>
         <tr>
-            <td rowspan=1>Laser Model Parameters</td>
+            <td rowspan=4>Laser Model Parameters</td>
+        </tr>
+        <tr>
+            <td><code>laser_max_beams</code></td>
+            <td><code>120</code></td>
+            <td>This value was found to give the most stable results.</td>
+        </tr>
+        <tr>
+            <td><code>laser_z_hit</code></td>
+            <td><code>0.95</code></td>
+            <td rowspan=2>Suggested values [3] to enable recovery mode.</td>
+        </tr>
+        <tr>
+            <td><code>laser_z_rand</code></td>
+            <td><code>0.05</code></td>
+        </tr>
+        <tr>
+            <td><code>laser_likelihood_max_dist</code></td>
+            <td><code>4.0</code></td>
+            <td></td>
         </tr>
         <tr>
             <td rowspan=1>Odometry Model Parameters</td>
