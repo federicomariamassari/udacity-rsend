@@ -82,7 +82,7 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>laser_likelihood_max_dist</code></td>
             <td><code>4.0</code></td>
-            <td>Increasing distance for obstacle inflation following [1].</td>
+            <td>Increase distance for obstacle inflation [1].</td>
         </tr>
         <tr>
             <td rowspan=5>Odometry Model Parameters</td>
@@ -111,6 +111,36 @@ __Figure 1: The Rearranged Environment__
 </table>
 
 ### Move Base
+
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Explanation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=3>Costmap Common Parameters</td>
+        </tr>
+        <tr>
+            <td><code>robot_radius</code></td>
+            <td><code>0.3</code></td>
+            <td>Enough to prevent bumping into corners while allowing some degree of movement.</td>
+        </tr>
+        <tr>
+            <td><code>inflation_radius</code></td>
+            <td><code>1.75</code></td>
+            <td rowspan=2>With this combination the robot tends to move in the middle of obstacles [1].</td>
+        </tr>
+        <tr>
+            <td><code>cost_scaling_factor</code></td>
+            <td><code>2.58</code></td>
+        </tr>
+    </tbody>
+</table>
 
 __Figure 2: Global and Local Costmaps__
 ![](./img/mov6.gif)
