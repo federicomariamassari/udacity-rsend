@@ -20,10 +20,18 @@ __Figure 1: The Rearranged Environment__
     </thead>
     <tbody>
         <tr>
-            <td rowspan=1>Overall Filter Parameters</td>
+            <td rowspan=4>Overall Filter Parameters</td>
             <td><code>min_particles</code></td>
             <td><code>500</code></td>
             <td>To reduce computational burden once the robot is localised [1].</td>
+            <td><code>max_particles</code></td>
+            <td><code>5000</code></td>
+            <td>To give some weight to (random) alternate routes when robot is stuck.</td>
+            <td><code>kld_err</code></td>
+            <td><code>0.01</code></td>
+            <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable [1]</td>
+            <td><code>kld_z</code></td>
+            <td><code>0.99</code></td>
         </tr>
         <tr>
             <td rowspan=1>Laser Model Parameters</td>
