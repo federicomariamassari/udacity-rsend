@@ -13,6 +13,28 @@ __Figure 1: The Rearranged Environment__
 |-----------------|------|----------------|:-------------------------|
 |`odom_model_type`|`diff`|`diff-corrected`|For skid-steer robots [2].|
 
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Explanation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>Overall Filter Parameters</td>
+            <td rowspan=4>Laser Model Parameters</td>
+            <td rowspan=2>Odometry Model Parameters</td>
+        </tr>
+        <tr>
+            <td><code>odom_model_type</code></td>
+            <td>Adopted for skid-steer robots [2].</td>
+        </tr>
+    </tbody>
+</table>
+
 ### Move Base
 
 __Figure 2: Global and Local Costmaps__
@@ -21,4 +43,5 @@ __Figure 2: Global and Local Costmaps__
 ## Resources
 
 [1] Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision)
+
 [2] McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
