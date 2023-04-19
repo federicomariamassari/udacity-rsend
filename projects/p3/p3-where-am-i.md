@@ -24,12 +24,17 @@ __Figure 1: The Rearranged Environment__
             <td><code>min_particles</code></td>
             <td><code>500</code></td>
             <td>To reduce computational burden once the robot is localised [1].</td>
+        </tr>
+        <tr>
             <td><code>max_particles</code></td>
             <td><code>5000</code></td>
             <td>To give some weight to (random) alternate routes when robot is stuck.</td>
+        </tr>
+        <tr>
             <td><code>kld_err</code></td>
             <td><code>0.01</code></td>
             <td>Assume kernel density estimation of odometry data is fairly reliable [1]</td>
+        </tr>
             <td><code>kld_z</code></td>
             <td><code>0.99</code></td>
             <td>Assume kernel density estimation of odometry data is fairly reliable [1]</td>
