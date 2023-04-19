@@ -55,7 +55,7 @@ __Figure 2: Directory Structure Tree__
 
 ## Building and Running the Project
 
-As usual, `catkin_make` builds the project. To run, spawn two terminal windows.
+As usual, `catkin_make` builds the project. To run it, spawn two terminal windows.
 
 ### First Terminal
 
@@ -64,12 +64,32 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
+This command will open the Gazebo world and the RViz application with custom configurations, which include: robot model, laser scan (lidar), pose array (particle filter cloud), environment map, global and local costmaps, and global and local planners.
+
 ### Second Terminal
 
 ```bash
 source devel/setup.bash
 roslaunch my_robot amcl.launch
 ```
+
+This will display the environment map in RViz and initialize AMCL and 2D navigation with the coded parameters.
+
+### Optional Terminals
+
+```bash
+source devel/setup.bash
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+If you have `teleop_twist_keyboard` installed [a], this command allows to teleoperate the robot using a keyboard, as opposed to pressing the "2D Navigation" button in RViz.
+
+```bash
+source devel/setup.bash
+rosrun rqt_reconfigure rqt_reconfigure
+```
+
+This useful command allows to dynamically (re-)calibrate parameters on the fly.
 
 ## Parameter Configuration
 
@@ -227,3 +247,14 @@ __Figure 2: Global and Local Costmaps__
 [2] McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
 
 [3] [AMCL Official Documentation (Noetic)](http://wiki.ros.org/amcl?distro=noetic)
+
+## Notes
+
+[a] To install and build `teleop_twist_keyboard` run below commands:
+
+```bash
+cd /home/$whoami/workspace/udacity-rsend/projects/p3/catkin_ws/src
+git clone https://github.com/ros-teleop/teleop_twist_keyboard
+cd ..
+catkin_make
+```
