@@ -19,11 +19,8 @@ __Figure 1: The Rearranged Environment__
         </tr>
     </thead>
     <tbody>
-        <style>
-            tr {text-align:left; vertical-align:top}
-        </style>
         <tr>
-            <td rowspan=4>Overall Filter Parameters</td>
+            <td rowspan=8>Overall Filter Parameters</td>
             <td><code>min_particles</code></td>
             <td><code>500</code></td>
             <td>To reduce computational burden once the robot is localised. [1]</td>
@@ -38,8 +35,27 @@ __Figure 1: The Rearranged Environment__
             <td><code>0.01</code></td>
             <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable. [1]</td>
         </tr>
+        <tr>
             <td><code>kld_z</code></td>
             <td><code>0.99</code></td>
+        </tr>
+        <tr>
+            <td><code>update_min_d</code></td>
+            <td><code>0.05</code></td>
+            <td rowspan=2>Minimum translational and rotational distances travelled before triggering parameters update.</td>
+        </tr>
+        <tr>
+            <td><code>update_min_a</code></td>
+            <td><code>0.1309</code></td>
+        </tr>
+        <tr>
+            <td><code>recovery_alpha_slow</code></td>
+            <td><code>0.001</code></td>
+            <td rowspan=2>Suggested values [3] to enable recovery mode.</td>
+        </tr>
+        <tr>
+            <td><code>recovery_alpha_fast</code></td>
+            <td><code>0.1</code></td>
         </tr>
         <tr>
             <td rowspan=1>Laser Model Parameters</td>
