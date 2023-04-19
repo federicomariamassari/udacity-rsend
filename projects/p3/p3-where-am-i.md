@@ -33,11 +33,10 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>kld_err</code></td>
             <td><code>0.01</code></td>
-            <td>Assume kernel density estimation of odometry data is fairly reliable [1]</td>
+            <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable [1]</td>
         </tr>
             <td><code>kld_z</code></td>
             <td><code>0.99</code></td>
-            <td>Assume kernel density estimation of odometry data is fairly reliable [1]</td>
         </tr>
         <tr>
             <td rowspan=1>Laser Model Parameters</td>
