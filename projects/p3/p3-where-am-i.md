@@ -23,7 +23,7 @@ __Figure 1: The Rearranged Environment__
             <td rowspan=4>Overall Filter Parameters</td>
             <td><code>min_particles</code></td>
             <td><code>500</code></td>
-            <td>To reduce computational burden once the robot is localised [1].</td>
+            <td>To reduce computational burden once the robot is localised. [1]</td>
         </tr>
         <tr>
             <td><code>max_particles</code></td>
@@ -33,7 +33,9 @@ __Figure 1: The Rearranged Environment__
         <tr>
             <td><code>kld_err</code></td>
             <td><code>0.01</code></td>
-            <td rowspan=2>Assume kernel density estimation of odometry data is fairly reliable [1]</td>
+            <td rowspan=2 style="text-align:left;vertical-align:top">
+                Assume kernel density estimation of odometry data is fairly reliable. [1]
+            </td>
         </tr>
             <td><code>kld_z</code></td>
             <td><code>0.99</code></td>
