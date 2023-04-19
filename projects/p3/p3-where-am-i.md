@@ -10,9 +10,9 @@ __Localization__ is a robot's ability to establish its own position and orientat
 
 __2D navigation__ is the ability to produce a safe path from start to goal for the robot to execute, based on odometry and sensor data, as well as local and global costmaps [2].
 
-In order to improve the outcome for both exercises, several parameters had to be tuned.
+A plethora of parameters exists to calibrate, in order to improve the outcome for both exercises. Tuning is, however, a very challenging task (literature agrees): it took several days of trial-and-error to reach a satisfactory, but not perfect, result at project submission.
 
-Since inclusion of a good number of adequately-spaced landmarks is needed for the robot to quickly orient itself and safely move from place to place, I rearranged the furniture in the Gazebo environment from Project 2 [Figure 1].
+Also, since inclusion of a good number of adequately-spaced landmarks was necessary for the robot to quickly orient itself and safely move from place to place, I rearranged the furniture in the Gazebo environment from Project 2 [Figure 1].
 
 __Figure 1: The Rearranged Environment__
 !['Where Am I?' Animated GIF](./img/img2.png)
