@@ -20,16 +20,16 @@ __Figure 1: The Rearranged Environment__
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4>Overall Filter Parameters</td>
+            <td rowspan=1>Overall Filter Parameters</td>
             <td><code>odom_model_type</code></td>
             <td><code>diff</code></td>
             <td>Adopted for skid-steer robots [2].</td>
         </tr>
         <tr>
-            <td rowspan=4>Laser Model Parameters</td>
+            <td rowspan=1>Laser Model Parameters</td>
         </tr>
         <tr>
-            <td rowspan=4>Odometry Model Parameters</td>
+            <td rowspan=1>Odometry Model Parameters</td>
         </tr>
     </tbody>
 </table>
