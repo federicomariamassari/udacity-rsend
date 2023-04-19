@@ -63,7 +63,7 @@ __Figure 1: The Rearranged Environment__
             <td>Rotate initial pose mean (yaw) 90° clockwise (-π/2 radians) to align with map.</td>
         </tr>
         <tr>
-            <td rowspan=4>Laser Model Parameters</td>
+            <td rowspan=5>Laser Model Parameters</td>
         </tr>
         <tr>
             <td><code>laser_max_beams</code></td>
