@@ -9,10 +9,6 @@ __Figure 1: The Rearranged Environment__
 
 ### AMCL
 
-|__Parameter__|__Value__|__Default__|__Explanation__|
-|-----------------|------|----------------|:-------------------------|
-|`odom_model_type`|`diff`|`diff-corrected`|For skid-steer robots [2].|
-
 <table>
     <thead>
         <tr>
@@ -25,12 +21,15 @@ __Figure 1: The Rearranged Environment__
     <tbody>
         <tr>
             <td rowspan=4>Overall Filter Parameters</td>
-            <td rowspan=4>Laser Model Parameters</td>
-            <td rowspan=2>Odometry Model Parameters</td>
+            <td><code>odom_model_type</code></td>
+            <td><code>diff</code></td>
+            <td>Adopted for skid-steer robots [2].</td>
         </tr>
         <tr>
-            <td><code>odom_model_type</code></td>
-            <td>Adopted for skid-steer robots [2].</td>
+            <td rowspan=4>Laser Model Parameters</td>
+        </tr>
+        <tr>
+            <td rowspan=4>Odometry Model Parameters</td>
         </tr>
     </tbody>
 </table>
