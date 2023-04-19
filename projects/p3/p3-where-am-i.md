@@ -83,7 +83,6 @@ __Figure 1: The Rearranged Environment__
             <td><code>laser_likelihood_max_dist</code></td>
             <td><code>4.0</code></td>
             <td>Increasing distance for obstacle inflation following [1].</td>
-            <td></td>
         </tr>
         <tr>
             <td rowspan=5>Odometry Model Parameters</td>
