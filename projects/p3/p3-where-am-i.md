@@ -82,7 +82,7 @@ source devel/setup.bash
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
-If you have `teleop_twist_keyboard` installed [a], this command allows to teleoperate the robot using a keyboard, as opposed to pressing the "2D Navigation" button in RViz.
+If you have `teleop_twist_keyboard` installed (*), this command allows to teleoperate the robot using a keyboard, as opposed to pressing the "2D Navigation" button in RViz.
 
 ### Fourth Terminal (Optional)
 
@@ -268,22 +268,24 @@ __Figure 5: Quick Robot Localization (Keyboard Teleop)__
 
 ### 2D Navigation
 
+To reproduce it, deselect "Map" in RViz and toggle both "Global Costmap" and "Local Costmap".
+
 __Figure 6: Global and Local Costmaps__
 ![](./img/mov4.gif)
 
 ## Resources
 
-[1] [Monte Carlo Localization, Mathworks](https://www.mathworks.com/help/nav/ug/monte-carlo-localization-algorithm.html)
+1. [Monte Carlo Localization, Mathworks](https://www.mathworks.com/help/nav/ug/monte-carlo-localization-algorithm.html)
 
-[2] Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision)
+2. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision)
 
-[3] McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
+3. McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
 
-[4] [AMCL Official Documentation (Noetic)](http://wiki.ros.org/amcl?distro=noetic)
+4. [AMCL Official Documentation (Noetic)](http://wiki.ros.org/amcl?distro=noetic)
 
 ## Notes
 
-[a] To install and build `teleop_twist_keyboard` run below commands:
+(*) To install and build `teleop_twist_keyboard` run below commands:
 
 ```bash
 cd /home/$whoami/workspace/udacity-rsend/projects/p3/catkin_ws/src
