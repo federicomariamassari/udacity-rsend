@@ -256,8 +256,15 @@ __Figure 3: RQt Graph__
 
 * `/amcl` contains the logic for the Adaptive Monte Carlo Localization algorithm and subscribes to laser data (`/scan`) and to an initial pose (`/initialpose`), an alternative to pressing button "2D Pose Estimate" in RViz.
 
-__Figure 4: Global and Local Costmaps__
-![](./img/mov6.gif)
+### AMCL
+
+__Figure 4: Quick Robot Localization__
+![](./img/mov2.gif)
+
+### 2D Navigation
+
+__Figure 5: Global and Local Costmaps__
+![](./img/mov3.gif)
 
 ## Resources
 
