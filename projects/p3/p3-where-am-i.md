@@ -226,10 +226,15 @@ The ROS [navigation stack](http://wiki.ros.org/navigation?distro=noetic) has lot
             <td><code>2.58</code></td>
         </tr>
         <tr>
-            <td rowspan=2>Base Local Planner Parameters</td>
+            <td rowspan=3>Base Local Planner Parameters</td>
             <td><code>min_vel_x</code></td>
             <td><code>-0.1</code></td>
-            <td>To allow for reverse gear.</td>
+            <td>To allow for reverse gear [2].</td>
+        </tr>
+        <tr>
+            <td><code>sim_time</code></td>
+            <td><code>2.0</code></td>
+            <td>To have enough time for planning an optimal trajectory through narrow paths [1].</td>
         </tr>
         <tr>
             <td><code>meter_scoring</code></td>

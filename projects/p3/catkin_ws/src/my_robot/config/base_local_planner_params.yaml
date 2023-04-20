@@ -11,7 +11,7 @@ TrajectoryPlannerROS:
   acc_lim_x: 2.0
   acc_lim_y: 2.0
 
-  sim_time: 1.0
+  sim_time: 2.0 # To have enough time for planning an optimal trajectory through narrow paths 
 
   vx_samples: 5.0
   vtheta_samples: 10.0
