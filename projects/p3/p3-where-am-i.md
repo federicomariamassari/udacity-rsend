@@ -243,9 +243,12 @@ The ROS [navigation stack](http://wiki.ros.org/navigation?distro=noetic) has lot
 
 ### RQt Graph
 
+The RQt graph for the project appears in Figure 3. To reproduce it, open all four suggested terminal windows, then in a fifth one source the `setup.bash` script and run `rosrun rqt_graph rqt_graph`. Once inside the application, choose "Nodes/Topics (all)", Group: 2, and keep `/tf` hidden.
 
+__Figure 3: RQt Graph__
+![RQt Graph](./img/img3.png)
 
-__Figure 3: Global and Local Costmaps__
+__Figure 4: Global and Local Costmaps__
 ![](./img/mov6.gif)
 
 ## Resources
