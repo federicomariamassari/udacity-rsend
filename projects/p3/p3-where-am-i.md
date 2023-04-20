@@ -258,7 +258,7 @@ __Figure 3: RQt Graph__
 
 ### AMCL
 
-Using either the "2D Nav Goal" command [Figure 4] or the keyboard teleop package [Figure 5], one can see how quickly the robot is able to estimate its position in the environment. 
+Using either the "2D Nav Goal" command [Figure 4] or the keyboard teleop package [Figure 5], one can see how fast the robot is able to estimate its position in the room. The particle filter cloud is heavily dispersed at the beginning, but pose arrays quickly converge around a single location as the robot moves and senses the environment. The number of particles also decreases as soon as confidence on position increases, overall reducing the computational burden.
 
 __Figure 4: Quick Robot Localization (Move Base)__
 ![](./img/mov2.gif)
