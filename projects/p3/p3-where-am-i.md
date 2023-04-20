@@ -6,7 +6,7 @@
 
 This third project is about localization and 2D navigation.
 
-__Localization__ is a robot's ability to establish its own position and orientation using a known map of an environment, laser scan, and  odometry data [1]. In this assignment, the robot is interfaced with the Adaptive Monte Carlo Localization (AMCL) algorithm, which uses a dynamically-adjusting particle filter representing a distribution of likely states for the robot. AMCL is widely used in robotics due to its computational efficiency: the robot reduces the number of total particles as it navigates the environment, senses its objects via lidar, and becomes more confident about its position; otherwise it generates, and gives weight to, more particles in random places.
+__Localization__ is a robot's ability to establish its own position and orientation using a known map of an environment, laser scan, and  odometry data [1]. In this assignment, the robot is interfaced with the Adaptive Monte Carlo Localization (AMCL) algorithm, which uses a dynamically-adjusting particle filter representing a distribution of likely states for the robot. AMCL is widely used in robotics due to its computational efficiency: the robot reduces the number of total particles as it navigates the environment, senses its objects via LiDAR, and becomes more confident about its position; otherwise it generates, and gives weight to, more particles in random places.
 
 __2D navigation__ is the ability to produce a safe path from start to goal for the robot to execute, based on odometry and sensor data, as well as local and global costmaps [2].
 
@@ -64,7 +64,7 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-This command will open the Gazebo world and the RViz application with custom configurations, which include: robot model, laser scan (lidar), pose array (particle filter cloud), environment map, global and local costmaps (disabled by default), and global and local planners.
+This command will open the Gazebo world and the RViz application with custom configurations, which include: robot model, laser scan (LiDAR), pose array (particle filter cloud), environment map, global and local costmaps (disabled by default), and global and local planners.
 
 ### Second Terminal
 
@@ -243,10 +243,18 @@ The ROS [navigation stack](http://wiki.ros.org/navigation?distro=noetic) has lot
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3. To reproduce it, open all four suggested terminal windows, then in a fifth one source the `setup.bash` script and run `rosrun rqt_graph rqt_graph`. Once inside the application, choose "Nodes/Topics (all)", Group: 2, and keep `/tf` hidden.
+The RQt graph for the project appears in Figure 3. To reproduce it, open all four suggested terminal windows, then in a fifth one source the `setup.bash` script and run `rosrun rqt_graph rqt_graph`. Once inside the application, choose "Nodes/Topics (all)", Group: 2, and keep `/tf` hidden. This graph is considerably more complex, compared to the one for Project 2.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
+
+### Nodes
+
+* `/map_server` provides map data as a ROS service to nodes `/move_base` and `/amcl`. It locates the map based on `map.yaml` configurations;
+
+* `/move_base` supplies the 2D navigation logic, and holds components for global and local planning and costmaps; it subscribes to odometry (`/odom`) and LiDAR (`/scan`) data, and publishes velocities to the robot's wheels (`/cmd_vel`);
+
+* `/amcl` contains the logic for the Adaptive Monte Carlo Localization algorithm and subscribes to laser data (`/scan`) and to an initial pose (`/initialpose`), an alternative to pressing button "2D Pose Estimate" in RViz.
 
 __Figure 4: Global and Local Costmaps__
 ![](./img/mov6.gif)
