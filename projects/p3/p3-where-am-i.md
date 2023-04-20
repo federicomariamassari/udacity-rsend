@@ -258,13 +258,18 @@ __Figure 3: RQt Graph__
 
 ### AMCL
 
-__Figure 4: Quick Robot Localization__
+Using either the "2D Nav Goal" command [Figure 4] or the keyboard teleop package [Figure 5], one can see how quickly the robot is able to estimate its position in the environment. 
+
+__Figure 4: Quick Robot Localization (Move Base)__
 ![](./img/mov2.gif)
+
+__Figure 5: Quick Robot Localization (Keyboard Teleop)__
+![](./img/mov3.gif)
 
 ### 2D Navigation
 
-__Figure 5: Global and Local Costmaps__
-![](./img/mov3.gif)
+__Figure 6: Global and Local Costmaps__
+![](./img/mov4.gif)
 
 ## Resources
 
