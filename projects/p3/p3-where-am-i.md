@@ -279,7 +279,7 @@ Global costmap inflates the obstacles on the static map provided by the navigati
 
 Global planning is the blue line generated at inception; local planning is the green segment whose length is dictated by `sim_time` and the robot's velocities.
 
-__Figure 6: Global and Local Costmaps__
+__Figure 6: Global and Local (Pixelated) Costmaps__
 ![](./img/mov4.gif)
 
 ## Resources
