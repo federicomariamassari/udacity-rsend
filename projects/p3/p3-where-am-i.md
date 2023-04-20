@@ -19,7 +19,7 @@ __Figure 1: The Rearranged Environment__
 
 ## Project Structure
 
-Figure 2 highlights the directory structure tree for the project. Particularly relevant are file `amcl.launch` and folder `config` holding, respectively, calibrated parameters for AMCL and 2D planning. Also, `maps` contains the environment map required for localization and generated via `pgm_map_creator`. This package __does not__ work with ROS Noetic, so the map was generated online in the provided Udacity workspace, and later downloaded for use in my virtual machine.
+Figure 2 highlights the directory structure tree for the project. Particularly relevant are file `amcl.launch` and folder `config` holding, respectively, calibrated parameters for AMCL and 2D planning. Also, `maps` contains the environment map required for localization and generated via `pgm_map_creator`. This package __does not__ work with ROS Noetic, so the map was generated online in the provided Udacity workspace, and later downloaded for use in my virtual machine. The map is a bird-eye view of the room, so it did not display doors as free cells, which had to be manually accounted for.
 
 __Figure 2: Directory Structure Tree__
 
@@ -64,7 +64,7 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-This command will open the Gazebo world and the RViz application with custom configurations, which include: robot model, laser scan (lidar), pose array (particle filter cloud), environment map, global and local costmaps, and global and local planners.
+This command will open the Gazebo world and the RViz application with custom configurations, which include: robot model, laser scan (lidar), pose array (particle filter cloud), environment map, global and local costmaps (disabled by default), and global and local planners.
 
 ### Second Terminal
 
@@ -75,7 +75,7 @@ roslaunch my_robot amcl.launch
 
 This will display the environment map in RViz and initialize AMCL and 2D navigation with the coded parameters.
 
-### Optional Terminals
+### Third Terminal (Optional)
 
 ```bash
 source devel/setup.bash
@@ -83,6 +83,8 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
 If you have `teleop_twist_keyboard` installed [a], this command allows to teleoperate the robot using a keyboard, as opposed to pressing the "2D Navigation" button in RViz.
+
+### Fourth Terminal (Optional)
 
 ```bash
 source devel/setup.bash
@@ -237,7 +239,13 @@ The ROS [navigation stack](http://wiki.ros.org/navigation?distro=noetic) has lot
     </tbody>
 </table>
 
-__Figure 2: Global and Local Costmaps__
+## Code Logic
+
+### RQt Graph
+
+
+
+__Figure 3: Global and Local Costmaps__
 ![](./img/mov6.gif)
 
 ## Resources
