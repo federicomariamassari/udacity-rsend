@@ -275,7 +275,7 @@ __Figure 5: Quick Robot Localization (Keyboard Teleop)__
 
 Generating a path and moving towards the goal is achieved by pressing the "2D Nav Goal" button in RViz and clicking on any location in the map: if a feasible path exists, the robot will make a start. Parameter tuning is particularly relevant for local planning, especially when passing through narrow doorways and next to obstacles. For this reason, it is useful to display costmaps that could help with calibration. In RViz, deselect "Map" and toggle both "Global Costmap" and "Local Costmap".
 
-Global costmap inflates the obstacles on the static map provided by the navigation stack, while local costmap inflates the obstacles detected by the robot's sensors in real time [2]. `robot_radius` (equivalently, `footprint`), `inflation_radius` and `cost_scaling_factor` were all carefully fine-tuned to ensure a smoother navigation [Figure 6].
+Global costmap inflates the obstacles on the static map provided by the navigation stack, while local costmap inflates the obstacles detected by the robot's sensors in real time [2]. `robot_radius` (equivalently, `footprint`), `inflation_radius` and `cost_scaling_factor` were all carefully tuned to ensure a smoother navigation [Figure 6].
 
 Global planning is the blue line generated at inception; local planning is the green segment whose length is dictated by `sim_time` and the robot's velocities.
 
