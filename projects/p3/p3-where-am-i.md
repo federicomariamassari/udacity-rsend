@@ -4,7 +4,7 @@
 
 ## Overview
 
-This third project is about localization and 2D navigation.
+This third project combines localization and 2D navigation.
 
 __Localization__ is a robot's ability to establish its own position and orientation using a known map of an environment, laser scan, and  odometry data [1]. In this assignment, the robot is interfaced with the Adaptive Monte Carlo Localization (AMCL) algorithm, which uses a dynamically-adjusting particle filter representing a distribution of likely states for the robot. AMCL is widely used in robotics due to its computational efficiency: the robot reduces the number of total particles as it navigates the environment, senses its objects via LiDAR, and becomes more confident about its position; otherwise it generates, and gives weight to, more particles in random places.
 
