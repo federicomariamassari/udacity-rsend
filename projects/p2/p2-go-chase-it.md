@@ -159,3 +159,5 @@ Robot configurations are included in folder `urdf`. The robot has a _skid-steer_
 ## Resources
 
 1. Install via `sudo apt install tree` (Ubuntu), then step into the desired directory and run `tree`.
+
+[Home](../../README.md) | Next: [Where Am I?](../p3/p3-where-am-i.md)

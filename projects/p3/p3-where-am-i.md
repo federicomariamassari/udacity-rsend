@@ -275,11 +275,11 @@ __Figure 6: Global and Local Costmaps__
 
 [1] [Monte Carlo Localization, Mathworks](https://www.mathworks.com/help/nav/ug/monte-carlo-localization-algorithm.html)
 
-[1] Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision)
+[2] Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision)
 
-[2] McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
+[3] McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018)
 
-[3] [AMCL Official Documentation (Noetic)](http://wiki.ros.org/amcl?distro=noetic)
+[4] [AMCL Official Documentation (Noetic)](http://wiki.ros.org/amcl?distro=noetic)
 
 ## Notes
 
@@ -291,3 +291,5 @@ git clone https://github.com/ros-teleop/teleop_twist_keyboard
 cd ..
 catkin_make
 ```
+
+[Home](../../README.md) | Previous: [Go Chase It!](../p2/p2-go-chase-it.md)
