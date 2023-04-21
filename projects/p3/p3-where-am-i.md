@@ -234,7 +234,7 @@ The ROS [navigation stack](http://wiki.ros.org/navigation?distro=noetic) has lot
         <tr>
             <td><code>sim_time</code></td>
             <td><code>2.0</code></td>
-            <td>To have enough time for planning an optimal trajectory through narrow paths (in seconds) [1].</td>
+            <td>To have enough time (in seconds) for planning an optimal trajectory through narrow paths [1].</td>
         </tr>
         <tr>
             <td><code>meter_scoring</code></td>
