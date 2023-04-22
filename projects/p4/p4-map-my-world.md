@@ -8,8 +8,7 @@
 
 To ensure RTAB-Map and related visualization package work on Ubuntu 20.04-5 (UTM QEMU 7.0) and ROS Noetic, below changes are required:
 
-* Update UTM Virtual Machine specs to 32GB RAM and 8 cores;
-
+* Update UTM Virtual Machine specs to 32GB RAM and 8 cores (to minimize crashes during map collection phase);
 * Account for new sub-package setup of RTAB-Map ROS in Udacity's default `mapping.launch` file [1]:
 
 ```bash
@@ -22,7 +21,7 @@ To ensure RTAB-Map and related visualization package work on Ubuntu 20.04-5 (UTM
 </group>
 ```
 
-* Override Mesa linked versions of OpenGL (default: 2.1) and associated shader libraries by appending below lines to `~/.bashrc`:
+* Override Mesa's linked versions of OpenGL (default: 2.1) and associated shader libraries by appending below lines to `~/.bashrc`:
 
 ```bash
 export MESA_GL_VERSION_OVERRIDE=3.3
