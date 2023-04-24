@@ -1,4 +1,4 @@
-[Home](../../README.md) | Previous: [Go Chase It!](../p2/p2-go-chase-it.md)
+[Home](../../README.md) | Previous: [Go Chase It!](../p2/p2-go-chase-it.md) | Next: [Map My World](../p4/p4-map-my-world.md)
 
 # Project 3: Where Am I?
 
@@ -303,4 +303,4 @@ cd ..
 catkin_make
 ```
 
-[Home](../../README.md) | Previous: [Go Chase It!](../p2/p2-go-chase-it.md)
+[Home](../../README.md) | Previous: [Go Chase It!](../p2/p2-go-chase-it.md) | Next: [Map My World](../p4/p4-map-my-world.md)
