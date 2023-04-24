@@ -39,7 +39,7 @@ Open `CMakeLists.txt` inside `opencv` folder and turn below option ON:
 OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable non-free algorithms" ON)
 ```
 
-Build OpenCV from source linking extra modules [4]:
+Build OpenCV from source linking extra modules [4]. By default, libraries will be installed in the `/usr/local` folder:
 
 ```bash
 cd /home/$whoami/packages/opencv
@@ -53,15 +53,23 @@ sudo make install
 
 ### Rebuild RTAB-Map from Source
 
-With OpenCV built from source and installed, download RTAB-Map and perform a catkin clean installation [5]:
+With OpenCV built from source and installed, download RTAB-Map and perform a clean build and installation [5]:
 
 ```bash
 cd /home/$whoami/packages
-git clone https://github.com/introlab/rtabmap_ros.git
+git clone https://github.com/introlab/rtabmap.git
 cd rtabmap && mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=/home/$whoami/workspace/udacity-rsend/projects/p4/catkin_ws/devel ..
 make
 sudo make install
+```
+
+Finally, clone RTAB-Map ROS inside `catkin_ws` and build the project [5]:
+
+```bash
+cd /home/$whoami/workspace/udacity-rsend/projects/p4/catkin_ws/
+git clone https://github.com/introlab/rtabmap_ros.git src/rtabmap_ros
+catkin_make -j4
 ```
 
 ### Account for Meta-Package Setup
