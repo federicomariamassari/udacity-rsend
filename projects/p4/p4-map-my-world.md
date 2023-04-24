@@ -23,22 +23,46 @@ export MESA_GLSL_VERSION_OVERRIDE=150
 
 ### Rebuild OpenCV from Source with Patented Modules
 
-To enable the SURF (Speeded-Up Robust Features) algorithm, rebuild OpenCV from source including patented module `xfeature2d` (now available in `opencv-contrib`) [2] [3].
+To enable the SURF (Speeded-Up Robust Features) algorithm, rebuild OpenCV from source including patented module `xfeature2d` (now available in `opencv-contrib`) [2] [3]:
 
 ```bash
 # Create custom directory to store all downloaded packages
-cd /home/$whoami/ && mkdir packages
+cd /home/$whoami/ && mkdir packages && cd packages
 
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 ```
 
-Open `CMakeLists.txt` inside `opencv` folder and turn on below option:
+Open `CMakeLists.txt` inside `opencv` folder and turn below option ON:
 
 ```cmake
 OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable non-free algorithms" ON)
 ```
 
+Build OpenCV from source linking extra modules [4]:
+
+```bash
+cd /home/$whoami/packages/opencv
+mkdir build && cd build
+cmake -DOPENCV_EXTRA_MODULES_PATH=/home/$whoami/packages/opencv-contrib/modules /home/$whoami/packages/opencv
+
+# -jN tells make(1) to run N processes in parallel; remove flag if VM tends to crash, or use -j1
+make -j5
+sudo make install
+```
+
+### Rebuild RTAB-Map from Source
+
+With OpenCV built from source and installed, download RTAB-Map and perform a catkin clean installation [5]:
+
+```bash
+cd /home/$whoami/packages
+git clone https://github.com/introlab/rtabmap_ros.git
+cd rtabmap && mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=/home/$whoami/workspace/udacity-rsend/projects/p4/catkin_ws/devel ..
+make
+sudo make install
+```
 
 ### Account for Meta-Package Setup
 
@@ -54,13 +78,6 @@ OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable non-free algorithms" ON)
 </group>
 ```
 
-* To enable SURF (Speeded-Up Robust Features), rebuild OpenCV from source linking to patented module `xfeatures2d` which is available in  `opencv-contrib` [2] [3]. We suppose packages 
-
-```bash
-cd /home/$whoami/workspace
-```
-
-
 ## Resources
 
 1. [Migration Guide New Interface Noetic/ROS2](http://wiki.ros.org/rtabmap_ros#rtabmap_ros.2Fnoetic_and_newer.Migration_Guide_New_Interface_Noetic.2FROS2)
@@ -68,3 +85,7 @@ cd /home/$whoami/workspace
 2. [RTAB-Map ROS Noetic Installation Guide](https://github.com/introlab/rtabmap_ros)
 
 3. [RTAB-Map ROS Noetic Installation Wiki (Ubuntu)](https://github.com/introlab/rtabmap/wiki/Installation#ubuntu)
+
+4. [OpenCV Extra Modules Installation](https://github.com/opencv/opencv_contrib)
+
+5. [RTAB-Map ROS and Non-Free OpenCV](https://answers.ros.org/question/232015/problem-with-rtabmap_ros-and-nonfree-opencv/)
