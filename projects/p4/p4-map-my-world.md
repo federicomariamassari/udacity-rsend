@@ -39,7 +39,7 @@ Open `CMakeLists.txt` inside `opencv` folder and turn below option ON:
 OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable non-free algorithms" ON)
 ```
 
-Build OpenCV from source linking extra modules [4]. By default, libraries will be installed in the `/usr/local` folder:
+Build OpenCV from source linking extra modules [4]. By default, libraries will be installed in `/usr/local`:
 
 ```bash
 cd /home/$whoami/packages/opencv
@@ -64,26 +64,30 @@ make
 sudo make install
 ```
 
-Finally, clone RTAB-Map ROS inside `catkin_ws` and build the project [5]:
+Finally, clone RTAB-Map ROS inside `catkin_ws/src` and build the project [5]:
 
 ```bash
-cd /home/$whoami/workspace/udacity-rsend/projects/p4/catkin_ws/
-git clone https://github.com/introlab/rtabmap_ros.git src/rtabmap_ros
+cd /home/$whoami/workspace/udacity-rsend/projects/p4/catkin_ws/src
+git clone https://github.com/introlab/rtabmap_ros.git
 catkin_make -j4
 ```
 
 ### Account for Meta-Package Setup
 
-* Account for new sub-package setup of RTAB-Map ROS in Udacity's default `mapping.launch` file [1]:
+Account for new sub-package setup of RTAB-Map ROS in Udacity's default `mapping.launch` file [1]:
+
+#### Old
 
 ```bash
-<group ns="rtabmap">
-    <node pkg="rtabmap_slam" type="rtabmap" name="rtabmap" output="screen" args="--delete_db_on_start">
-    </node>
-    ...
-    <node pkg="rtabmap_viz" type="rtabmap_viz" name="rtabmap_viz" args="-d $(find rtabmap_viz)/launch/config/rgbd_gui.ini" output="screen">
-    </node>
-</group>
+<node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="--delete_db_on_start">
+<node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
+```
+
+#### New
+
+```bash
+<node pkg="rtabmap_slam" type="rtabmap" name="rtabmap" output="screen" args="--delete_db_on_start">
+<node pkg="rtabmap_viz" type="rtabmap_viz" name="rtabmap_viz" args="-d $(find rtabmap_viz)/launch/config/rgbd_gui.ini" output="screen">
 ```
 
 ## Resources
