@@ -1,6 +1,6 @@
 # Project 4: Preliminary Configurations
 
-To ensure RTAB-Map and related visualization package work on Ubuntu 20.04-5 (UTM QEMU 7.0) and ROS Noetic, the following changes are required
+To ensure RTAB-Map and related visualization package work on Ubuntu 20.04-5 (UTM QEMU 7.0) and ROS Noetic, the following changes are required, in order.
 
 ## Checklist
 
@@ -8,41 +8,26 @@ To ensure RTAB-Map and related visualization package work on Ubuntu 20.04-5 (UTM
 2. Update linked OpenGL versions
 3. Rebuild OpenCV from source with patented modules
 4. Rebuild RTAB-Map and RTAB-Map ROS from source
-5. Account for RTAB-Map meta-project setup
+5. Account for RTAB-Map ROS meta-project setup
 
-***
+## Configurations
 
+### 1. Update Virtual Machine Specifications (Recommended)
 
+Update UTM Virtual Machine specs to 32GB RAM and 8 CPU cores (to minimize crashes during map collection phase).
 
+### 2. Update Linked OpenGL Versions
 
-## Update VM Specifications (Recommended)
-
-Update UTM Virtual Machine specs to 32GB RAM and 8 CPU cores (to minimize crashes during map collection phase);
-
-## Update linked version of OpenGL
-
-
-
-## Preliminary Configurations
-
-To ensure RTAB-Map and related visualization package work on Ubuntu 20.04-5 (UTM QEMU 7.0) and ROS Noetic, below changes are required:
-
-### Update VM Specs (Recommended)
-
-Update UTM Virtual Machine specs to 32GB RAM and 8 CPU cores (to minimize crashes during map collection phase);
-
-### Update linked version of OpenGL
-
-Append below lines to `~/.bashrc` to override Mesa's linked versions of OpenGL (default: 2.1) and associated shader libraries (as required by RTAB-Map Viz):
+To override Mesa's linked versions of OpenGL (default: 2.1) and associated shader libraries, add below lines to `~/.bashrc`:
 
 ```bash
 export MESA_GL_VERSION_OVERRIDE=3.2
 export MESA_GLSL_VERSION_OVERRIDE=150
 ```
 
-### Rebuild OpenCV from Source with Patented Modules
+### 3. Rebuild OpenCV from Source with Patented Modules
 
-To enable the SURF (Speeded-Up Robust Features) algorithm, rebuild OpenCV from source including patented module `xfeature2d` (now available in `opencv-contrib`) [2] [3]:
+To enable SURF (Speeded-Up Robust Features), rebuild OpenCV from source including `xfeature2d` and other patented modules, now available exclusively in `opencv-contrib` [1] [2]:
 
 ```bash
 # Create custom directory to store all downloaded packages
@@ -58,7 +43,7 @@ Open `CMakeLists.txt` inside `opencv` folder and turn below option ON:
 OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable non-free algorithms" ON)
 ```
 
-Build OpenCV from source linking extra modules [4]. By default, libraries will be installed in `/usr/local`:
+Build OpenCV linking extra modules [3]. By default, libraries will be installed in `/usr/local`:
 
 ```bash
 cd /home/$whoami/packages/opencv
@@ -70,9 +55,9 @@ make -j5
 sudo make install
 ```
 
-### Rebuild RTAB-Map from Source
+### 4. Rebuild RTAB-Map and RTAB-Map ROS from Source
 
-With OpenCV built from source and installed, download RTAB-Map and perform a clean build and installation [5]:
+Download RTAB-Map and perform a clean build and installation [4]:
 
 ```bash
 cd /home/$whoami/packages
@@ -83,7 +68,7 @@ make
 sudo make install
 ```
 
-Finally, clone RTAB-Map ROS inside `catkin_ws/src` and build the project [5]:
+Clone RTAB-Map ROS inside `catkin_ws/src` and build the project [4]:
 
 ```bash
 cd /home/$whoami/workspace/udacity-rsend/projects/p4/catkin_ws/src
@@ -91,32 +76,31 @@ git clone https://github.com/introlab/rtabmap_ros.git
 catkin_make -j4
 ```
 
-### Account for Meta-Package Setup
+### 5. Account for RTAB-Map ROS Meta-Project Setup
 
-Account for new sub-package setup of RTAB-Map ROS in Udacity's default `mapping.launch` file [1]:
+In Noetic, RTAB-Map ROS nodes have been migrated into sub-packages matching their functions [5]:
 
-#### Old
+|**Old Name**| |**New Name**| |
+|------------|----|------------|----|
+|`rtabmap_ros`|`rtabmap`|`rtabmap_slam`|`rtabmap`|
+|`rtabmap_ros`|`rtabmapviz`|`rtabmap_viz`|`rtabmap_viz`|
 
-```bash
-<node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="--delete_db_on_start">
-<node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
-```
-
-#### New
+To account for the new meta-project setup, modify Udacity's default `mapping.launch` file:
 
 ```bash
-<node pkg="rtabmap_slam" type="rtabmap" name="rtabmap" output="screen" args="--delete_db_on_start">
-<node pkg="rtabmap_viz" type="rtabmap_viz" name="rtabmap_viz" args="-d $(find rtabmap_viz)/launch/config/rgbd_gui.ini" output="screen">
+<group ns="rtabmap">
+    <node pkg="rtabmap_slam" type="rtabmap" name="rtabmap" output="screen" args="--delete_db_on_start">
+    </node>
+    ...
+    <node pkg="rtabmap_viz" type="rtabmap_viz" name="rtabmap_viz" args="-d $(find rtabmap_viz)/launch/config/rgbd_gui.ini" output="screen">
+    </node>
+</group>
 ```
 
 ## Resources
 
-1. [Migration Guide New Interface Noetic/ROS2](http://wiki.ros.org/rtabmap_ros#rtabmap_ros.2Fnoetic_and_newer.Migration_Guide_New_Interface_Noetic.2FROS2)
-
-2. [RTAB-Map ROS Noetic Installation Guide](https://github.com/introlab/rtabmap_ros)
-
-3. [RTAB-Map ROS Noetic Installation Wiki (Ubuntu)](https://github.com/introlab/rtabmap/wiki/Installation#ubuntu)
-
-4. [OpenCV Extra Modules Installation](https://github.com/opencv/opencv_contrib)
-
-5. [RTAB-Map ROS and Non-Free OpenCV](https://answers.ros.org/question/232015/problem-with-rtabmap_ros-and-nonfree-opencv/)
+1. https://github.com/introlab/rtabmap_ros
+2. https://github.com/introlab/rtabmap/wiki/Installation#ubuntu
+3. https://github.com/opencv/opencv_contrib
+4. https://answers.ros.org/question/232015/problem-with-rtabmap_ros-and-nonfree-opencv/
+5. http://wiki.ros.org/rtabmap_ros#rtabmap_ros.2Fnoetic_and_newer.Migration_Guide_New_Interface_Noetic.2FROS2
