@@ -9,7 +9,7 @@
 
   <!-- Mapping Node -->
   <group ns="rtabmap">
-    <!-- Revert to pkg="rtabmap_ros" for ROS versions earlier than 'noetic' -->
+    
     <node name="rtabmap" pkg="rtabmap_slam" type="rtabmap" output="screen" args="--delete_db_on_start">
 
       <!-- Basic RTAB-Map Parameters -->
@@ -19,7 +19,8 @@
       <param name="subscribe_depth" type="bool" value="true"/>
       <param name="subscribe_scan" type="bool" value="true"/>
 
-      <!-- Custom RTAB-Map Parameters -->
+      <!-- Additional RTAB-Map Parameters -->
+      <!-- https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h -->
 
       <!-- Construct occupancy grid map from laser scans (suppress warning) -->
       <param name="Grid/Sensor" type="string" value="0"/>
@@ -29,6 +30,9 @@
 
       <!-- To enable Mem/UseOdomFeatures. 0=SURF -->
       <param name="Vis/FeatureType" type="int" value="0"/>
+      
+      <!-- To account for non-holonomic, skid-steer robot setup: y = x*tan(yaw) --> 
+      <param name="Odom/Holonomic" type="bool" value="false"/>
 
       <!-- RTAB-Map Inputs -->
       <remap from="scan" to="/scan"/>
@@ -55,8 +59,7 @@
       <!-- Used to extract more or less SURF features -->
       <param name="SURF/HessianThreshold" type="string" value="100"/>
 
-      <!-- Loop Closure Constraint -->
-      <!-- 0=Visual 1=ICP (1 requires scan) -->
+      <!-- Loop Closure Constraint: 0=Visual 1=ICP (1 requires scan) -->
       <param name="Reg/Strategy" type="string" value="0"/>
 
       <!-- Minimum visual inliers to accept loop closure -->
