@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <!-- Make sure a clone of "teleop_twist_keyboard" exists inside catkin/src folder -->
+  
+  <!-- Launch with custom velocities to speed-up map collection (https://github.com/ros-teleop/teleop_twist_keyboard) -->
+
+  <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" args="_speed:=1.2 _turn:=0.8"/>
+
+</launch>
+
