@@ -14,7 +14,7 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>-0.267687 0.595494 -0.060343 0 -0 1.5714</pose>
+      <pose>-0.211757 0.222097 -0.060343 0 -0 1.5714</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -24,7 +24,7 @@
         <geometry>
           <mesh>
             <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
-            <scale>1 1 1.15</scale>
+            <scale>0.6 1 1.15</scale>
           </mesh>
         </geometry>
         <material>
@@ -51,7 +51,7 @@
         <geometry>
           <mesh>
             <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
-            <scale>1 1 1.15</scale>
+            <scale>0.6 1 1.15</scale>
           </mesh>
         </geometry>
         <surface>
@@ -114,7 +114,7 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>-0.276287 1.31522 -0.054274 0 -0 0</pose>
+      <pose>-0.223901 1.09183 -0.054274 0 -0 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -124,7 +124,7 @@
         <geometry>
           <mesh>
             <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
-            <scale>1 1 1.15</scale>
+            <scale>0.75 1 1.15</scale>
           </mesh>
         </geometry>
         <material>
@@ -151,7 +151,7 @@
         <geometry>
           <mesh>
             <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
-            <scale>1 1 1.15</scale>
+            <scale>0.75 1 1.15</scale>
           </mesh>
         </geometry>
         <surface>
@@ -214,7 +214,7 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>-0.273542 0.203562 1.05159 0 -0 0</pose>
+      <pose>-0.239313 0.203562 1.05159 0 -0 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -223,7 +223,7 @@
         <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.12 1.35 0.2</size>
+            <size>0.2 1.35 0.2</size>
           </box>
         </geometry>
         <material>
@@ -249,7 +249,7 @@
         <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.12 1.35 0.2</size>
+            <size>0.2 1.35 0.2</size>
           </box>
         </geometry>
         <surface>
