@@ -12,7 +12,7 @@
 
 ## Running the Project
 
-First, append below two lines to `~/.bashrc`, to avoid continuous sourcing of `setup.bash` script:
+To avoid continuous sourcing of `setup.bash` script, append below two lines to `~/.bashrc`:
 
 ```bash
 source /opt/ros/$ROS_DISTRO/setup.bash
