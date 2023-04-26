@@ -62,7 +62,7 @@ With `catkin_ws` as current directory, run:
 catkin_make
 ```
 
-Among the others, this command will create folders `build` and `devel`, the latter containing the `setup.bash` script which you may need to source in each new terminal window in order to run ROS-related statements. To avoid continuous sourcing, add below two lines to the bottom of `~/.bashrc` file (`gedit ~/bashrc`):
+Among the others, this command will create folders `build` and `devel`, the latter containing the `setup.bash` script which you may need to source in each new terminal window in order to run ROS-related statements. To avoid continuous sourcing, add below two lines at the bottom of `~/.bashrc` file (`gedit ~/bashrc`):
 
 ```bash
 source /opt/ros/noetic/setup.bash
