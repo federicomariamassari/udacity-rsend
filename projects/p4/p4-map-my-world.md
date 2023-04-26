@@ -8,8 +8,6 @@
 
 [Link](p4-preliminary-config.md)
 
-[Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
-
 ## Running the Project
 
 To avoid continuous sourcing of `setup.bash` script, append below two lines to `~/.bashrc`:
@@ -18,3 +16,5 @@ To avoid continuous sourcing of `setup.bash` script, append below two lines to `
 source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/workspace/udacity-rsend/projects/p4/catkin_ws/devel/setup.bash
 ```
+
+[Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)

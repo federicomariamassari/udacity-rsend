@@ -27,7 +27,7 @@ export MESA_GLSL_VERSION_OVERRIDE=150
 
 ### 3. Rebuild OpenCV from Source with Patented Modules
 
-To enable SURF (Speeded-Up Robust Features), rebuild OpenCV from source including `xfeature2d` and other patented modules, now available exclusively in `opencv-contrib` [1] [2]:
+To enable SURF (Speeded-Up Robust Features), rebuild OpenCV from source including `xfeature2d` and other non-free modules, now available exclusively in `opencv-contrib` [1] [2]:
 
 ```bash
 # Create custom directory to store all downloaded packages
