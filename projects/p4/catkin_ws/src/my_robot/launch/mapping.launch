@@ -110,7 +110,7 @@
     </node>
 
     <!-- Visualization via rtabmapviz; not recommended during simulation due to computing overhead -->
-    <!--
+
     <node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
     <param name="subscribe_depth" type="bool" value="true"/>
     <param name="subscribe_scan" type="bool" value="true"/>
@@ -121,9 +121,9 @@
     <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
     <remap from="scan" to="/scan"/>
 
-    <remap from="odom" to="/odom"/>
+    <remap from="odom" to="/odom"/>  <!-- To suppress warning -->
 
-    </node> -->
+    </node>
 
   </group>
 
