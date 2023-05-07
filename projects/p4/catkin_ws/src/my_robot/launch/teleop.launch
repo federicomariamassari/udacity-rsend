@@ -6,7 +6,7 @@
   
   <!-- Launch with custom velocities to speed-up map collection (https://github.com/ros-teleop/teleop_twist_keyboard) -->
 
-  <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" args="_speed:=1.2 _turn:=0.8"/>
+  <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" args="_speed:=0.5 _turn:=0.35"/>
 
 </launch>
 

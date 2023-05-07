@@ -9,7 +9,7 @@
 
   <!-- Mapping Node -->
   <group ns="rtabmap">
-    
+
     <node name="rtabmap" pkg="rtabmap_slam" type="rtabmap" output="screen" args="--delete_db_on_start">
 
       <!-- Basic RTAB-Map Parameters -->
@@ -18,21 +18,6 @@
       <param name="odom_frame_id" type="string" value="odom"/>
       <param name="subscribe_depth" type="bool" value="true"/>
       <param name="subscribe_scan" type="bool" value="true"/>
-
-      <!-- Additional RTAB-Map Parameters -->
-      <!-- https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h -->
-
-      <!-- Construct occupancy grid map from laser scans (suppress warning) -->
-      <param name="Grid/Sensor" type="string" value="0"/>
-
-      <!-- Backward compatible with Udacity workspace -->
-      <param name="Db/TargetVersion" type="string" value="0.19"/>
-
-      <!-- To enable Mem/UseOdomFeatures. 0=SURF -->
-      <param name="Vis/FeatureType" type="int" value="0"/>
-      
-      <!-- To account for non-holonomic, skid-steer robot setup: y = x*tan(yaw) --> 
-      <param name="Odom/Holonomic" type="bool" value="false"/>
 
       <!-- RTAB-Map Inputs -->
       <remap from="scan" to="/scan"/>
@@ -43,36 +28,90 @@
       <!-- RTAB-Map Output -->
       <remap from="grid_map" to="/map"/>
 
-      <!-- Rate (Hz) at which new nodes are added to map -->
+      <!-- Parameters with asterisk (*) are custom additions to the default ones from Udacity.
+        
+        Resources: 
+        
+        [1] https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
+        [2] https://github.com/introlab/rtabmap/issues/350 (To prevent 2D map distortion at loop closure)
+
+      -->
+
+      <!-- RTAB-Map Parameters -->
+
+      <!-- Rate (Hz) at which new nodes are added to map (1 Hz = 1 second) -->
       <param name="Rtabmap/DetectionRate" type="string" value="1"/>
 
-      <!-- 2D Slam -->
-      <param name="Reg/Force3DoF" type="string" value="true"/>
+      <!-- Memory -->
+
+      <!-- Set to false to avoid saving data when robot is not moving -->
+      <param name="Mem/NotLinkedNodesKept" type="string" value="false"/>
+
+      <!-- KeypointMemory (keypoint-based) -->
+
+      <!-- Maximum visual words per milage (bag-of-words) -->
+      <param name="Kp/MaxFeatures" type="string" value="400"/>
 
       <!-- Loop Closure Detection -->
       <!-- 0=SURF 1=SIFT 2=ORB 3=FAST/FREAK 4=FAST/BRIEF 5=GFTT/FREAK 6=GFTT/BRIEF 7=BRISK 8=GFTT/ORB 9=KAZE-->
       <param name="Kp/DetectorStrategy" type="string" value="0"/>
 
-      <!-- Maximum visual words per milage (bag-of-words) -->
-      <param name="Kp/MaxFeatures" type="string" value="400"/>
+      <!-- Keypoint Descriptors/Detectors -->
 
       <!-- Used to extract more or less SURF features -->
       <param name="SURF/HessianThreshold" type="string" value="100"/>
 
+      <!-- RGBD-SLAM -->
+      
+      <!-- Slightly increase linear displacement for map update (to 10 cm) to reduce computational burden (*) -->
+      <param name="RGBD/LinearUpdate" type="string" value="0.10"/>
+
+      <!-- Odometry -->
+
+      <!-- To account for non-holonomic, skid-steer robot setup: y = x*tan(yaw) (*) --> 
+      <param name="Odom/Holonomic" type="string" value="false"/>
+      
+      <!-- Use particle filtering strategy with 120 particles, which worked well for project "Where Am I?" (*) -->
+      <param name="Odom/FilteringStrategy" type="string" value="2"/>
+      <param name="Odom/ParticleSize" type="string" value="120"/>
+
+      <!-- Common Registration Parameters -->
+
       <!-- Loop Closure Constraint: 0=Visual 1=ICP (1 requires scan) -->
       <param name="Reg/Strategy" type="string" value="0"/>
 
-      <!-- Minimum visual inliers to accept loop closure -->
-      <param name="Vis/MinInliers" type="string" value="15"/>
+      <!-- 2D Slam -->
+      <param name="Reg/Force3DoF" type="string" value="true"/>
 
-      <!-- Set to false to avoid saving data when robot is not moving -->
-      <param name="Mem/NotLinkedNodesKept" type="string" value="false"/>
+      <!-- Visual Registration Parameters -->
+
+      <!-- Minimum visual inliers to accept loop closure; increasing for much more robust matches [2] -->
+      <param name="Vis/MinInliers" type="string" value="35"/>
+
+      <!-- To enable Mem/UseOdomFeatures. 0=SURF (*) -->
+      <param name="Vis/FeatureType" type="string" value="0"/>      
+
+      <!-- Occupancy Grid -->
+
+      <!-- Construct occupancy grid map from laser scans (suppress warning) (*) -->
+      <param name="Grid/Sensor" type="string" value="0"/>
+      
+      <!-- Used to filter points over the footprint of the robot (*) -->
+      <param name="Grid/FootprintLength" type="string" value="0.5"/>
+      <param name="Grid/FootprintWidth" type="string" value="0.3"/>
+      <param name="Grid/FootprintHeight" type="string" value="0.08"/>
+
+      <!-- Marker -->
+      
+      <!-- Linear and angular variance on marker detections (*) -->
+      <param name="Marker/VarianceLinear" type="string" value="0.001"/>
+      <param name="Marker/VarianceAngular" type="string" value="0.001"/>
 
     </node>
 
-    <!-- Not recommended during simulation phase due to computing overhead -->
-    <!-- Visualization with rtabmap_viz -->
-    <node pkg="rtabmap_viz" type="rtabmap_viz" name="rtabmap_viz" args="-d $(find rtabmap_viz)/launch/config/rgbd_gui.ini" output="screen">
+    <!-- Visualization via rtabmapviz; not recommended during simulation due to computing overhead -->
+    <!--
+    <node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
     <param name="subscribe_depth" type="bool" value="true"/>
     <param name="subscribe_scan" type="bool" value="true"/>
     <param name="frame_id" type="string" value="robot_footprint"/>
@@ -82,9 +121,9 @@
     <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
     <remap from="scan" to="/scan"/>
 
-    <remap from="odom" to="/odom"/>  <!-- To suppress warning -->
+    <remap from="odom" to="/odom"/>
 
-    </node>
+    </node> -->
 
   </group>
 

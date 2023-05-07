@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.7'>
-  <model name='my_curtains'>
+  <model name='my_curtains_v2'>
     <link name='link_0'>
       <inertial>
         <mass>1</mass>
@@ -14,7 +14,7 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>-0.211757 0.222097 -0.060343 0 -0 1.5714</pose>
+      <pose>-0.196447 0.34663 -0.060343 0 -0 1.5714</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -101,7 +101,7 @@
         </surface>
       </collision>
     </link>
-    <link name='link_1'>
+    <link name='link_0_clone'>
       <inertial>
         <mass>1</mass>
         <inertia>
@@ -114,17 +114,17 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>-0.223901 1.09183 -0.054274 0 -0 0</pose>
+      <pose>-0.192892 0.930317 -0.060343 0 -0 1.5714</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <enable_wind>0</enable_wind>
       <visual name='visual'>
-        <pose>0 0 1.28 0 -0 1.5707</pose>
+        <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <mesh>
             <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
-            <scale>0.75 1 1.15</scale>
+            <scale>0.6 1 1.15</scale>
           </mesh>
         </geometry>
         <material>
@@ -147,11 +147,11 @@
       <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
-        <pose>0 0 1.28 0 -0 1.5707</pose>
+        <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <mesh>
             <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
-            <scale>0.75 1 1.15</scale>
+            <scale>0.6 1 1.15</scale>
           </mesh>
         </geometry>
         <surface>
@@ -223,7 +223,7 @@
         <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.2 1.35 0.2</size>
+            <size>0.2 1.15 0.2</size>
           </box>
         </geometry>
         <material>
@@ -249,7 +249,7 @@
         <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.2 1.35 0.2</size>
+            <size>0.2 1.15 0.2</size>
           </box>
         </geometry>
         <surface>
