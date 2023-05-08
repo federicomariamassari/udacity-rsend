@@ -120,6 +120,10 @@ Components for AMCL (arrow particle cloud, LiDAR scan and superimposed map) and 
 
 ## [Project 4: Map My World](projects/p4/p4-map-my-world.md)
 
+### Overview
+
+__
+
 __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
 
 __[Link to code](/projects/p4/catkin_ws/src)__
