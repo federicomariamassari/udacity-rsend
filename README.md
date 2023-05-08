@@ -123,3 +123,10 @@ Components for AMCL (arrow particle cloud, LiDAR scan and superimposed map) and 
 __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
 
 __[Link to code](/projects/p4/catkin_ws/src)__
+
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./projects/p4/img/img0.png" width="500"/></td>
+    <td align="center"><img align="center" src="./projects/p4/img/img1.png" width="500"/></td>
+  </tr>
+</table>
