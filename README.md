@@ -122,7 +122,9 @@ Components for AMCL (arrow particle cloud, LiDAR scan and superimposed map) and 
 
 ### Overview
 
-_Create 2D occupancy grid and 3D view maps in real time using SLAM with RTAB-Map._
+_Create 2D occupancy grid and 3D view maps in real time using RGB-D SLAM with RTAB-Map._
+
+
 
 __[Link to code](/projects/p4/catkin_ws/src)__
 
