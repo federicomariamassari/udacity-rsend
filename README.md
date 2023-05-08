@@ -128,11 +128,9 @@ __[Link to code](/projects/p4/catkin_ws/src)__
 
 ### How to Build and Run the Project
 
-Building this project is challenging in ROS Noetic, as a simple `catkin_make` won't do the trick. Follow below steps to ensure correct compilation:
+Building this project is challenging in ROS Noetic, as a simple `catkin_make` won't do the trick. Follow below steps to ensure correct compilation and run using the instructions in the dedicated README file.
 
 __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
-
-Run using the instructions in the dedicated README file.
 
 <table>
   <tr>
