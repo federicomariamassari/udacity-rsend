@@ -132,6 +132,8 @@ Building this project is challenging in ROS Noetic, as a simple `catkin_make` wo
 
 __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
 
+Run using the instructions in the dedicated README file.
+
 <table>
   <tr>
     <td align="center"><img align="center" src="./projects/p4/img/img0.png" width="500"/></td>
