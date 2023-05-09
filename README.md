@@ -124,7 +124,7 @@ Components for AMCL (arrow particle cloud, LiDAR scan and superimposed map) and 
 
 _Create 2D occupancy grid and 3D view map in real time using RGB-D SLAM (Kinect-like) with RTAB-Map._
 
-This project is an implementation of simultaneous localization and mapping (SLAM) in ROS. With SLAM, a robot is concerned with the "chicken-and-egg problem" of both mapping out, and localize itself in, an unknown environment at the same time. To perform SLAM, RTAB-Map (Real-Time Appearance-Based Mapping) is used. Sketching the original home from project 3 proved too computationally intensive, so I designed a brand new, smaller room with a lot of identifiable features and colours to facilitate loop closure. Also, to minimize distortion, criteria onloop closure were made much more stringent and several parameters were fine-tuned. The result is an identifiable map of the world.
+This project is an implementation of simultaneous localization and mapping (SLAM) in ROS. With SLAM, a robot is concerned with the "chicken-and-egg problem" of both mapping out, and localize itself in, an unknown environment at the same time. To perform SLAM, RTAB-Map (Real-Time Appearance-Based Mapping) is used. Sketching the original home from project 3 proved too computationally intensive, so I designed a brand new, smaller room with a lot of identifiable features and colours to facilitate loop closure. Also, to minimize distortion, criteria on loop closure were made much more stringent and several parameters were fine-tuned. The result is an identifiable map of the world.
 
 __[Link to code](/projects/p4/catkin_ws/src)__
 
