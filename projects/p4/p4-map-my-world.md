@@ -45,11 +45,29 @@ __Figure 2: Directory Structure Tree__
 
 ## Running the Project
 
-To avoid continuous sourcing of `setup.bash` script, append below two lines to `~/.bashrc`:
+To avoid continuous sourcing of `setup.bash` script, append below two lines to `~/.bashrc`. The change will affect all newly-spawned terminal windows. `$ROS_DISTRO` is automatically set to `noetic` at runtime.
 
 ```bash
 source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/workspace/udacity-rsend/projects/p4/catkin_ws/devel/setup.bash
+```
+
+### First Terminal
+
+```bash
+roslaunch my_robot world.launch
+```
+
+### Second Terminal
+
+```bash
+roslaunch my_robot teleop.launch
+```
+
+### Third Terminal
+
+```bash
+roslaunch my_robot mapping.launch
 ```
 
 __Figure 1: The Original World__
