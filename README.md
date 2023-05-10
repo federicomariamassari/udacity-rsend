@@ -126,7 +126,7 @@ _Create 2D occupancy grid and 3D view map in real time using RGB-D SLAM (Kinect-
 
 This projects implements simultaneous localization and mapping (SLAM) with ROS. In SLAM, a robot is concerned with the "chicken-and-egg" problem of both mapping out, and localize itself in, an unknown environment at the same time. To perform this task, RTAB-Map (Real-Time Appearance-Based Mapping) is used. Mapping the original home from Project 3 proved too computationally intensive, so I designed a brand new, smaller room with plenty of identifiable features and colours to facilitate loop closure. To reduce distortion in the maps, I made criteria on such loop closures more stringent and fine-tuned extra parameters. The result is an identifiable map of the world.
 
-__[Link to code](/projects/p4/catkin_ws/src)__
+__[Link to code](/projects/p4/catkin_ws/src/my_robot/)__
 
 <table>
   <tr>
