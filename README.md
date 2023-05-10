@@ -143,5 +143,6 @@ __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
 
 ### Output
 
-The mapping process (left) and the final maps (right) appear in the figures below.
+Real-time mapping in 2D (RViz, RHS top) and 3D (RTAB-Map, center) appear below.
 
+![](./projects/p4/img/mov1.gif)
