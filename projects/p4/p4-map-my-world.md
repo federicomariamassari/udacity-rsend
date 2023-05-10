@@ -18,9 +18,9 @@ source ~/workspace/udacity-rsend/projects/p4/catkin_ws/devel/setup.bash
 ```
 
 __Figure 1: The Original World__
-![](./projects/p4/img/img2.png)
+![](./img/img2.png)
 
 __Figure 2: The Redesigned World__
-![](./projects/p4/img/img3.png)
+![](./img/img3.png)
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
