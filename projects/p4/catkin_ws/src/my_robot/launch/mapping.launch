@@ -109,9 +109,9 @@
 
     </node>
 
-    <!-- Visualization via rtabmapviz; not recommended during simulation due to computing overhead -->
+    <!-- Visualization via rtabmap_viz; not recommended during simulation due to computing overhead -->
 
-    <node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
+    <node pkg="rtabmap_viz" type="rtabmap_viz" name="rtabmap_viz" args="-d $(find rtabmap_viz)/launch/config/rgbd_gui.ini" output="screen">
     <param name="subscribe_depth" type="bool" value="true"/>
     <param name="subscribe_scan" type="bool" value="true"/>
     <param name="frame_id" type="string" value="robot_footprint"/>
