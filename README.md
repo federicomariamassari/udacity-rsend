@@ -146,3 +146,5 @@ __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
 Real-time creation of the 2D occupancy grid (with RViz, top-right corner) and 3D point-cloud map (with RTAB-Map, center) appear in the figure below. The loop closure detection process is visible on the LHS of the screen, top. The robot is manouvered via keyboard teleop (bottom-left).
 
 ![](./projects/p4/img/mov1.gif)
+
+## Project 5: Home Service Robot

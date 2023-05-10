@@ -4,6 +4,9 @@
 
 ## Overview
 
+__Figure 1: The Redesigned World__
+![](./img/img2.png)
+
 ## Project Structure
 
 __Figure 2: Directory Structure Tree__
@@ -71,11 +74,5 @@ roslaunch my_robot teleop.launch
 ```bash
 roslaunch my_robot mapping.launch
 ```
-
-__Figure 1: The Original World__
-![](./img/img2.png)
-
-__Figure 2: The Redesigned World__
-![](./img/img3.png)
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
