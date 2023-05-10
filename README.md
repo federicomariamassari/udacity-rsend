@@ -140,3 +140,8 @@ __[Link to code](/projects/p4/catkin_ws/src)__
 Building this project is challenging in ROS Noetic, as a simple `catkin_make` won't do the trick. Follow below steps to ensure correct compilation and run using the instructions in the dedicated README file.
 
 __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
+
+### Output
+
+The mapping process (left) and the final maps (right) appear in the figures below.
+
