@@ -143,6 +143,6 @@ __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
 
 ### Output
 
-Real-time mapping in 2D (RViz, RHS top) and 3D (RTAB-Map, center) appear below.
+Real-time creation of the 2D occupancy grid (with RViz, top-right corner) and 3D point cloud map (with RTAB-Map, center) appear in the figure below.
 
 ![](./projects/p4/img/mov1.gif)
