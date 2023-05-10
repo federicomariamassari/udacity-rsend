@@ -26,7 +26,7 @@ __Figure 2: Directory Structure Tree__
             │   ├── teleop.launch
             │   └── world.launch
             ├── maps
-            │   └── rtabmap.db
+            │   └── rtabmap.db (.tar.xz)
             ├── meshes
             │   ├── hokuyo.dae
             │   ├── my_coffee_table.dae
