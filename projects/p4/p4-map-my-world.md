@@ -52,6 +52,8 @@ source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/workspace/udacity-rsend/projects/p4/catkin_ws/devel/setup.bash
 ```
 
+Then, open three terminal windows:
+
 ### First Terminal
 
 ```bash
