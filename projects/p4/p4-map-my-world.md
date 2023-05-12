@@ -4,7 +4,7 @@
 
 ## Overview
 
-This problem is an implementation of simultaneous localization and mapping (SLAM) in ROS. Mapping is the first step, since a map is needed for effective localization.
+This project implements simultaneous localization and mapping (SLAM) in ROS. Mapping is the first step, since a map is needed for effective localization.
 
 ### Mapping
 
