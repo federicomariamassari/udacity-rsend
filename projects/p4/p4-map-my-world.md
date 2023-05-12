@@ -48,7 +48,7 @@ __Figure 2: Directory Structure Tree__
 
 ## Building the Project
 
-[Link](p4-preliminary-config.md)
+RTAB-Map and associated visualization tool have [specific build requirements](p4-preliminary-config.md).
 
 ## Running the Project
 
