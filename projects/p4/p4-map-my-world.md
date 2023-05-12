@@ -4,6 +4,10 @@
 
 ## Overview
 
+### Mapping
+
+### Localization
+
 __Figure 1: The Redesigned World__
 ![](./img/img2.png)
 
