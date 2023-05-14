@@ -81,10 +81,19 @@ roslaunch my_robot teleop.launch
 roslaunch my_robot mapping.launch
 ```
 
-__Figure 3: 2D Occupancy Grid__
-![](./img/img3.png)
+## Code Logic
 
-__Figure 4: 3D Point-Cloud Map__
+### RQt Graph
+
+The RQt graph for the project appears in Figure 3.
+
+__Figure 3: RQt Graph__
+![RQt Graph](./img/img3.png)
+
+__Figure 4: 2D Occupancy Grid__
 ![](./img/img4.png)
+
+__Figure 5: 3D Point-Cloud Map__
+![](./img/img5.png)
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
