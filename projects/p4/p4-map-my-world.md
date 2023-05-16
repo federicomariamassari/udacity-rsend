@@ -4,11 +4,15 @@
 
 ## Overview
 
-This project implements simultaneous localization and mapping (SLAM) in ROS.
+This project implements Simultaneous Localization And Mapping (SLAM) in ROS via RTAB-Map.
 
-__Mapping__
+Loop closure used to determine if location has been seen before. As robot travels to new areas in its environment, the map is expanded. SURF (Speeded-Up Robust Features) is used to extract visual features from a map. If enough features in an image have been detected before, then the loop is closed. 
 
-__Localization__
+__Mapping__ is the process of generating a 2D occupancy grid and 3D point-cloud map on the fly: the robot moves across the room collecting data from visual sensors, and from these data features are extracted and added to the robot's bag-of-words.
+
+The robot moves across the room collecting data from visual sensors which are added to its bag-of-words. Loop closure is used to determine whether a location has been seen before.
+
+To perform __Localization__, as per Project 3, requires a pre-existing map. The robot navigates the environment until it visually recognizes a landmark location existing in the database (one global loop closure), at which point the complete map is displayed.
 
 __Figure 1: The Redesigned World__
 ![](./img/img2.png)
@@ -85,10 +89,12 @@ roslaunch my_robot mapping.launch
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3.
+The RQt graph for the project appears in Figure 3. In particular, the laser scan `/scan` and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`) are subscribed to by `/rtabmap`, which then publishes to the `/map` topic and generates the map. `/teleop_twist_keyboard` as usual is used to move the robot.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
+
+The camera is located at 10 cm (?) from the ground, so even at a large distance the robot is unable to collect images on tall surfaces (result unmapped) or top of non-transparent.. As a consequence, the 2D grid only displays obstacles related to object legs (table, chairs) - this is how it should be as robot is able to traverse these objects freely - and the 3D map has several obscure areas (no info available). Nevertheless, the resulting images are quite precise. Also because the depth camera generates good images from a maximum distance of 4 meters, so going further than that will likely result in black pictures.
 
 __Figure 4: 2D Occupancy Grid__
 ![](./img/img4.png)
