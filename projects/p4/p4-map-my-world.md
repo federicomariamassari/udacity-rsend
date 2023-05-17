@@ -132,6 +132,18 @@ roslaunch my_robot mapping.launch
             <td><code>0</code></td>
             <td>Using SURF as loop closure detection strategy.</td>
         </tr>
+        <tr>
+            <td rowspan=2>Keypoint Descriptors and Detectors</td>
+            <td><code>SURF/HessianThreshold</code></td>
+            <td><code>100</code></td>
+            <td>Used to extract more or less SURF features.</td>
+        </tr>
+        <tr>
+            <td rowspan=1>RGBD-SLAM</td>
+            <td><code>RGBD/LinearUpdate</code></td>
+            <td><code>10</code></td>
+            <td>Slightly increase linear displacement for map update (to 10 cm) to reduce computational burden.</td>
+        </tr>
     </tbody>
 </table>
 
