@@ -144,6 +144,22 @@ roslaunch my_robot mapping.launch
             <td><code>10</code></td>
             <td>Slightly increase linear displacement for map update (to 10 cm) to reduce computational burden.</td>
         </tr>
+        <tr>
+            <td rowspan=3>Odometry</td>
+            <td><code>Odom/Holonomic</code></td>
+            <td><code>false</code></td>
+            <td>To account for non-holonomic, skid-steer robot setup: y = x*tan(yaw).</td>
+        </tr>
+        <tr>
+            <td><code>Odom/FilteringStrategy</code></td>
+            <td><code>2</code></td>
+            <td>Use particle filtering.</td>
+        </tr>
+        <tr>
+            <td><code>Odom/ParticleSize</code></td>
+            <td><code>120</code></td>
+            <td>Set number of particles to 120 (which worked well for Project 3 "Where Am I?").</td>
+        </tr>
     </tbody>
 </table>
 
