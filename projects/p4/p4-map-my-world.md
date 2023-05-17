@@ -23,6 +23,8 @@ __Figure 1: The Redesigned World__
 
 ## Project Structure
 
+The directory structure tree for this project is outlined in Figure 2. Worth of mention are launch files `mapping.launch` and `localization.launch` performing, respectively, SLAM and pure localization, and `rtabmap.db` (here, compressed and split into smaller archives), the generated map database of the environment.
+
 __Figure 2: Directory Structure Tree__
 
 ```bash
@@ -93,7 +95,7 @@ roslaunch my_robot mapping.launch
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (i.e., subscribes to) both laser scan (`/scan`) and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`), and publishes to topic `/map` to generate the map. To operate the robot `/teleop_twist_keyboard` is used.
+The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (i.e., subscribes to) both laser scan (`/scan`) and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`) and publishes to topic `/map` to generate the map. To operate the robot `/teleop_twist_keyboard` is used.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
