@@ -218,18 +218,18 @@ Only included in the tables below are the parameters I experimented with. Others
 
 ### Localization
 
-<table style="width: 100%">
+<table>
     <thead>
         <tr>
-            <th style="width: 20%">Type</th>
-            <th style="width: 20%">Parameter</th>
-            <th style="width: 20%">Value</th>
-            <th style="width: 40%">Rationale</th>
+            <th>Type</th>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Rationale</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan=1>Memory</td>
+            <td rowspan=1><div style="width: 50px">Memory</div></td>
             <td><code>Mem/IncrementalMemory</code></td>
             <td><code>false</code></td>
             <td>Set to <code>false</code> to enable localization mode (<code>true</code>: SLAM).</td>
