@@ -242,6 +242,9 @@ __Figure 5: 3D Point-Cloud Map__
 __Figure 6: Global Loop Closure Detection__
 ![Global Loop Closure](./img/mov2.gif)
 
+__Figure 7: Successful Robot Localization__
+![Robot Localization](./img/mov3.gif)
+
 ## Resources
 
 1. https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
