@@ -6,7 +6,11 @@
 
 This project is an implementation of Simultaneous Localization And Mapping (SLAM) in ROS via RTAB-Map.
 
-__Mapping__ is the process of generating a 2D occupancy grid and a 3D point-cloud map on the fly: the robot moves across the room using visual sensors to collect data from which features are extracted and added to the robot's bag-of-words.
+
+
+In __mapping__, 
+
+__Mapping__ is the process of generating a 2D occupancy grid and a 3D point-cloud map on the fly: the robot moves across the room using visual sensors to collect data from which features are extracted and added to the robot's bag-of-words. Portions of the environment are progressively added to the robot's bag-of-words, and contribute to map generation. LiDAR for 2D occupancy, and 3D for depth images. Loop closure is used to determine if a location has been seen before. If an area already exists in the robot's memory (based on number of features extracted), then the robot has seen it already and images are merged to create a single, more refined view of that place.
 
 Loop closure used to determine if location has been seen before. As robot travels to new areas in its environment, the map is expanded. SURF (Speeded-Up Robust Features) is used to extract visual features from a map. If enough features in an image have been detected before, then the loop is closed. 
 
@@ -95,6 +99,30 @@ roslaunch my_robot mapping.launch
 
 ### Mapping
 
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Rationale</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=1><code>Rtabmap</code> (RTAB-Map Parameters)</td>
+            <td><code>DetectionRate</code></td>
+            <td><code>1</code></td>
+            <td>To add new images to every second.</td>
+        </tr>
+        <tr>
+            <td><code>max_particles</code></td>
+            <td><code>5000</code></td>
+            <td>To give some weight to (random) alternate routes when robot is stuck.</td>
+        </tr>
+    </tbody>
+</table>
+
 ### Localization
 
 ## Code Logic
@@ -117,5 +145,9 @@ __Figure 4: 2D Occupancy Grid__
 
 __Figure 5: 3D Point-Cloud Map__
 ![](./img/img5.png)
+
+## Resources
+
+1. https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
