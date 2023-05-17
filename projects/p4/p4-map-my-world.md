@@ -93,7 +93,7 @@ roslaunch my_robot mapping.launch
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (i.e., subscribes to) both laser scan (`/scan`) and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`), and publishes to topic `/map` to generate the map. `/teleop_twist_keyboard` is used to move the robot.
+The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (i.e., subscribes to) both laser scan (`/scan`) and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`), and publishes to topic `/map` to generate the map. To operate the robot `/teleop_twist_keyboard` is used.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
