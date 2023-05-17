@@ -127,7 +127,7 @@ Only included in the tables below are the parameters I experimented with. Others
             <td rowspan=2>Keypoint Memory</td>
             <td><code>Kp/MaxFeatures</code></td>
             <td><code>400</code></td>
-            <td>Maximum size of the bag-of-words.</td>
+            <td>Slightly reduce maximum number of features extracted from images.</td>
         </tr>
         <tr>
             <td><code>Kp/DetectorStrategy</code></td>
@@ -150,7 +150,7 @@ Only included in the tables below are the parameters I experimented with. Others
             <td rowspan=3>Odometry</td>
             <td><code>Odom/Holonomic</code></td>
             <td><code>false</code></td>
-            <td>To account for non-holonomic, skid-steer robot setup: y = x*tan(yaw).</td>
+            <td>Account for a non-holonomic, skid-steer robot setup: y = x*tan(yaw).</td>
         </tr>
         <tr>
             <td><code>Odom/FilteringStrategy</code></td>
@@ -171,7 +171,7 @@ Only included in the tables below are the parameters I experimented with. Others
         <tr>
             <td><code>Reg/Force3DoF</code></td>
             <td><code>true</code></td>
-            <td>2D SLAM: only consider x, y, and yaw (disregard z, roll, pitch).</td>
+            <td> Perform 2D SLAM: only consider x, y, and yaw (disregard z, roll, and pitch).</td>
         </tr>
         <tr>
             <td rowspan=2>Visual Registration Parameters</td>
@@ -207,7 +207,7 @@ Only included in the tables below are the parameters I experimented with. Others
             <td rowspan=2>Marker</td>
             <td><code>Marker/VarianceLinear</code></td>
             <td><code>0.001</code></td>
-            <td rowspan=2>Linear and angular variance on marker detections.</td>
+            <td rowspan=2>Minimize linear and angular variance on marker detections.</td>
         </tr>
         <tr>
             <td><code>Marker/VarianceAngular</code></td>
