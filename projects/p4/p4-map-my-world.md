@@ -132,7 +132,7 @@ Only included in the tables below are the parameters I experimented with. Others
         <tr>
             <td><code>Kp/DetectorStrategy</code></td>
             <td><code>0</code></td>
-            <td>Using SURF as loop closure detection strategy.</td>
+            <td>Use SURF as loop closure detection strategy.</td>
         </tr>
         <tr>
             <td rowspan=1>Keypoint Descriptors and Detectors</td>
@@ -217,6 +217,25 @@ Only included in the tables below are the parameters I experimented with. Others
 </table>
 
 ### Localization
+
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Rationale</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=1>Memory</td>
+            <td><code>Mem/IncrementalMemory</code></td>
+            <td><code>false</code></td>
+            <td>Set to <code>false</code> to enable localization mode (<code>true</code>: SLAM).</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Code Logic
 
