@@ -239,6 +239,9 @@ __Figure 4: 2D Occupancy Grid__
 __Figure 5: 3D Point-Cloud Map__
 ![](./img/img5.png)
 
+__Figure 6: Global Loop Closure Detection__
+![Global Loop Closure](./img/mov2.gif)
+
 ## Resources
 
 1. https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
