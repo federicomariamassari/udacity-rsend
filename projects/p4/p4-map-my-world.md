@@ -110,15 +110,27 @@ roslaunch my_robot mapping.launch
     </thead>
     <tbody>
         <tr>
-            <td rowspan=1><code>Rtabmap</code> (RTAB-Map Parameters)</td>
-            <td><code>DetectionRate</code></td>
+            <td rowspan=1>RTAB-Map Parameters</td>
+            <td><code>Rtabmap/DetectionRate</code></td>
             <td><code>1</code></td>
-            <td>To add new images to every second.</td>
+            <td>Rate (Hz) at which new nodes are added to map (1 Hz = 1 second).</td>
         </tr>
         <tr>
-            <td><code>max_particles</code></td>
-            <td><code>5000</code></td>
-            <td>To give some weight to (random) alternate routes when robot is stuck.</td>
+            <td rowspan=1>Memory</td>
+            <td><code>Mem/NotLinkedNodesKept</code></td>
+            <td><code>false</code></td>
+            <td>Avoid registering new images if robot is not moving.</td>
+        </tr>
+        <tr>
+            <td rowspan=2>Keypoint Memory</td>
+            <td><code>Kp/MaxFeatures</code></td>
+            <td><code>400</code></td>
+            <td>Maximum size of the bag-of-words.</td>
+        </tr>
+        <tr>
+            <td><code>Kp/DetectorStrategy</code></td>
+            <td><code>0</code></td>
+            <td>Using SURF as loop closure detection strategy.</td>
         </tr>
     </tbody>
 </table>
