@@ -133,7 +133,7 @@ roslaunch my_robot mapping.launch
             <td>Using SURF as loop closure detection strategy.</td>
         </tr>
         <tr>
-            <td rowspan=2>Keypoint Descriptors and Detectors</td>
+            <td rowspan=1>Keypoint Descriptors and Detectors</td>
             <td><code>SURF/HessianThreshold</code></td>
             <td><code>100</code></td>
             <td>Used to extract more or less SURF features.</td>
