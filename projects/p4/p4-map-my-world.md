@@ -201,6 +201,16 @@ roslaunch my_robot mapping.launch
             <td><code>Grid/FootprintHeight</code></td>
             <td><code>0.08</code></td>
         </tr>
+        <tr>
+            <td rowspan=2>Marker</td>
+            <td><code>Marker/VarianceLinear</code></td>
+            <td><code>0.001</code></td>
+            <td rowspan=2>Linear and angular variance on marker detections.</td>
+        </tr>
+        <tr>
+            <td><code>Marker/VarianceAngular</code></td>
+            <td><code>0.001</code></td>
+        </tr>
     </tbody>
 </table>
 
