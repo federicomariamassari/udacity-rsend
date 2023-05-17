@@ -99,6 +99,8 @@ roslaunch my_robot mapping.launch
 
 ### Mapping
 
+Only included in the tables below are the parameters I experimented with. Others are available in the official documentation [1].
+
 <table>
     <thead>
         <tr>
