@@ -218,13 +218,13 @@ Only included in the tables below are the parameters I experimented with. Others
 
 ### Localization
 
-<table>
+<table style="width: 100%">
     <thead>
         <tr>
-            <th>Type</th>
-            <th>Parameter</th>
-            <th>Value</th>
-            <th>Rationale</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 20%">Parameter</th>
+            <th style="width: 20%">Value</th>
+            <th style="width: 40%">Rationale</th>
         </tr>
     </thead>
     <tbody>
