@@ -169,7 +169,18 @@ roslaunch my_robot mapping.launch
         <tr>
             <td><code>Reg/Force3DoF</code></td>
             <td><code>true</code></td>
-            <td>2D SLAM: only consider x, y, and yaw (disregard z, roll, and pitch).</td>
+            <td>2D SLAM: only consider x, y, and yaw (disregard z, roll, pitch).</td>
+        </tr>
+        <tr>
+            <td rowspan=2>Visual Registration Parameters</td>
+            <td><code>Vis/MinInliers</code></td>
+            <td><code>35</code></td>
+            <td>Increase minimum number of visual inliers to accept loop closure, for more robust matches.</td>
+        </tr>
+        <tr>
+            <td><code>Vis/FeatureType</code></td>
+            <td><code>0</code></td>
+            <td>To enable <code>Mem/UseOdomFeatures</code>.</td>
         </tr>
     </tbody>
 </table>
