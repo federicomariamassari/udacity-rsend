@@ -182,6 +182,25 @@ roslaunch my_robot mapping.launch
             <td><code>0</code></td>
             <td>To enable <code>Mem/UseOdomFeatures</code>.</td>
         </tr>
+        <tr>
+            <td rowspan=4>Occupancy Grid</td>
+            <td><code>Grid/Sensor</code></td>
+            <td><code>0</code></td>
+            <td>Construct occupancy grid map from laser scans (suppress warning).</td>
+        </tr>
+        <tr>
+            <td><code>Grid/FootprintLength</code></td>
+            <td><code>0.5</code></td>
+            <td rowspan=3>Used to filter points over the footprint of the robot.</td>
+        </tr>
+        <tr>
+            <td><code>Grid/FootprintWidth</code></td>
+            <td><code>0.3</code></td>
+        </tr>
+        <tr>
+            <td><code>Grid/FootprintHeight</code></td>
+            <td><code>0.08</code></td>
+        </tr>
     </tbody>
 </table>
 
