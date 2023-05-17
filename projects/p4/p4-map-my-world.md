@@ -23,7 +23,7 @@ __Figure 1: The Redesigned World__
 
 ## Project Structure
 
-The directory structure tree for this project is outlined in Figure 2. Worth of mention are launch files `mapping.launch` and `localization.launch` performing, respectively, SLAM and pure localization, and `rtabmap.db` (here, compressed and split into smaller archives), the generated map database of the environment.
+The directory structure tree for this project is outlined in Figure 2. Worth of mention are launch files `mapping.launch` and `localization.launch` performing, respectively, SLAM and pure localization, and `rtabmap.db`, the generated map database of the environment (here, compressed and split into smaller archives).
 
 __Figure 2: Directory Structure Tree__
 
