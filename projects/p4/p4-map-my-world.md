@@ -6,13 +6,17 @@
 
 This project implements Simultaneous Localization And Mapping (SLAM) in ROS via RTAB-Map.
 
+__Mapping__ is the process of generating a 2D occupancy grid and a 3D point-cloud map on the fly:
+
 Loop closure used to determine if location has been seen before. As robot travels to new areas in its environment, the map is expanded. SURF (Speeded-Up Robust Features) is used to extract visual features from a map. If enough features in an image have been detected before, then the loop is closed. 
 
 __Mapping__ is the process of generating a 2D occupancy grid and 3D point-cloud map on the fly: the robot moves across the room collecting data from visual sensors, and from these data features are extracted and added to the robot's bag-of-words.
 
 The robot moves across the room collecting data from visual sensors which are added to its bag-of-words. Loop closure is used to determine whether a location has been seen before.
 
+Localization is about understanding if a location has been seen before.
 To perform __Localization__, as per Project 3, requires a pre-existing map. The robot navigates the environment until it visually recognizes a landmark location existing in the database (one global loop closure), at which point the complete map is displayed.
+First, need to teleport robot in an unknown location, then movement until the map is recognized. 
 
 __Figure 1: The Redesigned World__
 ![](./img/img2.png)
@@ -89,7 +93,7 @@ roslaunch my_robot mapping.launch
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3. In particular, the laser scan `/scan` and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`) are subscribed to by `/rtabmap`, which then publishes to the `/map` topic and generates the map. `/teleop_twist_keyboard` as usual is used to move the robot.
+The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (i.e., subscribes to) both laser scan (`/scan`) and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`), and publishes to topic `/map` to generate the map. `/teleop_twist_keyboard` is used to move the robot.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
