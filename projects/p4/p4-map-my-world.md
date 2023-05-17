@@ -160,6 +160,17 @@ roslaunch my_robot mapping.launch
             <td><code>120</code></td>
             <td>Set number of particles to 120 (which worked well for Project 3 "Where Am I?").</td>
         </tr>
+        <tr>
+            <td rowspan=2>Common Registration Parameters</td>
+            <td><code>Reg/Strategy</code></td>
+            <td><code>0</code></td>
+            <td>Use visual-only loop closure constraint (disregard scans).</td>
+        </tr>
+        <tr>
+            <td><code>Reg/Force3DoF</code></td>
+            <td><code>true</code></td>
+            <td>2D SLAM: only consider x, y, and yaw (disregard z, roll, and pitch).</td>
+        </tr>
     </tbody>
 </table>
 
