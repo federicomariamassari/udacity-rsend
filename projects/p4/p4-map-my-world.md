@@ -85,7 +85,7 @@ This is a convenient wrapper for `teleop_twist_keyboard`.
 
 ### Third Terminal
 
-To perform mapping (which creates a brand new database):
+To perform mapping (which creates a brand new database or overwrites the available one):
 
 ```bash
 roslaunch my_robot mapping.launch
