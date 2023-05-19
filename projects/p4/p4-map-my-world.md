@@ -10,7 +10,7 @@ __Mapping__ is the process of sketching an environment on the fly. The robot mov
 
 __Pure Localization__ is the process of understanding if an area has already been explored. To perform pure localization (as per [Project 3](../../p3/p3-where-am-i.md)), a pre-existing map is required: the map is generally loaded at inception, but its orientation is wrong until the robot recognizes -- through a global loop closure -- a landmark location present in its database, at which point the map correctly aligns with the environment.
 
-Because SLAM is both a CPU and memory -intensive task, I designed a smaller, feature-rich house that could allow for fast, stable mapping in a moderately-sized database [Figure 1]. The outcome is overall pleasing.
+Because SLAM is both a CPU and memory -intensive task, I designed a smaller, feature-rich house that could allow for fast, stable mapping in a moderately-sized database [Figure 1]. The outcome is overall very pleasing.
 
 __Figure 1: The Redesigned World__
 ![](./img/img2.png)
