@@ -244,6 +244,8 @@ A small number of passes, at a slow linear and angular speed, is enough to creat
 __Figure 4: Global Loop Closure Detection (Green Frame)__
 ![Global Loop Closure](./img/mov2.gif)
 
+### The Mapping Outcome
+
 When assessing the quality of the maps, an important factor to consider is that the robot's RGB-D camera is located at 10 cm from the ground. Hence, the 2D occupancy grid only registers the _legs_ of tall objects like tables and chairs, since at that height the robot can traverse such objects freely [Figure 5]. The 3D view, instead, 
 
 because even at long distances the robot is unable to collect data on high surfaces
@@ -260,7 +262,7 @@ __Figure 5: 2D Occupancy Grid__
 __Figure 6: 3D Point-Cloud Map__
 ![](./img/img5.png)
 
-### Localization
+### The Localization Process
 
 Start from a random location. The map is visualized but does not appear to be allineated to the environment. Only after the robot reaches a spot it has already in memory (for example, the starting position in the database), a global loop closure is detected and the map aligns with the environment [Figure 7].
 
