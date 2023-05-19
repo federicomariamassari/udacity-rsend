@@ -237,25 +237,28 @@ The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
 
-### Mapping
+### The Mapping Process
 
-A small number of passes, at a slow linear and angular speed, is enough to create a satisfactory representation of the world. An important factor to consider, when assessing the quality of the outcome, is the elevation from the ground of the robot's RGB-D camera (10 cm). The 2D occupancy grid [Figure 4] 
+A small number of passes, at a slow linear and angular speed, is enough to create a satisfactory representation of the world. 
 
+__Figure 4: Global Loop Closure Detection (Green Frame)__
+![Global Loop Closure](./img/mov2.gif)
 
+When assessing the quality of the maps, an important factor to consider is that the robot's RGB-D camera is located at 10 cm from the ground. Hence, the 2D occupancy grid only registers the _legs_ of tall objects like tables and chairs, since at that height the robot can traverse such objects freely [Figure 5]. The 3D view, instead, 
 
+because even at long distances the robot is unable to collect data on high surfaces
+
+In turn, 
 
 The RGB-D camera is at 10 centimeters from the ground, 
 
 The camera is located at 10 cm (?) from the ground, so even at a large distance the robot is unable to collect images on tall surfaces (which then result unmapped) or top of non-transparent.. As a consequence, the 2D grid only displays obstacles related to object legs (table, chairs) - this is how it should be as robot is able to traverse these objects freely - and the 3D map has several obscure areas (no info available). Nevertheless, the resulting images are quite precise. Also because the depth camera generates good images from a maximum distance of 4 meters, so going further than that will likely result in black pictures.
 
-__Figure 4: 2D Occupancy Grid__
+__Figure 5: 2D Occupancy Grid__
 ![](./img/img4.png)
 
-__Figure 5: 3D Point-Cloud Map__
+__Figure 6: 3D Point-Cloud Map__
 ![](./img/img5.png)
-
-__Figure 6: Global Loop Closure Detection (Green Frame)__
-![Global Loop Closure](./img/mov2.gif)
 
 ### Localization
 
