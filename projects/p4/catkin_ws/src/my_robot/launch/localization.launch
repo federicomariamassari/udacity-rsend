@@ -20,19 +20,6 @@
       <param name="subscribe_depth" type="bool" value="true"/>
       <param name="subscribe_scan" type="bool" value="true"/>
 
-      <!-- Additional RTAB-Map Parameters -->
-      <!-- https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h -->
-
-      <!-- Construct occupancy grid map from laser scans (suppress warning) -->
-      <param name="Grid/3D" type="string" value="true"/>
-      <param name="Grid/Sensor" type="string" value="true"/>
-
-      <!-- To enable Mem/UseOdomFeatures. 0=SURF -->
-      <param name="Vis/FeatureType" type="int" value="0"/>
-
-      <!-- To account for non-holonomic, skid-steer robot setup: y = x*tan(yaw) --> 
-      <param name="Odom/Holonomic" type="bool" value="false"/>
-
       <!-- RTAB-Map Inputs -->
       <remap from="scan" to="/scan"/>
       <remap from="rgb/image" to="$(arg rgb_topic)"/>
@@ -42,30 +29,65 @@
       <!-- RTAB-Map Output -->
       <remap from="grid_map" to="/map"/>
 
+      <!-- Parameters with asterisk (*) are custom additions to the default ones from Udacity.
+        
+        Resources: 
+        
+        [1] https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
+        [2] https://github.com/introlab/rtabmap/issues/350 (To prevent 2D map distortion at loop closure)
+
+      -->
+
+      <!-- RTAB-Map Parameters -->
+
       <!-- Rate (Hz) at which new nodes are added to map -->
       <param name="Rtabmap/DetectionRate" type="string" value="1"/>
 
-      <!-- 2D Slam -->
-      <param name="Reg/Force3DoF" type="string" value="true"/>
+      <!-- Memory -->
+
+      <!-- Set to false to enable localization mode (true: SLAM) -->
+      <param name="Mem/IncrementalMemory" type="string" value="false"/>
+
+      <!-- KeypointMemory (keypoint-based) -->
+
+      <!-- Maximum visual words per milage (bag-of-words) -->
+      <param name="Kp/MaxFeatures" type="string" value="400"/>
 
       <!-- Loop Closure Detection -->
       <!-- 0=SURF 1=SIFT 2=ORB 3=FAST/FREAK 4=FAST/BRIEF 5=GFTT/FREAK 6=GFTT/BRIEF 7=BRISK 8=GFTT/ORB 9=KAZE-->
       <param name="Kp/DetectorStrategy" type="string" value="0"/>
 
-      <!-- Maximum visual words per milage (bag-of-words) -->
-      <param name="Kp/MaxFeatures" type="string" value="400"/>
+      <!-- Keypoint Descriptors/Detectors -->
 
       <!-- Used to extract more or less SURF features -->
       <param name="SURF/HessianThreshold" type="string" value="100"/>
 
+      <!-- Odometry -->
+
+      <!-- To account for non-holonomic, skid-steer robot setup: y = x*tan(yaw) --> 
+      <param name="Odom/Holonomic" type="bool" value="false"/>
+
+      <!-- Common Registration Parameters -->
+
       <!-- Loop Closure Constraint: 0=Visual 1=ICP (1 requires scan) -->
       <param name="Reg/Strategy" type="string" value="0"/>
+
+      <!-- 2D Slam -->
+      <param name="Reg/Force3DoF" type="string" value="true"/>
+
+      <!-- Visual Registration Parameters -->
 
       <!-- Minimum visual inliers to accept loop closure -->
       <param name="Vis/MinInliers" type="string" value="35"/>
 
-      <!-- Set to false to enable localization mode (true: SLAM) -->
-      <param name="Mem/IncrementalMemory" type="string" value="false"/>
+      <!-- To enable Mem/UseOdomFeatures. 0=SURF -->
+      <param name="Vis/FeatureType" type="int" value="0"/>
+
+      <!-- Occupancy Grid -->
+
+      <!-- Construct occupancy grid map from laser scans (suppress warning) -->
+      <param name="Grid/3D" type="string" value="true"/>
+      <param name="Grid/Sensor" type="string" value="true"/>
 
     </node>
 
