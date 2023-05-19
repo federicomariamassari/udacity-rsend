@@ -8,7 +8,7 @@ This project is an implementation of Simultaneous Localization And Mapping (SLAM
 
 __Mapping__ is the process of sketching an environment on the fly. The robot moves across the room and, via its sensors, collects data to incrementally build maps: LiDAR scans to generate a 2D occupancy grid, depth images to create a 3D point-cloud map. A loop closure mechanism is used to determine whether a location has been seen before. If an area already exists in the robot's database, based on the number of features extracted from a particular frame, then it is a known location and like images are merged to create a single, more refined view of that spot. Soon, the maps becomes robust and reliable. Feature extraction is performed via Speeded-Up Robust Feature (SURF).
 
-__Pure Localization__ is the process of understanding if an area has already been explored. To perform pure localization (as per [Project 3](../../p3/p3-where-am-i.md)), a pre-existing map is required: the map is generally loaded at inception, but its orientation is wrong until the robot recognizes -- through a global loop closure -- a landmark location present in its database, at which point the map correctly aligns with the environment.
+__Pure Localization__ is the process of understanding if an area has already been explored. To perform pure localization (as in [Project 3](../p3/p3-where-am-i.md)), a pre-existing map is required: the map is generally loaded at inception, but its orientation is wrong until the robot recognizes — through a global loop closure — a landmark location present in its database, at which point the map correctly aligns with the environment.
 
 Because SLAM is both a CPU and memory -intensive task, I designed a smaller, feature-rich house that could allow for fast, stable mapping in a moderately-sized database [Figure 1]. The outcome is overall very pleasing.
 
@@ -73,23 +73,31 @@ Then, open three terminal windows:
 roslaunch my_robot world.launch
 ```
 
+As usual, this command will launch the Gazebo world and RViz with custom configuration. Heavy collada (.dae) objects like the window curtains will occasionally produce errors at this stage; if so, terminate the program (CTRL+C) and try again. If required, restart UTM.
+
 ### Second Terminal
 
 ```bash
 roslaunch my_robot teleop.launch
 ```
 
+This is a convenient wrapper for `teleop_twist_keyboard`.
+
 ### Third Terminal
+
+To perform mapping (which creates a brand new database):
 
 ```bash
 roslaunch my_robot mapping.launch
 ```
 
-Or equivalently, to perform pure localization with an existing database:
+Equivalently, to perform pure localization with an existing database:
 
 ```bash
 roslaunch my_robot localization.launch
 ```
+
+These commands will display the environment map (or its visible portion, in case of mapping) in RViz, start the RTAB-Map SLAM algorithm and, unless commented-out, trigger the RTAB-Map visualization tool.
 
 ## Parameter Configuration
 
