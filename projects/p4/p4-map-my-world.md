@@ -4,30 +4,20 @@
 
 ## Overview
 
-This project is an implementation of Simultaneous Localization And Mapping (SLAM) in ROS via RTAB-Map.
+This project is an implementation of Simultaneous Localization And Mapping (SLAM) in ROS with RTAB-Map.
 
+__Mapping__ is the process of sketching an environment on the fly. The robot moves across the room and, via its sensors, collects data to incrementally build maps: LiDAR scans to generate a 2D occupancy grid, depth images to create a 3D point-cloud map. A loop closure mechanism is used to determine whether a location has been seen before. If an area already exists in the robot's database, based on the number of features extracted from a particular frame, then it is a known location and like images are merged to create a single, more refined view of that place. Soon, the maps becomes robust and reliable. Feature extraction is performed via the Speeded-Up Robust Feature (SURF) algorithm.
 
+__Pure Localization__ is the process of understanding if an area is already explored. To perform pure localiziation, as per [Project 3](../../p3/p3-where-am-i.md), a pre-existing map is required: the map is generally loaded at the start, but its orientation is wrong until the robot recognizes (i.e., a global loop closure) a landmark location present in its database, at which point the map correctly aligns with the environment.
 
-In __mapping__, 
-
-__Mapping__ is the process of generating a 2D occupancy grid and a 3D point-cloud map on the fly: the robot moves across the room using visual sensors to collect data from which features are extracted and added to the robot's bag-of-words. Portions of the environment are progressively added to the robot's bag-of-words, and contribute to map generation. LiDAR for 2D occupancy, and 3D for depth images. Loop closure is used to determine if a location has been seen before. If an area already exists in the robot's memory (based on number of features extracted), then the robot has seen it already and images are merged to create a single, more refined view of that place.
-
-Loop closure used to determine if location has been seen before. As robot travels to new areas in its environment, the map is expanded. SURF (Speeded-Up Robust Features) is used to extract visual features from a map. If enough features in an image have been detected before, then the loop is closed. 
-
-__Mapping__ is the process of generating a 2D occupancy grid and 3D point-cloud map on the fly: the robot moves across the room collecting data from visual sensors, and from these data features are extracted and added to the robot's bag-of-words.
-
-The robot moves across the room collecting data from visual sensors which are added to its bag-of-words. Loop closure is used to determine whether a location has been seen before.
-
-Localization is about understanding if a location has been seen before.
-To perform __Localization__, as per Project 3, requires a pre-existing map. The robot navigates the environment until it visually recognizes a landmark location existing in the database (one global loop closure), at which point the complete map is displayed.
-First, need to teleport robot in an unknown location, then movement until the map is recognized. 
+SLAM is very computationally-intensive. 
 
 __Figure 1: The Redesigned World__
 ![](./img/img2.png)
 
 ## Project Structure
 
-The directory structure tree for this project is outlined in Figure 2. Worth of mention are launch files `mapping.launch` and `localization.launch` performing, respectively, SLAM and pure localization, and `rtabmap.db`, the generated map database of the environment (here, compressed and split into smaller archives).
+The directory structure tree for this project appears in Figure 2. Worth of mention are the two launch files `mapping.launch` and `localization.launch` performing, respectively, SLAM and pure localization, and `rtabmap.db`, the generated map database of the environment (here, compressed and split into smaller archives).
 
 __Figure 2: Directory Structure Tree__
 
@@ -99,6 +89,9 @@ roslaunch my_robot mapping.launch
 
 ### Mapping
 
+RTAB-Map has hundreds of parameters that can be fine-tuned to improve the performance of the algorithm. Since there are so many, the official documentation advises to deviate from the default ones 
+
+that can be fine-tuned to improve the performance of the algorithm. Since there are so many, it is advised to use the default ones, and only tweak selected few ones in case of issues.
 Only included in the tables below are the parameters I experimented with. Others are available in the official documentation [1].
 
 <table>
@@ -218,24 +211,7 @@ Only included in the tables below are the parameters I experimented with. Others
 
 ### Localization
 
-<table>
-    <thead>
-        <tr>
-            <th>Type</th>
-            <th>Parameter</th>
-            <th>Value</th>
-            <th>Rationale</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan=1><div style="width: 50px">Memory</div></td>
-            <td><code>Mem/IncrementalMemory</code></td>
-            <td><code>false</code></td>
-            <td>Set to <code>false</code> to enable localization mode (<code>true</code>: SLAM).</td>
-        </tr>
-    </tbody>
-</table>
+
 
 ## Code Logic
 
@@ -260,6 +236,10 @@ __Figure 5: 3D Point-Cloud Map__
 
 __Figure 6: Global Loop Closure Detection__
 ![Global Loop Closure](./img/mov2.gif)
+
+### Localization
+
+Start from a random location. The map is visualized but does not appear to be allineated to the environment. Only after the robot reaches a spot it has already in memory (for example, the starting position in the database), a global loop closure is detected and the map aligns with the environment [Figure 7].
 
 __Figure 7: Successful Robot Localization__
 ![Robot Localization](./img/mov3.gif)
