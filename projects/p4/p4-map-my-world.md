@@ -8,7 +8,7 @@ This project is an implementation of Simultaneous Localization And Mapping (SLAM
 
 __Mapping__ is the process of sketching an environment on the fly. The robot moves across the room and, via its sensors, collects data to incrementally build maps: LiDAR scans to generate a 2D occupancy grid, depth images to create a 3D point-cloud map. A loop closure mechanism is used to determine whether a location has been seen before. If an area already exists in the robot's database, based on the number of features extracted from a particular frame, then it is a known location and like images are merged to create a single, more refined view of that place. Soon, the maps becomes robust and reliable. Feature extraction is performed via the Speeded-Up Robust Feature (SURF) algorithm.
 
-__Pure Localization__ is the process of understanding if an area is already explored. To perform pure localiziation, as per [Project 3](../../p3/p3-where-am-i.md), a pre-existing map is required: the map is generally loaded at the start, but its orientation is wrong until the robot recognizes (i.e., a global loop closure) a landmark location present in its database, at which point the map correctly aligns with the environment.
+__Pure Localization__ is the process of understanding if an area has already been explored. To perform pure localization (as per [Project 3](../../p3/p3-where-am-i.md)), a pre-existing map is required: the map is generally loaded at the start, but its orientation is wrong until the robot recognizes (i.e., a global loop closure) a landmark location present in its database, at which point the map correctly aligns with the environment.
 
 SLAM is very computationally-intensive. 
 
