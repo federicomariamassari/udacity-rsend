@@ -220,9 +220,13 @@ RTAB-Map has hundreds of parameters that can be fine-tuned to improve the perfor
     </tbody>
 </table>
 
-### Localization
+### Pure Localization
 
+For pure localization, minor changes in the related launch file are needed:
 
+* Remove `args="--delete_db_on_start"` when launching the `rtabmap` node: this will load a pre-existing map of the environment in RViz;
+* Remove parameter `Mem/NotLinkedNodesKept`;
+* Set `Mem/IncrementalMemory` to `false` to enable localization mode.
 
 ## Code Logic
 

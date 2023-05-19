@@ -7,9 +7,10 @@
   <arg name="depth_topic" default="/camera/depth/image_raw"/>
   <arg name="camera_info_topic" default="/camera/rgb/camera_info"/>
 
-  <!-- Mapping Node -->
+  <!-- Localization Node -->
   <group ns="rtabmap">
 
+    <!-- Open an existing database (if available) to perform localization -->
     <node name="rtabmap" pkg="rtabmap_slam" type="rtabmap" output="screen">
 
       <!-- Basic RTAB-Map Parameters -->
@@ -61,7 +62,7 @@
       <param name="Reg/Strategy" type="string" value="0"/>
 
       <!-- Minimum visual inliers to accept loop closure -->
-      <param name="Vis/MinInliers" type="string" value="15"/>
+      <param name="Vis/MinInliers" type="string" value="35"/>
 
       <!-- Set to false to enable localization mode (true: SLAM) -->
       <param name="Mem/IncrementalMemory" type="string" value="false"/>
