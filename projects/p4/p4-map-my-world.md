@@ -85,6 +85,12 @@ roslaunch my_robot teleop.launch
 roslaunch my_robot mapping.launch
 ```
 
+Or equivalently, to perform pure localization with an existing database:
+
+```bash
+roslaunch my_robot localization.launch
+```
+
 ## Parameter Configuration
 
 ### Mapping
