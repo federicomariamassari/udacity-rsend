@@ -103,10 +103,7 @@ These commands will display the environment map (or its visible portion, in case
 
 ### Mapping
 
-RTAB-Map has hundreds of parameters that can be fine-tuned to improve the performance of the algorithm. Since there are so many, the official documentation advises to deviate from the default ones 
-
-that can be fine-tuned to improve the performance of the algorithm. Since there are so many, it is advised to use the default ones, and only tweak selected few ones in case of issues.
-Only included in the tables below are the parameters I experimented with. Others are available in the official documentation [1].
+RTAB-Map has hundreds of parameters that can be fine-tuned to improve the performance of SLAM [1]. Since there are so many, the official documentation suggests to deviate from the default setup only if it does not yield good enough results [2]. From my experience, the default setting introduces some degree of distortion in the maps at loop closure, so I tried to reduce the bias by tightening the constraints on feature detection and visual odometry. Iterative Closest Point (ICP, `Reg/Strategy=1`), an alternative to visual scans, generally led to more stable and precise outcome [3]; however, it was not recommended for this project.
 
 <table>
     <thead>
@@ -261,5 +258,7 @@ __Figure 7: Successful Robot Localization__
 ## Resources
 
 1. https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
+2. https://github.com/introlab/rtabmap/wiki/Change-parameters
+3. https://github.com/introlab/rtabmap/wiki/ICP
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
