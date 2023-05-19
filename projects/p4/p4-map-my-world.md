@@ -10,7 +10,7 @@ __Mapping__ is the process of sketching an environment on the fly. The robot mov
 
 __Pure Localization__ is the process of understanding if an area has already been explored. To perform pure localization (as in [Project 3](../p3/p3-where-am-i.md)), a pre-existing map is required: the map is generally loaded at inception, but its orientation is wrong until the robot recognizes — through a global loop closure — a landmark location present in its database, at which point the map correctly aligns with the environment.
 
-Because SLAM is both a CPU and memory -intensive task, I designed a smaller, feature-rich house that could allow for fast, stable mapping in a moderately-sized database [Figure 1]. The outcome is overall very pleasing.
+Because SLAM is both a CPU and memory -intensive task, I designed a smaller, feature-rich house that could allow for fast, stable mapping resulting in a moderately-sized database. The outcome is overall very pleasing [Figure 1].
 
 __Figure 1: The Redesigned World__
 ![](./img/img2.png)
@@ -58,7 +58,7 @@ RTAB-Map and associated visualization tool have [specific build requirements](p4
 
 ## Running the Project
 
-To avoid continuous sourcing of `setup.bash` script, append below two lines to `~/.bashrc`. The change will affect all newly-spawned terminal windows. `$ROS_DISTRO` is automatically set to `noetic` at runtime.
+To avoid continuous sourcing of the `setup.bash` script, append below two lines to `~/.bashrc`. The change will affect all newly-spawned terminal windows. `$ROS_DISTRO` will be automatically set to `noetic` at runtime.
 
 ```bash
 source /opt/ros/$ROS_DISTRO/setup.bash
@@ -232,12 +232,17 @@ For pure localization, minor changes in the related launch file are needed:
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (i.e., subscribes to) both laser scan (`/scan`) and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`) and publishes to topic `/map` to generate the map. To operate the robot `/teleop_twist_keyboard` is used.
+The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (i.e., subscribes to) both laser scan (`/scan`) and RGB-D camera (`camera/rgb/image_raw` and `camera/depth/image_raw`) and publishes to topic `/map` to generate the maps. To operate the robot `/teleop_twist_keyboard` is used.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
 
 ### Mapping
+
+A small number of passes, at a slow linear and angular speed, is enough to create a satisfactory representation of the world. An important factor to consider, when assessing the quality of the outcome, is the elevation from the ground of the robot's RGB-D camera (10 cm). The 2D occupancy grid [Figure 4] 
+
+
+
 
 The RGB-D camera is at 10 centimeters from the ground, 
 
@@ -249,7 +254,7 @@ __Figure 4: 2D Occupancy Grid__
 __Figure 5: 3D Point-Cloud Map__
 ![](./img/img5.png)
 
-__Figure 6: Global Loop Closure Detection__
+__Figure 6: Global Loop Closure Detection (Green Frame)__
 ![Global Loop Closure](./img/mov2.gif)
 
 ### Localization
