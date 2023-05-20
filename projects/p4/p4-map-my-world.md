@@ -239,7 +239,7 @@ __Figure 3: RQt Graph__
 
 ### Mapping
 
-A small number of passes, at reduced linear and angular speed, is enough to create a satisfactory representation of the world. Robustness is mainly achieved through global loop closures [Figure 4], though care is needed to ensure reliable matches. Moving and turning slowly, setting the minimum number of visual inliers for a match to a relatively large value (35), and covering the same areas multiple times all help in reducing distortion.
+A small number of passes, at reduced linear and angular speed, is enough to create a satisfactory representation of the world. Robustness is mainly achieved through global loop closures [Figure 4], though care is needed to ensure matches are reliable. Moving and turning slowly, setting the minimum number of visual inliers for a match to a relatively large value (35), and covering the same areas multiple times all help in reducing distortion.
 
 __Figure 4: Global Loop Closure Detection (Green Frame)__
 ![Global Loop Closure](./img/mov2.gif)
