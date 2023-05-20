@@ -246,7 +246,9 @@ __Figure 4: Global Loop Closure Detection (Green Frame)__
 
 ### Mapping Outcome
 
-When assessing the quality of the maps, an important factor to consider is that the robot's RGB-D camera is located at 10 cm from the ground. Hence, the 2D occupancy grid only registers the _legs_ of tall objects like tables and chairs, since at that height the robot can traverse such objects freely [Figure 5]. The 3D view, instead, 
+Figures 5 and 6 show, respectively, 
+
+When assessing the quality of the maps, an important factor to consider is that the robot's RGB-D camera is located at 10 cm from the ground. Hence, the 2D occupancy grid only registers the legs of tall objects like tables and chairs, since at that height the robot can traverse such objects freely [Figure 5]. The 3D view, instead, 
 
 because even at long distances the robot is unable to collect data on high surfaces
 
@@ -274,5 +276,6 @@ __Figure 7: Successful Robot Localization__
 1. https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
 2. https://github.com/introlab/rtabmap/wiki/Change-parameters
 3. https://github.com/introlab/rtabmap/wiki/ICP
+4. [The Construct: RTAB-Map in ROS 101](https://www.youtube.com/watch?v=gJz-MWn7jhE)
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
