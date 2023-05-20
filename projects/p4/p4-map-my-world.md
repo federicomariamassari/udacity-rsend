@@ -6,7 +6,7 @@
 
 This project is an implementation of Simultaneous Localization And Mapping (SLAM) in ROS with RTAB-Map.
 
-__Mapping__ is the process of sketching an environment on the fly. The robot moves across the room and, via its sensors, collects data to incrementally build maps: LiDAR scans to generate a 2D occupancy grid, depth images to create a 3D point-cloud map. A loop closure mechanism is used to determine whether a location has been seen before. If an area already exists in the robot's database, based on the number of features extracted from a particular frame, then it is a known location and like images are merged to create a single, more refined view of that spot. Soon, the maps become robust and reliable. Feature extraction is performed via Speeded-Up Robust Feature (SURF).
+__Mapping__ is the process of sketching an environment on the fly. The robot moves across the room and, via its sensors, collects data to incrementally build maps: LiDAR scans to generate a 2D occupancy grid, depth images to create a 3D point-cloud view. A loop closure mechanism is used to determine whether a location has been seen before. If an area already exists in the robot's database, based on the number of features extracted from a particular frame, then it is a known location and like images are merged to create a single, more refined view of that spot. Soon, the maps become robust and reliable. Feature extraction is performed via Speeded-Up Robust Feature (SURF).
 
 __Pure Localization__ is the process of understanding if an area has already been explored. To perform pure localization (as in [Project 3](../p3/p3-where-am-i.md)), a pre-existing map is required: the map is generally loaded at inception, but its orientation is wrong until the robot recognizes — through a global loop closure — a landmark location present in its database, at which point the map correctly aligns with the environment.
 
@@ -85,7 +85,7 @@ This is a convenient wrapper for `teleop_twist_keyboard`.
 
 ### Third Terminal
 
-To perform mapping (which creates a brand new database or overwrites the available one):
+To perform mapping (which creates a brand new database overwriting previously available ones):
 
 ```bash
 roslaunch my_robot mapping.launch
@@ -225,7 +225,7 @@ RTAB-Map has hundreds of parameters that can be fine-tuned to improve the perfor
 For pure localization, minor changes in the related launch file are needed:
 
 * Remove `args="--delete_db_on_start"` when launching `rtabmap` to load a pre-existing map of the environment in RViz;
-* Remove parameter `Mem/NotLinkedNodesKept`;
+* Remove parameter `Mem/NotLinkedNodesKept`, which is pertinent to SLAM;
 * Set `Mem/IncrementalMemory` to `false` to enable localization mode.
 
 ## Code Logic
@@ -237,14 +237,14 @@ The RQt graph for the project appears in Figure 3. RTAB-Map acquires data from (
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
 
-### The Mapping Process
+### Mapping
 
 A small number of passes, at a slow linear and angular speed, is enough to create a satisfactory representation of the world. 
 
 __Figure 4: Global Loop Closure Detection (Green Frame)__
 ![Global Loop Closure](./img/mov2.gif)
 
-### The Mapping Outcome
+### Mapping Outcome
 
 When assessing the quality of the maps, an important factor to consider is that the robot's RGB-D camera is located at 10 cm from the ground. Hence, the 2D occupancy grid only registers the _legs_ of tall objects like tables and chairs, since at that height the robot can traverse such objects freely [Figure 5]. The 3D view, instead, 
 
@@ -262,7 +262,7 @@ __Figure 5: 2D Occupancy Grid__
 __Figure 6: 3D Point-Cloud Map__
 ![](./img/img5.png)
 
-### The Localization Process
+### Localization
 
 Start from a random location. The map is visualized but does not appear to be allineated to the environment. Only after the robot reaches a spot it has already in memory (for example, the starting position in the database), a global loop closure is detected and the map aligns with the environment [Figure 7].
 
