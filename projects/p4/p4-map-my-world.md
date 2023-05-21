@@ -246,7 +246,16 @@ __Figure 4: Global Loop Closure Detection (Green Frame)__
 
 ### Mapping Outcome
 
-Figures 5 and 6 show, respectively, 
+Figures 5 and 6 display, respectively, a 2D occupancy grid and a 3D point-cloud view of the room. 
+
+In asessing the quality of the maps, important factors to consider are the elevation of the RGB-D camera from the ground (10 centimeters) and its maximum span (4 meters).
+
+The robot's RGB-D camera is located at 10 centimeters from the ground, which means the 2D occupancy grid would only register as obstacles the legs of tall objects like tables and chairs (since at that height the robot can traverse such objects freely), and the 3D view 
+
+This is clearly visible from the maps
+
+an important factor to consider when assessing the quality of the maps.
+elevation of the and of the span of the  RGB-D camera
 
 When assessing the quality of the maps, an important factor to consider is that the robot's RGB-D camera is located at 10 cm from the ground. Hence, the 2D occupancy grid only registers the legs of tall objects like tables and chairs, since at that height the robot can traverse such objects freely [Figure 5]. The 3D view, instead, 
 
@@ -276,6 +285,6 @@ __Figure 7: Successful Robot Localization__
 1. https://github.com/introlab/rtabmap/blob/master/corelib/include/rtabmap/core/Parameters.h
 2. https://github.com/introlab/rtabmap/wiki/Change-parameters
 3. https://github.com/introlab/rtabmap/wiki/ICP
-4. [The Construct: RTAB-Map in ROS 101](https://www.youtube.com/watch?v=gJz-MWn7jhE)
+4. [RTAB-Map in ROS 101 - The Construct](https://www.youtube.com/watch?v=gJz-MWn7jhE)
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
