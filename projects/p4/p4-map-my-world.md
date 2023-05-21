@@ -258,7 +258,11 @@ __Figure 6: 3D Point-Cloud Map__
 
 ### Localization
 
-Start from a random location. The map is visualized but does not appear to be allineated to the environment. Only after the robot reaches a spot it has already in memory (for example, the starting position in the database), a global loop closure is detected and the map aligns with the environment [Figure 7].
+To best display 
+
+To understand the concept of localization, it is advisable to start from a random location before running the related launch file. Doing so will display the full map generated in the mapping phase, but since the robot is unable to determine its position and orientation, it will likely not be aligned with the environment.
+
+Start from a random location [4]. The map is visualized but does not appear to be allineated to the environment. Only after the robot reaches a spot it has already in memory (for example, the starting position in the database), a global loop closure is detected and the map aligns with the environment [Figure 7].
 
 __Figure 7: Successful Robot Localization__
 ![Robot Localization](./img/mov3.gif)
