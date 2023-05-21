@@ -248,11 +248,7 @@ __Figure 4: Global Loop Closure Detection (Green Frame)__
 
 Figures 5 and 6 display, respectively, a 2D occupancy grid and a 3D point-cloud view of the room.
 
-Constraints on the elevation of the robot's sensor from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and on the maximum span of the depth camera itself (4 meters) are important factors to consider when assessing the quality of the maps.
-
-When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). With these constraints, the
-
-As a consequence, the 2D grid only registers as obstacles the legs of tall objects like tables and chairs (at that height the robot can traverse the latter freely), while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects, for which the robot is unable to register any image, even at maximum distance.
+When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). Given these constraints, the 2D grid can only register as obstacles the legs of tall objects like tables and chairs — at that height the robot can traverse the latter freely—, while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects, for which the robot is unable to collect any picture, even at maximum distance.
 
 __Figure 5: 2D Occupancy Grid__
 ![](./img/img4.png)
