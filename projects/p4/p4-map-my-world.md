@@ -248,28 +248,11 @@ __Figure 4: Global Loop Closure Detection (Green Frame)__
 
 Figures 5 and 6 display, respectively, a 2D occupancy grid and a 3D point-cloud view of the room.
 
-When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). As a consequence, the 2D grid only registers as obstacles the legs of tall objects like tables and chairs, since at that height the robot can traverse the latter freely, while
+Constraints on the elevation of the robot's sensor from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and on the maximum span of the depth camera itself (4 meters) are important factors to consider when assessing the quality of the maps.
 
+When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). With these constraints, the
 
-
-The robot would be unable to register tall surfaces even at max distance, resulting in unmapped areas
-
-The robot's RGB-D camera is located at 10 centimeters from the ground, which means the 2D occupancy grid would only register as obstacles the legs of tall objects like tables and chairs (since at that height the robot can traverse such objects freely), and the 3D view 
-
-This is clearly visible from the maps
-
-an important factor to consider when assessing the quality of the maps.
-elevation of the and of the span of the  RGB-D camera
-
-When assessing the quality of the maps, an important factor to consider is that the robot's RGB-D camera is located at 10 cm from the ground. Hence, the 2D occupancy grid only registers the legs of tall objects like tables and chairs, since at that height the robot can traverse such objects freely [Figure 5]. The 3D view, instead, 
-
-because even at long distances the robot is unable to collect data on high surfaces
-
-In turn, 
-
-The RGB-D camera is at 10 centimeters from the ground, 
-
-The camera is located at 10 cm (?) from the ground, so even at a large distance the robot is unable to collect images on tall surfaces (which then result unmapped) or top of non-transparent.. As a consequence, the 2D grid only displays obstacles related to object legs (table, chairs) - this is how it should be as robot is able to traverse these objects freely - and the 3D map has several obscure areas (no info available). Nevertheless, the resulting images are quite precise. Also because the depth camera generates good images from a maximum distance of 4 meters, so going further than that will likely result in black pictures.
+As a consequence, the 2D grid only registers as obstacles the legs of tall objects like tables and chairs (at that height the robot can traverse the latter freely), while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects, for which the robot is unable to register any image, even at maximum distance.
 
 __Figure 5: 2D Occupancy Grid__
 ![](./img/img4.png)
