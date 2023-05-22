@@ -246,7 +246,11 @@ __Figure 4: Global Loop Closure Detection (Green Frame)__
 
 ### Mapping Outcome
 
-Figures 5 and 6 display, respectively, a 2D occupancy grid and a 3D point-cloud view of the room.
+Figures 5 and 6 display, respectively, a 2D occupancy grid and a 3D point-cloud view of the room. The database in which both are contained can be explored from `catkin_ws` via below command:
+
+```bash
+rtabmap-databaseViewer src/my_robot/maps/rtabmap.db
+```
 
 When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). Given these constraints, the 2D grid can only register as obstacles the legs of tall objects like tables and chairs —at that height the robot can traverse the latter freely—, while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects (like the kitchen countertop or the strip of wall below the ceiling), for which the robot is unable to collect any picture, even at maximum distance.
 
@@ -258,9 +262,7 @@ __Figure 6: 3D Point-Cloud View__
 
 ### Localization
 
-Before launching the localization script, the robot is displaced to a corner of the room with no features and uniform colour to ensure it is unable to determine its current position and orientation [4]. As a consequence, when the map is initially displayed it will not be aligned with the environment. Teleoperating the robot to a location it has in memory, such as the real starting position, will trigger a global loop closure —a successful localization— and a correct orientation of the world map [Figure 7].
-
-__Important note:__ I
+Before launching the localization script, the robot is displaced to a corner of the room with no features and uniform colour to ensure it is unable to determine its current position and orientation [4]. As a consequence, when the map is initially displayed it will not be aligned with the environment (*). Teleoperating the robot to a location it has in memory, such as the real starting position, will trigger a global loop closure —a successful localization— and a correct orientation of the world map [Figure 7].
 
 __Figure 7: Successful Robot Localization__
 ![Robot Localization](./img/mov3.gif)
@@ -271,5 +273,9 @@ __Figure 7: Successful Robot Localization__
 2. https://github.com/introlab/rtabmap/wiki/Change-parameters
 3. https://github.com/introlab/rtabmap/wiki/ICP
 4. [RTAB-Map in ROS 101 - The Construct](https://www.youtube.com/watch?v=gJz-MWn7jhE)
+
+## Notes
+
+(*) If the map does not display in RViz when running the localization script and the database appears empty, run "File" > "Database recovery" in RTAB-Map's Database Viewer to resolve.
 
 [Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
