@@ -258,7 +258,7 @@ __Figure 6: 3D Point-Cloud View__
 
 ### Localization
 
-Before launching the localization script, the robot is displaced to a corner of the room with no features and uniform colour to ensure it is unable to determine its current position and orientation [4]. As a consequence, when the map is initially displayed, it will not be aligned with the environment. Teleoperating the robot to a location it has in memory, such as the real starting position, will trigger a global loop closure —a successful localization— and correct orientation of the map [Figure 7].
+Before launching the localization script, the robot is displaced to a corner of the room with no features and uniform colour to ensure it is unable to determine its current position and orientation [4]. As a consequence, when the map is initially displayed it will not be aligned with the environment. Teleoperating the robot to a location it has in memory, such as the real starting position, will trigger a global loop closure —a successful localization— and a correct orientation of the world map [Figure 7].
 
 __Figure 7: Successful Robot Localization__
 ![Robot Localization](./img/mov3.gif)
