@@ -248,7 +248,7 @@ __Figure 4: Global Loop Closure Detection (Green Frame)__
 
 Figures 5 and 6 display, respectively, a 2D occupancy grid and a 3D point-cloud view of the room.
 
-When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). Given these constraints, the 2D grid can only register as obstacles the legs of tall objects like tables and chairs —at that height the robot can traverse the latter freely—, while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects, for which the robot is unable to collect any picture, even at maximum distance.
+When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). Given these constraints, the 2D grid can only register as obstacles the legs of tall objects like tables and chairs —at that height the robot can traverse the latter freely—, while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects (like the kitchen countertop), for which the robot is unable to collect any picture, even at maximum distance.
 
 __Figure 5: 2D Occupancy Grid__
 ![](./img/img4.png)
@@ -258,9 +258,9 @@ __Figure 6: 3D Point-Cloud Map__
 
 ### Localization
 
-To best display 
+To best showcase localization, it is useful to displace the robot to any place that would make it hard for it to determine its current position (few or no feature, uniform colour).
 
-To understand the concept of localization, it is advisable to start from a random location before running the related launch file. Doing so will display the full map generated in the mapping phase, but since the robot is unable to determine its position and orientation, it will likely not be aligned with the environment.
+To understand the concept of localization, it is advisable to start from a random location before running the related launch file. Doing so will display the full map generated in the mapping phase, but since the robot is unable to determine its position and orientation, the map will likely not be aligned with the environment.
 
 Start from a random location [4]. The map is visualized but does not appear to be allineated to the environment. Only after the robot reaches a spot it has already in memory (for example, the starting position in the database), a global loop closure is detected and the map aligns with the environment [Figure 7].
 
