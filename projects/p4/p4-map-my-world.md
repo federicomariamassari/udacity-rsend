@@ -252,7 +252,7 @@ Figures 5 and 6 display, respectively, a 2D occupancy grid and a 3D point-cloud 
 rtabmap-databaseViewer src/my_robot/maps/rtabmap.db
 ```
 
-When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 10 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). Given these constraints, the 2D grid can only register as obstacles the legs of tall objects like tables and chairs —at that height the robot can traverse the latter freely—, while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects (like the kitchen countertop or the strip of wall below the ceiling), for which the robot is unable to collect any picture, even at maximum distance.
+When assessing the quality of the maps, important factors to consider are the elevation of the robot's sensors from the ground (RGB-D camera: 9 cm; Hokuyo LiDAR: 15 cm) and the maximum span of the depth camera itself (4 meters). Given these constraints, the 2D grid can only register as obstacles the legs of tall objects like tables and chairs —at that height the robot can traverse the latter freely—, while the 3D view contains several unmapped areas corresponding to tall surfaces of non-transparent objects (like the kitchen countertop or the strip of wall below the ceiling), for which the robot is unable to collect any picture, even at maximum distance.
 
 __Figure 5: 2D Occupancy Grid__
 ![](./img/img4.png)
