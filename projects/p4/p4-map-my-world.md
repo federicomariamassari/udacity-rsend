@@ -1,4 +1,4 @@
-[Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
+[Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md) | Next:  [Home Service Robot](../p5/p5-home-service-robot.md)
 
 # Project 4: Map My World
 
@@ -278,4 +278,4 @@ __Figure 7: Successful Robot Localization__
 
 (*) If the map does not display in RViz when running the localization script and the database appears empty, run "File" > "Database recovery" in RTAB-Map's Database Viewer to resolve.
 
-[Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md)
+[Home](../../README.md) | Previous: [Where Am I?](../p3/p3-where-am-i.md) | Next:  [Home Service Robot](../p5/p5-home-service-robot.md)
