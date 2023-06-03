@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <!-- Modified from: https://github.com/turtlebot/turtlebot_apps/blob/indigo/turtlebot_navigation/launch/gmapping_demo.launch -->
+
+  <!-- Gmapping node -->
+  <arg name="my_robot_gmapping_launch_file" default="$(find my_robot)/launch/includes/gmapping.launch.xml"/>
+  <include file="$(arg my_robot_gmapping_launch_file)"/>
+
+</launch>

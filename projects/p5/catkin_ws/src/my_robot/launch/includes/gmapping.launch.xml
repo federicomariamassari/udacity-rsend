@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <!-- Modified from: https://github.com/turtlebot/turtlebot_apps/blob/indigo/turtlebot_navigation/launch/includes/gmapping/gmapping.launch.xml -->
+  <!-- Resources: http://wiki.ros.org/gmapping -->
+
+  <arg name="scan_topic" default="/scan" />
+  <arg name="base_frame" default="robot_footprint"/>
+  <arg name="map_frame" default="map"/>
+  <arg name="odom_frame" default="odom"/>
+
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+
+    <!-- Set in line with my_robot URDF files -->
+    <remap from="scan" to="$(arg scan_topic)"/>
+    <param name="base_frame" value="$(arg base_frame)"/>
+    <param name="map_frame" value="$(arg map_frame)"/>
+    <param name="odom_frame" value="$(arg odom_frame)"/>
+
+    <param name="map_update_interval" value="4.0"/>
+
+    <param name="maxUrange" value="10.0"/>
+    <param name="sigma" value="0.05"/>
+    <param name="kernelSize" value="1"/>
+    <param name="lstep" value="0.05"/>
+    <param name="astep" value="0.05"/>
+    <param name="iterations" value="5"/>
+    <param name="lsigma" value="0.075"/>
+    <param name="ogain" value="3.0"/>
+    <param name="lskip" value="0"/>
+    <param name="minimumScore" value="200"/>
+
+    <!-- Assume low noise in odometry data, which worked well for Project 3 -->
+    <param name="srr" value="0.01"/>
+    <param name="srt" value="0.02"/>
+    <param name="str" value="0.01"/>
+    <param name="stt" value="0.02"/>
+
+    <!-- Update 2D grid each time robot moves this far (in meters) -->
+    <param name="linearUpdate" value="0.30"/>  <!-- 30 cm -->
+    <param name="angularUpdate" value="0.2618"/>  <!-- π/12 radians -->
+    <param name="temporalUpdate" value="-1.0"/>  <!-- Do not update map when still -->
+
+    <param name="resampleThreshold" value="0.9"/>
+
+    <!-- Set number of particles to 120, which worked well for previous projects -->
+    <param name="particles" value="120"/>
+
+    <param name="xmin" value="-1.0"/>
+    <param name="ymin" value="-1.0"/>
+    <param name="xmax" value="1.0"/>
+    <param name="ymax" value="1.0"/>
+
+    <param name="delta" value="0.05"/>
+
+    <param name="llsamplerange" value="0.01"/>
+    <param name="llsamplestep" value="0.01"/>
+    <param name="lasamplerange" value="0.005"/>
+    <param name="lasamplestep" value="0.005"/>
+
+    <param name="maxRange" value="15.0"/>
+
+  </node>
+</launch>

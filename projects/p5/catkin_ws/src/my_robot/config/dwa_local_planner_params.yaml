@@ -1,0 +1,69 @@
+DWAPlannerROS:
+
+  # Modified from: https://github.com/turtlebot/turtlebot_apps/blob/indigo/turtlebot_navigation/param/dwa_local_planner_params.yaml
+  # Parameters' list: http://wiki.ros.org/dwa_local_planner?distro=noetic
+
+  # Robot Configuration Parameters
+
+  max_vel_x: 1.0
+  min_vel_x: -0.1  # To allow for reverse gear
+
+  # Non-holonomic, skid-steer robots cannot move in the Y direction
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+
+  max_vel_trans: 0.5
+  min_vel_trans: 0.1
+  
+  # https://answers.ros.org/question/356815/what-is-the-difference-between-min_vel_x-min_trans_vel-and-trans_stopped_vel/
+  trans_stopped_vel: 0.1
+
+  max_vel_theta: 1.570796  # π/2 radians/sec
+  min_vel_theta: 0.314  # π/10 radians/sec
+  theta_stopped_vel: 0.4
+
+  acc_lim_x: 2.0
+  acc_lim_y: 0.0
+  acc_lim_theta: 3.14
+  
+  # Goal Tolerance Parameters
+
+  yaw_goal_tolerance: 0.3
+  xy_goal_tolerance: 0.15
+  latch_xy_goal_tolerance: false
+
+  # Forward Simulation Parameters
+
+  sim_time: 2.0
+  vx_samples: 5
+  vy_samples: 1  # Only one sample in the Y-direction for non-holonomic robots
+  vth_samples: 10
+  controller_frequency: 10.0
+
+  # Trajectory Scoring Parameters
+  path_distance_bias: 64.0
+  goal_distance_bias: 24.0
+  
+  # To pass through obstacles instead of oscillating
+  # https://answers.ros.org/question/215758/how-do-i-make-the-local-planner-rotate-in-place/
+  occdist_scale: 0.1
+  
+  forward_point_distance: 0.325
+  stop_time_buffer: 0.2
+  scaling_speed: 0.25
+  max_scaling_factor: 0.2
+  publish_cost_grid: true
+
+  # Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.05
+
+  # Additional Unlisted Parameters
+  holonomic_robot: false
+
+  # To show Cost and Trajectory Clouds in RViz [VERIFY]
+  # https://answers.ros.org/question/192143/dwa_planner-trajectory_cloud-topic-not-showing-up/
+  publish_traj_pc : true
+  publish_cost_grid_pc: true
+  global_frame_id: odom
+
+

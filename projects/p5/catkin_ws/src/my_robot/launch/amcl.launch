@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <!-- Modified from: https://github.com/turtlebot/turtlebot_apps/blob/indigo/turtlebot_navigation/launch/amcl_demo.launch -->
+
+  <!-- Map Server -->
+  <arg name="map_file" default="$(find my_robot)/../map/map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!-- AMCL Node -->
+  <arg name="my_robot_amcl_launch_file" default="$(find my_robot)/launch/includes/amcl.launch.xml"/>
+  <include file="$(arg my_robot_amcl_launch_file)"/>
+
+  <!-- Move Base -->
+  <arg name="my_robot_move_base_launch_file" default="$(find my_robot)/launch/includes/move_base.launch.xml"/>
+  <include file="$(arg my_robot_move_base_launch_file)"/>
+
+</launch>
+
