@@ -34,4 +34,3 @@ init "roslaunch my_robot teleop.launch"
 
 # Choose whether to save gmapping-generated map (in main terminal window)
 save_map
-

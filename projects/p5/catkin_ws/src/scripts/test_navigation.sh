@@ -13,7 +13,3 @@ init "roslaunch my_robot world.launch"
 # Launch gmapping to perform SLAM
 # Created my own file based on https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
 init "roslaunch my_robot amcl.launch"
-
-# Launch keyboard teleop with custom arguments (from Project 4)
-init "roslaunch my_robot teleop.launch"
-
