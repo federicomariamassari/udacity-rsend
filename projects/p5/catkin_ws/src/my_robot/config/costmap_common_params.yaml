@@ -1,8 +1,6 @@
 # Modified from: https://github.com/turtlebot/turtlebot_apps/blob/indigo/turtlebot_navigation/param/costmap_common_params.yaml
 # Parameters' list: http://wiki.ros.org/costmap2d?distro=noetic
 
-# map_type: voxel  # As opposed to "costmap" in Project 3; unused since plugins are provided
-
 transform_tolerance: 0.2
 
 # Enough to prevent bumping into corners while allowing some degree of movement
@@ -22,15 +20,15 @@ obstacle_layer:
   mark_threshold: 0
   
   combination_method: 1
-  track_unknown_space: false  # To enable global path planning through unknown space (true: disable)
+  track_unknown_space: true  # To disable global path planning through unknown space
 
   obstacle_range: 1.0
   raytrace_range: 2.0
   publish_voxel_map: true
 
-  observation_sources: laser_scan_sensor bump
+  observation_sources: laser_scan_sensor
 
-  laser_scan_sensor: #{sensor_frame: hokuyo, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
+  laser_scan_sensor:
     sensor_frame: hokuyo
     data_type: LaserScan
     topic: /scan
@@ -38,14 +36,6 @@ obstacle_layer:
     clearing: true
     max_obstacle_height: 0.6
     min_obstacle_height: 0.05
-
-  bump:
-    data_type: PointCloud2
-    topic: mobile_base/sensors/bumper_pointcloud  # WRONG!
-    marking: true
-    clearing: false
-    max_obstacle_height: 0.15
-    min_obstacle_height: 0.0
 
 inflation_layer:
   enabled: true
@@ -56,4 +46,3 @@ inflation_layer:
 
 static_layer:
   enabled: true
-
