@@ -150,3 +150,5 @@ Real-time creation of the 2D occupancy grid (with RViz, top-right corner) and 3D
 ## Project 5: Home Service Robot
 
 ### Overview
+
+### How to Build and Run the Project
