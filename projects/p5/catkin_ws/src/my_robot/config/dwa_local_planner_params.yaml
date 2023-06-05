@@ -2,13 +2,16 @@ DWAPlannerROS:
 
   # Modified from: https://github.com/turtlebot/turtlebot_apps/blob/indigo/turtlebot_navigation/param/dwa_local_planner_params.yaml
   # Parameters' list: http://wiki.ros.org/dwa_local_planner?distro=noetic
+  
+  # Resources:
+  # [1] Zheng, K.: "ROS Navigation Tuning Guide" (2019)
 
   # Robot Configuration Parameters
 
-  max_vel_x: 1.0
+  max_vel_x: 4.0
   min_vel_x: -0.1  # To allow for reverse gear
 
-  # Non-holonomic, skid-steer robots cannot move in the Y direction
+  # Non-holonomic, skid-steer robots cannot move in the Y direction (i.e., no strafing velocity)
   max_vel_y: 0.0
   min_vel_y: 0.0
 
@@ -23,20 +26,20 @@ DWAPlannerROS:
   theta_stopped_vel: 0.4
 
   acc_lim_x: 2.0
-  acc_lim_y: 0.0
+  acc_lim_y: 0.0  # No strafing acceleration for skid-steer robots
   acc_lim_theta: 3.14
-  
+
   # Goal Tolerance Parameters
 
-  yaw_goal_tolerance: 0.3
+  yaw_goal_tolerance: 10  # https://answers.ros.org/question/208404/the-robot-rotates-when-he-is-near-the-goal/
   xy_goal_tolerance: 0.15
   latch_xy_goal_tolerance: false
 
   # Forward Simulation Parameters
 
-  sim_time: 2.0
+  sim_time: 2.0  # To have enough time to plan for the optimal trajectory, especially through narrow passways [1]
   vx_samples: 5
-  vy_samples: 1  # Only one sample in the Y-direction for non-holonomic robots
+  vy_samples: 1  # With max_vel_y = 0 (non-holonomic robots) there will be no usable y-velocity samples [1]
   vth_samples: 10
   controller_frequency: 10.0
 
@@ -59,8 +62,9 @@ DWAPlannerROS:
 
   # Additional Unlisted Parameters
   holonomic_robot: false
+  meter_scoring: true  # Express distances in meters instead of grid cells
 
-  # To show Cost and Trajectory Clouds in RViz [VERIFY]
+  # To show Cost and Trajectory Clouds in RViz
   # https://answers.ros.org/question/192143/dwa_planner-trajectory_cloud-topic-not-showing-up/
   publish_traj_pc : true
   publish_cost_grid_pc: true
