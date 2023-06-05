@@ -7,9 +7,12 @@ init()
   sleep 5
 }
 
-# Launch custom Gazebo world and spawn robot model (from Projects 2-4)
+# Launch custom Gazebo world, RViz, and spawn robot model (from Projects 2-4)
 init "roslaunch my_robot world.launch"
 
 # Launch gmapping to perform SLAM
 # Created my own file based on https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
 init "roslaunch my_robot amcl.launch"
+
+# Launch add_markers node to display markers at pick-up and drop-off locations
+init "rosrun add_markers add_markers"

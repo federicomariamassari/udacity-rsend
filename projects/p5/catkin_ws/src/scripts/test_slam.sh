@@ -22,7 +22,7 @@ save_map()
   done
 }
 
-# Launch custom Gazebo world and spawn robot model (from Project 2-4)
+# Launch custom Gazebo world and spawn robot model (from Projects 2-4)
 init "roslaunch my_robot world.launch"
 
 # Launch gmapping to perform SLAM
