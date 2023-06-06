@@ -81,7 +81,7 @@ void process_image_callback(const sensor_msgs::Image img)
 
 int main(int argc, char** argv)
 {
-  // Initialize te process_image node and create a handle to it
+  // Initialize the process_image node and create a handle to it
   ros::init(argc, argv, "process_image");
   ros::NodeHandle n;
   
