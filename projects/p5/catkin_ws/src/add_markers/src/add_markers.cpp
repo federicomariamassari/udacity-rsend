@@ -12,7 +12,7 @@ void publish_marker_at_location(visualization_msgs::Marker &marker, ros::Publish
 
   marker_pub.publish(marker);
 
-  ROS_INFO("Publishing marker at %s zone", location_name);
+  ROS_INFO("Showing marker at %s zone", location_name);
   ros::Duration(5.0).sleep();
   ROS_INFO("Hiding marker at %s zone", location_name);
   ros::Duration(5.0).sleep();
