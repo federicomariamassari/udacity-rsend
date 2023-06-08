@@ -89,7 +89,7 @@ catkin_make
 
 The Gazebo environment showcasing the ball-chasing logic appears on the LHS of the screen. Received camera images (top) and LiDAR scan (bottom) are on the RHS.
 
-![](./projects/p2/img/mov1.gif)
+![Go Chase It! Output](./projects/p2/img/mov1.gif)
 
 ## [Project 3: Where Am I?](projects/p3/p3-where-am-i.md)
 
@@ -116,7 +116,7 @@ Change directory to the Catkin folder and build the project. Run following the i
 
 Components for AMCL (arrow particle cloud, LiDAR scan and superimposed map) and 2d navigation (global plan in blue, local plan in green) are displayed in the below RViz window. Notice how quickly the arrow particles converge once the robot successfully localizes itself.
 
-![](./projects/p3/img/mov1.gif)
+![Where Am I? Output](./projects/p3/img/mov1.gif)
 
 ## [Project 4: Map My World](projects/p4/p4-map-my-world.md)
 
@@ -145,11 +145,15 @@ __[Preliminary Configurations](projects/p4/p4-preliminary-config.md)__
 
 Real-time creation of the 2D occupancy grid (with RViz, top-right corner) and 3D point-cloud map (with RTAB-Map, center) appear in the figure below. The loop closure detection process is visible on the LHS of the screen, top. The robot is manouvered via keyboard teleop (bottom-left).
 
-![](./projects/p4/img/mov1.gif)
+![Map My World Output](./projects/p4/img/mov1.gif)
 
 ## Project 5: Home Service Robot
 
 ### Overview
+
+_Combine SLAM, pure localization, navigation, and programming of ROS nodes in C++ to operate a robot that can autonomously move objects within an environment._
+
+This capstone project is the summa of 
 
 __[Link to code](/projects/p5/catkin_ws/src/)__
 
@@ -162,4 +166,8 @@ __[Link to code](/projects/p5/catkin_ws/src/)__
 
 ### How to Build and Run the Project
 
+
+
 ### Output
+
+![Home Service Robot Output](./projects/p5/img/mov1.gif)
