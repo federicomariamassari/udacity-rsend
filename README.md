@@ -153,6 +153,13 @@ Real-time creation of the 2D occupancy grid (with RViz, top-right corner) and 3D
 
 __[Link to code](/projects/p5/catkin_ws/src/)__
 
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./projects/p5/img/img0.png" width="500"/></td>
+    <td align="center"><img align="center" src="./projects/p5/img/img1.png" width="500"/></td>
+  </tr>
+</table>
+
 ### How to Build and Run the Project
 
 ### Output
