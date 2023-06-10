@@ -37,6 +37,10 @@ Faithful reproduction in my custom environment of all the RViz displays that com
 
 Mapping table and chair legs in the 2D occupancy grid was surprising problematic, since additional passes in the same spot tended to wipe out at least some of the marks left by previous scans (a behaviour probably caused by map updates frequency) [Figure 2.A]. In the final grid, this area is actually an offline collage of shots from single passes taken at different angles.
 
+### Localization and Navigation
+
+Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Luckily, fine tuning was simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the review of quality literature [3].
+
 <table>
   <tr>
   <td align="center"><b>Figure 2.A</b>: Wiped-out markers in the occupancy grid</td>
@@ -56,6 +60,7 @@ __Figure 3: RQt Graph__
 
 1. https://knowledge.udacity.com/questions/903802
 2. https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
-3. http://wiki.ros.org/base_local_planner?distro=noetic
+3. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision) - [Link](https://kaiyuzheng.me/documents/navguide.pdf)
+4. http://wiki.ros.org/base_local_planner?distro=noetic
 
 [Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md)
