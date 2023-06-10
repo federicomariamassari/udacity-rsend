@@ -45,7 +45,7 @@ Mapping table and chair legs in the 2D occupancy grid was surprisingly problemat
   </tr>
   <tr>
     <td align="center"><img align="center" src="./img/mov2.gif" width="500"/></td>
-    <td align="center"><img align="center" src="./projects/p4/img/img1.png" width="500"/></td>
+    <td align="center"><img align="center" src="./img/mov3.gif" width="500"/></td>
   </tr>
 </table>
 
