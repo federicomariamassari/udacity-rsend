@@ -39,8 +39,8 @@ Mapping table and chair legs in the 2D occupancy grid was surprisingly problemat
 
 <table>
   <tr>
-  <td><b>Figure 2.A</b>: Wiped-out markers in the occupancy grid</td>
-  <td><b>Figure 2.B</b>: Cost-cloud size and robot indecisiveness</td>
+  <td align="center"><b>Figure 2.A</b>: Wiped-out markers in the occupancy grid</td>
+  <td align="center"><b>Figure 2.B</b>: Cost-cloud size and robot indecisiveness</td>
   <tr>
   </tr>
   <tr>
