@@ -35,7 +35,7 @@ Faithful reproduction in my custom environment of all the RViz displays that com
 
 ### SLAM
 
-Mapping table and chair legs in the 2D occupancy grid was surprisingly problematic, since additional passes [Figure 2.A]
+Mapping table and chair legs in the 2D occupancy grid was surprising problematic, since additional passes in the same spot tended to wipe out at least some of the marks left by previous scans (a behaviour probably caused by map updates frequency) [Figure 2.A]. In the final grid, this area is actually an offline collage of shots from single passes taken at different angles.
 
 <table>
   <tr>
@@ -48,8 +48,6 @@ Mapping table and chair legs in the 2D occupancy grid was surprisingly problemat
     <td align="center"><img align="center" src="./img/mov3.gif" width="475"/></td>
   </tr>
 </table>
-
-Mapping table and chair legs was problematic as additional passes completely wiped out the trace (occupancy grid) left by previous mapping. Tried several times, but in the end I had to resort to a collage of maps: one single pass at the beginning left the right mark, made a few maps by going to different areas of table for first time and then combined everything offline (with program called: ...).
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
