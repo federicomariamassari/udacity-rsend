@@ -39,7 +39,7 @@ Mapping table and chair legs in the 2D occupancy grid was surprising problematic
 
 ### Localization and Navigation
 
-Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Luckily, fine tuning was simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the review of quality literature [3].
+Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Luckily, fine tuning was simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the availability of quality literature online [3].
 
 <table>
   <tr>
