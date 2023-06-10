@@ -35,9 +35,14 @@ Faithful reproduction in my custom environment of all the RViz displays that com
 
 ### SLAM
 
-Mapping table and chair legs in the 2D occupancy grid was surprisingly problematic, since additional passes 
+Mapping table and chair legs in the 2D occupancy grid was surprisingly problematic, since additional passes [Figure 2.A]
 
 <table>
+  <tr>
+  <td><b>Figure 2.A</b>: Wiped-out markers in the occupancy grid</td>
+  <td><b>Figure 2.B</b>: Cost-cloud size and robot indecisiveness</td>
+  <tr>
+  </tr>
   <tr>
     <td align="center"><img align="center" src="./img/mov2.gif" width="500"/></td>
     <td align="center"><img align="center" src="./projects/p4/img/img1.png" width="500"/></td>
