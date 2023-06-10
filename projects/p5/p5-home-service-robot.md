@@ -31,7 +31,7 @@ Finally, thanks to online posts, I realized it was feasible and actually encoura
 
 ### RViz Configuration
 
-Faithful reproduction in my custom environment of all the RViz displays that come with the Turtlebot navigation stack was not an easy feat, and it came from observing and mimicking the behaviour of the same components in the Udacity workspace setup. In the end, only "Bumper Hit" was left out because it relies on the Turtlebot-specific `/mobile_base` topic.
+Faithful reproduction in my custom environment of all the RViz displays that come with the Turtlebot navigation stack was not an easy feat, and it came from observing and mimicking the behaviour of the same components in the Udacity workspace setup. Only "Bumper Hit" was left out in the end, as it relies on the Turtlebot-specific `/mobile_base` topic.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
