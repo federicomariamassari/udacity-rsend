@@ -33,6 +33,19 @@ Finally, thanks to online posts, I realized it was feasible and actually encoura
 
 Faithful reproduction in my custom environment of all the RViz displays that come with the Turtlebot navigation stack was not an easy feat, and it came from observing and mimicking the behaviour of the same components in the Udacity workspace setup. Only "Bumper Hit" was left out in the end, as it relies on the Turtlebot-specific `/mobile_base` topic.
 
+### SLAM
+
+Mapping table and chair legs in the 2D occupancy grid was surprisingly problematic, since additional passes 
+
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./img/mov2.gif" width="500"/></td>
+    <td align="center"><img align="center" src="./projects/p4/img/img1.png" width="500"/></td>
+  </tr>
+</table>
+
+Mapping table and chair legs was problematic as additional passes completely wiped out the trace (occupancy grid) left by previous mapping. Tried several times, but in the end I had to resort to a collage of maps: one single pass at the beginning left the right mark, made a few maps by going to different areas of table for first time and then combined everything offline (with program called: ...).
+
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
 
