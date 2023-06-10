@@ -39,12 +39,12 @@ Mapping table and chair legs in the 2D occupancy grid was surprising problematic
 
 ### Localization and Navigation
 
-Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Fine tuning was luckily simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the availability of quality literature to review [3]. However, one major challenge came from the size of the cost cloud used for local planning: with 10 square meters (the original value for Project 3, calibrated for a much wider environment) the robot often got stuck when reaching the same y-coordinate of the goal but in a different room, with the red likelihood area spilling over to the inaccessible space and causing endless recalculation of the optimal trajectory [Figure 2.B]. It took me some time to understand how to resize the cloud, but finally got it working with a value of 6 square meters.
+Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Fine tuning was luckily simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the availability of quality literature to review [3]. However, one major challenge came from the size of the cost cloud used for local planning: with 10 square meters (the original value for Project 3, calibrated for a much wider environment) the robot often got stuck when reaching the same y-coordinate of the goal but in a different room, with the red likelihood area spilling over to the inaccessible space and causing endless recalculation of the ideal trajectory [Figure 2.B]. It took me some time to understand how to resize the cloud and find the optimal value of 6 square meters.
 
 <table>
   <tr>
   <td align="center"><b>Figure 2.A</b>: Wiped-out markers in the occupancy grid</td>
-  <td align="center"><b>Figure 2.B</b>: Cost-cloud size and robot indecisiveness</td>
+  <td align="center"><b>Figure 2.B</b>: Cost cloud size and robot indecisiveness</td>
   <tr>
   </tr>
   <tr>
