@@ -67,10 +67,20 @@ URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully com
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3. It is considerably more involved than those of previous assignments, mainly due to the more complex navigation stack used.
+The RQt graph for the project appears in Figure 3. It is considerably more involved than those of the previous assignments, mainly due to the more complex navigation stack used.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
+
+### Nodes
+
+- `move_base` supplies the 2D navigation logic including local and global costmaps, local and global planners (DWA), and support for RViz displays (cost cloud and trajectory cloud); it subscribes to odometry and LiDAR data and publishes linear and angular velocities to the robot's wheels;
+
+- `amcl` provides the Adaptive Monte Carlo Localization logic; it subscribes to LiDAR scans and initial pose and outputs a particle cloud representing the possible poses of the robot in the environment;
+
+- `pick_objects` imparts two subsequent goals to the robot and subscribes to `move_base`;
+
+- `add_markers` 
 
 ## Resources
 
@@ -78,6 +88,5 @@ __Figure 3: RQt Graph__
 2. https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
 3. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision) - [Link](https://kaiyuzheng.me/documents/navguide.pdf)
 4. https://knowledge.udacity.com/questions/922035
-5. http://wiki.ros.org/base_local_planner?distro=noetic
 
 [Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md)
