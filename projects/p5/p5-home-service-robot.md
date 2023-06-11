@@ -63,24 +63,11 @@ URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully com
 
 ## Packages Used
 
-<table>
-    <thead>
-        <tr>
-            <th>Package</th>
-            <th>Files Included</th>
-            <th>Task</th>
-            <th>Rationale for Inclusion</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>teleop_twist_keyboard</code></td>
-            <td>-</td>
-            <td><code>SLAM</code></td>
-            <td>To map environment</td>
-        </tr>
-    </tbody>
-</table>
+## Code Logic
+
+### RQt Graph
+
+The RQt graph for the project appears in Figure 3. It is considerably more involved than those of previous assignments, mainly due to the more complex navigation stack used.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
