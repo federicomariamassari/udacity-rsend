@@ -61,6 +61,10 @@ Understanding how to compile in the same node two `add_markers` files (time, odo
 
 URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully compatible and issues, mostly with objects pose, generally arise when retro-porting the Gazebo world ahead of project submission.
 
+## Packages Used
+
+
+
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
 
