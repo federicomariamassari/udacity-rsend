@@ -74,13 +74,13 @@ __Figure 3: RQt Graph__
 
 ### Nodes
 
-- `move_base` supplies the 2D navigation logic including local and global costmaps, local and global planners (DWA), and support for RViz displays (cost cloud and trajectory cloud); it subscribes to odometry and LiDAR data and publishes linear and angular velocities to the robot's wheels;
+- `/move_base` supplies the 2D navigation logic, including local and global costmaps, local and global planners (DWA), and support for RViz displays (cost cloud and trajectory cloud). It subscribes to odometry and LiDAR data and publishes linear and angular velocities to the robot's wheels;
 
-- `amcl` provides the Adaptive Monte Carlo Localization logic; it subscribes to LiDAR scans and initial pose and outputs a particle cloud representing the possible poses of the robot in the environment;
+- `/amcl` provides the Adaptive Monte Carlo Localization logic. It subscribes to LiDAR scans and to an initial pose, and outputs a particle cloud estimating the robot's position and orientation in the environment;
 
-- `pick_objects` imparts two subsequent goals to the robot and subscribes to `move_base`;
+- `/pick_objects` imparts two consecutive goals to the robot and subscribes to the navigation stack;
 
-- `add_markers` 
+- `/add_markers` contains the logic to show and hide markers representing object pick-ups and drop-offs. It subscribes to odometry data to synchronise with `/pick_objects` and publishes a marker (to be added manually) to RViz.
 
 ## Resources
 
