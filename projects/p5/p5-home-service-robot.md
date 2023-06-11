@@ -10,7 +10,7 @@ This capstone project combines SLAM, pure localization, navigation, and C++ prog
 
 - __Pure Localization and Navigation__: The parameter calibration for these tasks was similar to, but much more involved than, that required for [Project 3](../p3/p3-where-am-i.md) (Where Am I?). Keeping the structure of the original launch and configuration files from the Turtlebot packages suggested by Udacity meant, for example, dealing with a considerably more complex ROS navigation stack.
 
-- __Programming ROS Nodes in C++__: This final part of the assignment felt very much like doing [Project 2](../p2/p2-go-chase-it.md) (Go Chase It!) once again, with the logic of `pick_objects` and `add_markers` (the harder one) being very close to that of `drive_bot` and `process_image` respectively.
+- __Programming ROS Nodes in C++__: This final part of the assignment felt very much like working on [Project 2](../p2/p2-go-chase-it.md) (Go Chase It!) once again, with the logic of `pick_objects` and `add_markers` (the harder one) being very close to that of `drive_bot` and `process_image` respectively.
 
 __Figure 1: My "Real" Virtual Home__
 ![My Virtual Home](./img/img2.png)
@@ -52,6 +52,8 @@ Adapting Turtlebot configurations to my project was an opportunity to experiment
     <td align="center"><img align="center" src="./img/mov3.gif" width="475"/></td>
   </tr>
 </table>
+
+### Custom C++ ROS Nodes
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
