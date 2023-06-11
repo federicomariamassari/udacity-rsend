@@ -55,6 +55,11 @@ Adapting Turtlebot configurations to my project was an opportunity to experiment
 
 ### Custom C++ ROS Nodes
 
+Understanding how to compile in the same node two `add_markers` files (time, odometry) each with its own `main` function but sharing the same header took some time, and came through close inspection of `CMakeLists.txt` in Project 2 as well as review of an answer on Udacity Knowledge [4].
+
+### Testing in the Udacity Environment
+
+
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
 
@@ -63,6 +68,7 @@ __Figure 3: RQt Graph__
 1. https://knowledge.udacity.com/questions/903802
 2. https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
 3. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision) - [Link](https://kaiyuzheng.me/documents/navguide.pdf)
-4. http://wiki.ros.org/base_local_planner?distro=noetic
+4. https://knowledge.udacity.com/questions/922035
+5. http://wiki.ros.org/base_local_planner?distro=noetic
 
 [Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md)
