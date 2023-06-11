@@ -59,11 +59,28 @@ Understanding how to compile in the same node two `add_markers` files (time, odo
 
 ### Testing in the Udacity Environment
 
-URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully compatible and issues, mostly with objects pose, generally arise when retro-porting the Gazebo world ahead of project submission.
+URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully compatible and issues, mostly with objects pose, generally arise when retro-porting the Gazebo world ahead of project submission. Spawning the robot model inside the Gazebo world via ROS, saving the world including the robot, and manually removing the latter in the `.world` file helped resolve.
 
 ## Packages Used
 
-
+<table>
+    <thead>
+        <tr>
+            <th>Package</th>
+            <th>Files Included</th>
+            <th>Task</th>
+            <th>Rationale for Inclusion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>teleop_twist_keyboard</code></td>
+            <td>-</td>
+            <td><code>SLAM</code></td>
+            <td>To map environment</td>
+        </tr>
+    </tbody>
+</table>
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
