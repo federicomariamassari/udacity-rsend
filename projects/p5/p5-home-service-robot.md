@@ -55,10 +55,11 @@ Adapting Turtlebot configurations to my project was an opportunity to experiment
 
 ### Custom C++ ROS Nodes
 
-Understanding how to compile in the same node two `add_markers` files (time, odometry) each with its own `main` function but sharing the same header took some time, and came through close inspection of `CMakeLists.txt` in Project 2 as well as review of an answer on Udacity Knowledge [4].
+Understanding how to compile in the same node two `add_markers` files (time, odometry) each with its own `main` function but sharing the same header took some time, and came through close inspection of `CMakeLists.txt` in Project 2 as well as review of Udacity Knowledge answers [4].
 
 ### Testing in the Udacity Environment
 
+URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully compatible and issues, mostly with objects pose, generally arise when retro-porting the Gazebo world ahead of project submission.
 
 __Figure 3: RQt Graph__
 ![RQt Graph](./img/img3.png)
