@@ -30,10 +30,7 @@ __Figure 1: My "Real" Virtual Home__
             <td rowspan=1><code>teleop_twist_keyboard</code></td>
             <td>Full installation</td>
             <td>Used to manually teleoperate the robot during mapping via SLAM.
-            <li>
-            <ul>First element
-            </ul>
-            </li>
+            <ul>First element</ul>
             </td>
         </tr>
         <tr>
