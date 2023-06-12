@@ -20,9 +20,9 @@ __Figure 1: My "Real" Virtual Home__
 <table>
     <thead>
         <tr>
-            <th>Package</th>
-            <th>Method</th>
-            <th>Notes</th>
+            <th style="text-align:left">Package</th>
+            <th style="text-align:left">Method</th>
+            <th style="text-align:left">Notes</th>
         </tr>
     </thead>
     <tbody>
@@ -44,6 +44,8 @@ __Figure 1: My "Real" Virtual Home__
     </tbody>
 </table>
 
+
+
 config
 ├── costmap_common_params.yaml
 ├── dwa_local_planner_params.yaml
@@ -62,9 +64,10 @@ launch
 
 Scrapped packages
 
-- `teleop_twist_keyboard` — Used to manually teleoperate the robot during mapping via SLAM;
-- `slam_gmapping` — To generate a 2D occupancy grid using laser and pose data during mapping via SLAM;
-- `turtlebot_apps/turtlebot_navigation` — [1]
+
+
+
+
 
 demos of map building using gmapping and localization with amcl, while running the navigation stack.
 
