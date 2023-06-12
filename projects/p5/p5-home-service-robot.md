@@ -33,7 +33,7 @@ __Figure 1: My "Real" Virtual Home__
             <td>Installed</td>
             <td>
                 <ul>
-                    <li>Used to manually teleoperate the robot during mapping via SLAM.</li>
+                    <li>To manually teleoperate the robot during mapping via SLAM;</li>
                 </ul>
             </td>
         </tr>
@@ -42,14 +42,33 @@ __Figure 1: My "Real" Virtual Home__
             <td>Installed</td>
             <td>
                 <ul>
-                    <li>To create a 2D occupancy grid using laser and pose data during mapping via SLAM.</li>
+                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM;</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td rowspan=1><code>turtlebot_apps/turtlebot_navigation</code></td>
-            <td>Selected files adapted to the project</td>
-            <td>To configure parameters of the localization (AMCL) and navigation (DWA) stack. To save map data in the <code>map</code> folder.</td>
+            <td>Selected files adapted for the project</td>
+            <td>
+                <ul>
+                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks;</li>
+                    <li>To save map data in the <code>map</code> folder.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan=1><code>turtlebot_interactios/turtlebot_rviz_launchers</code></td>
+            <td>Selected files adapted for the project:
+            <ul>
+                <li><code>view_navigation.launch</code></li>
+                <li><code>rviz/navigation.rviz</code></li>
+            </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks;</li>
+                    <li>To save map data in the <code>map</code> folder.</td></li>
+                </ul>
         </tr>
     </tbody>
 </table>
