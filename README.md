@@ -153,7 +153,7 @@ Real-time creation of the 2D occupancy grid (with RViz, top-right corner) and 3D
 
 _Combine SLAM, pure localization, navigation, and programming of ROS nodes in C++ to operate a robot that can autonomously move objects within an environment._
 
-This capstone project builds on the experience gained in previous assignments to deploy a robot that can fetch and deliver items on its own in a Gazebo world. It involves several steps: mapping the environment using SLAM, setting up and fine-tuning the navigation stack, and programming two ROS nodes that can, respectively, impart consecutive goals to the robot and display and hide markers representing object pick-ups and drop-offs. It is the culmination of a long and rewarding journey in robotics!
+This capstone project builds on the experience gained in previous assignments to deploy a robot that can fetch and deliver items on its own in a Gazebo world. It involves several steps: mapping the environment using SLAM, setting up and fine-tuning the navigation stack, and programming two ROS nodes that can, respectively, impart consecutive goals to the robot and display and hide markers representing object pick-ups and drop-offs. It is the culmination of a rewarding journey in robotics!
 
 __[Link to code](/projects/p5/catkin_ws/src/)__
 
@@ -166,7 +166,7 @@ __[Link to code](/projects/p5/catkin_ws/src/)__
 
 ### How to Build and Run the Project
 
-`slam_gmapping` and `teleop_twist_keyboard` are required dependencies. If met, build via `catkin_make` and run following the instructions in the dedicated README file.
+Ensure `slam_gmapping` and `teleop_twist_keyboard` are installed (ROS Noetic). Then, build via `catkin_make` and run following the instructions in the dedicated README file.
 
 ### Output
 
