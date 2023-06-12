@@ -62,13 +62,9 @@ launch
 
 Scrapped packages
 
-
-
-- `teleop_twist_keyboard` - Full installation via sudo apt install ros-noetic-teleop-twist-keyboard - Used to teleoperate the robot while mapping the environment via SLAM.
-
-- `slam_gmapping` - To create 2D occupancy grid using laser and pose data during the mapping phase of SLAM. Also full installation via sudo apt install ros-noetic-slam-gmapping.
-
-- `turtlebot_apps/turtlebot_navigation` - [1]
+- `teleop_twist_keyboard` — Used to manually teleoperate the robot during mapping via SLAM;
+- `slam_gmapping` — To generate a 2D occupancy grid using laser and pose data during mapping via SLAM;
+- `turtlebot_apps/turtlebot_navigation` — [1]
 
 demos of map building using gmapping and localization with amcl, while running the navigation stack.
 
@@ -233,10 +229,11 @@ __Figure 4: RQt Graph__
 
 ### Phase 1: SLAM Testing
 
-`test_slam.sh` 
+- The logic is contained in `test_slam.sh`
+- 
 
 
-If the outcome is satisfactory, it can be saved into the `map` folder from the main terminal.
+A satisfactory output can be saved into the `map` folder from the main terminal.
 
 __Figure 5: Environment Mapping__
 ![Mapping Phase](./img/mov4.gif)
