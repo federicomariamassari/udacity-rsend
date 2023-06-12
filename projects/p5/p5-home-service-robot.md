@@ -20,16 +20,21 @@ __Figure 1: My "Real" Virtual Home__
 <table>
     <thead>
         <tr>
-            <th style="text-align:left">Package</th>
-            <th style="text-align:left">Method</th>
-            <th style="text-align:left">Notes</th>
+            <th style="text-align:left;">Package</th>
+            <th style="text-align:left;">Method</th>
+            <th style="text-align:left;">Notes</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td rowspan=1><code>teleop_twist_keyboard</code></td>
             <td>Full installation</td>
-            <td>Used to manually teleoperate the robot during mapping via SLAM.</td>
+            <td>Used to manually teleoperate the robot during mapping via SLAM.
+            <li>
+            <ul>First element
+            </ul>
+            </li>
+            </td>
         </tr>
         <tr>
             <td rowspan=1><code>slam_gmapping</code></td>
