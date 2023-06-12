@@ -17,32 +17,38 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
+
+
 <table>
     <thead>
         <tr>
             <th align="left">Package</th>
-            <th align="left">Method</th>
-            <th align="left">Notes</th>
+            <th align="left">Method of Inclusion</th>
+            <th align="left">Description</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td rowspan=1><code>teleop_twist_keyboard</code></td>
-            <td>Full installation</td>
-            <td>Used to manually teleoperate the robot during mapping via SLAM.
+            <td>Installed</td>
+            <td>
                 <ul>
-                    <li>First element</li>
+                    <li>Used to manually teleoperate the robot during mapping via SLAM.</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td rowspan=1><code>slam_gmapping</code></td>
-            <td>Full installation</td>
-            <td>To create a 2D occupancy grid using laser and pose data during mapping via SLAM.</td>
+            <td>Installed</td>
+            <td>
+                <ul>
+                    <li>To create a 2D occupancy grid using laser and pose data during mapping via SLAM.</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td rowspan=1><code>turtlebot_apps/turtlebot_navigation</code></td>
-            <td>Selected files</td>
+            <td>Selected files adapted to the project</td>
             <td>To configure parameters of the localization (AMCL) and navigation (DWA) stack. To save map data in the <code>map</code> folder.</td>
         </tr>
     </tbody>
