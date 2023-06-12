@@ -170,6 +170,6 @@ Ensure `slam_gmapping` and `teleop_twist_keyboard` are installed (ROS Noetic). T
 
 ### Output
 
-A simulated pick-up operation appears in the figure below. The item to fetch is represented by a rotating cyan cube. The robot moves towards the object and a message is displayed once the target is reached. After a few seconds, the object marker is hidden and a final message of successful pick-up is shown. Also visible are a rainbow cost cloud representing the likelihood of traversing a particular region of the map, and a fan-spreading trajectory cloud showing the robot's planned paths towards the goal.
+A simulated pick-up appears in the figure below. The item to fetch is represented by a rotating cyan cube. The robot moves towards the object and a message is displayed once the target is reached. After a few seconds, the object marker is hidden and a final message of successful collection is shown. Also visible in the picture are a rainbow cost cloud depicting the likelihood of traversing a particular region of the map, and a fan-spreading trajectory cloud showing the planned paths the robot will take to reach the goal.
 
 ![Home Service Robot Output](./projects/p5/img/mov1.gif)
