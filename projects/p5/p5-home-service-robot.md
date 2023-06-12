@@ -146,7 +146,7 @@ __Figure 4: RQt Graph__
 
 - `/pick_objects` imparts two consecutive goals to the robot and subscribes to the navigation stack;
 
-- `/add_markers` contains the logic to show and hide markers representing object pick-ups and drop-offs. It subscribes to odometry data to synchronise with `/pick_objects` and publishes a marker (to be added manually) to RViz.
+- `/add_markers` contains the logic to show and hide markers representing object pick-ups and drop-offs. It subscribes to odometry data to synchronise with `/pick_objects` and publishes a marker (manually added) to RViz.
 
 ## Resources
 
