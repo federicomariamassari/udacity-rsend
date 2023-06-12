@@ -153,7 +153,7 @@ Real-time creation of the 2D occupancy grid (with RViz, top-right corner) and 3D
 
 _Combine SLAM, pure localization, navigation, and programming of ROS nodes in C++ to operate a robot that can autonomously move objects within an environment._
 
-This capstone project builds on the experience gained in previous assignments to deploy a robot that can fetch and deliver items on its own in a Gazebo world. It involves several steps: mapping the environment using SLAM, setting up and fine-tuning the navigation stack, and programming two ROS nodes that can, respectively, impart consecutive goals to the robot and display and hide markers representing object pick-ups and drop-offs. It is the culmination of a rewarding journey in robotics!
+This capstone project builds on the experience gained in previous assignments to deploy a robot that can fetch and deliver items on its own in a Gazebo world. It comprises several steps: mapping the environment using SLAM, setting up and fine-tuning the navigation stack, and programming two ROS nodes that can, respectively, impart consecutive goals to the robot and display and hide markers representing object pick-ups and drop-offs. It is the culmination of a rewarding journey in robotics!
 
 __[Link to code](/projects/p5/catkin_ws/src/)__
 
@@ -166,10 +166,10 @@ __[Link to code](/projects/p5/catkin_ws/src/)__
 
 ### How to Build and Run the Project
 
-Ensure `slam_gmapping` and `teleop_twist_keyboard` are installed (ROS Noetic). Then, build via `catkin_make` and run following the instructions in the dedicated README file.
+Install `xterm` and Noetic-compatible versions of `slam_gmapping` and `teleop_twist_keyboard`. Then, build via `catkin_make` and run following the instructions in the dedicated README file.
 
 ### Output
 
-A simulated pick-up appears in the figure below. The item to fetch is represented by a rotating cyan cube. The robot moves towards the object and a message is displayed once the target is reached. After a few seconds, the object marker is hidden and a final message of successful collection is shown. Also visible in the picture are a rainbow cost cloud depicting the likelihood of traversing a particular region of the map, and a fan-spreading trajectory cloud showing the planned paths the robot will take to reach the goal.
+A simulated pick-up operation is displayed in the figure below. The item to fetch is represented by a rotating cyan cube. The robot moves towards the object and a message is shown once the target is reached. After a few seconds, the object marker disappears and a final message of successful collection is logged. Also visible in the image are a rainbow cost cloud depicting the likelihood of traversing a particular region of the map and a fan-spreading trajectory cloud showing the possible paths the robot could take to reach the goal.
 
 ![Home Service Robot Output](./projects/p5/img/mov1.gif)
