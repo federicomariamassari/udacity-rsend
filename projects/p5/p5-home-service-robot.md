@@ -28,12 +28,12 @@ __Figure 1: My "Real" Virtual Home__
     <tbody>
         <tr>
             <td rowspan=1><code>teleop_twist_keyboard</code></td>
-            <td><code>Full installation</code></td>
+            <td>Full installation</td>
             <td>Used to manually teleoperate the robot during mapping via SLAM.</td>
         </tr>
         <tr>
             <td rowspan=1><code>slam_gmapping</code></td>
-            <td><code>Full installation</code></td>
+            <td>Full installation</td>
             <td>To create a 2D occupancy grid using laser and pose data during mapping via SLAM.</td>
         </tr>
         <tr>
@@ -244,7 +244,7 @@ __Figure 5: Environment Mapping__
 ### Phase 2: Localization and Navigation Testing
 
 __Figure 6: Robot Navigation__
-![Mapping Phase](./img/mov4.gif)
+![Mapping Phase](./img/mov5.gif)
 
 ### Phase 3: 
 
