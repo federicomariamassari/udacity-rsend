@@ -47,7 +47,7 @@ __Figure 1: My "Real" Virtual Home__
             </td>
         </tr>
         <tr>
-            <td rowspan=1><code>turtlebot_apps/turtlebot_navigation</code></td>
+            <td rowspan=1><code>turtlebot_apps</code><br/><code>└── turtlebot_navigation</code></td>
             <td>Selected files adapted for the project:
             <code>
                 config
