@@ -68,13 +68,13 @@ __Figure 1: My "Real" Virtual Home__
             </td>
             <td>
                 <ul>
-                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks;</li>
-                    <li>To save map data in the <code>map</code> folder.</li>
+                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</li>
+                    <li>To save map data in the <code>map</code> folder</li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td rowspan=1><code>turtlebot_interactions/turtlebot_rviz_launchers</code></td>
+            <td rowspan=1><code>turtlebot_interactions</code><br/><code>└── turtlebot_rviz_launchers</code></td>
             <td>Selected files adapted for the project:
             <ul>
                 <li><code>view_navigation.launch</code></li>
@@ -83,8 +83,7 @@ __Figure 1: My "Real" Virtual Home__
             </td>
             <td>
                 <ul>
-                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks;</li>
-                    <li>To save map data in the <code>map</code> folder.</td></li>
+                    <li>To add RViz displays</li>
                 </ul>
         </tr>
     </tbody>
