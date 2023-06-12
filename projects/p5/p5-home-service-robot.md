@@ -15,6 +15,74 @@ This capstone project combines SLAM, pure localization, navigation, and C++ prog
 __Figure 1: My "Real" Virtual Home__
 ![My Virtual Home](./img/img2.png)
 
+## Packages Used
+
+__Figure 2: Directory Structure Tree__
+```bash
+.
+└── catkin_ws
+    └── src
+        ├── CMakeLists.txt -> /opt/ros/noetic/share/catkin/cmake/toplevel.cmake
+        ├── add_markers
+        │   ├── CMakeLists.txt
+        │   ├── include
+        │   │   └── add_markers
+        │   │       └── add_markers.h
+        │   ├── package.xml
+        │   └── src
+        │       └── add_markers.cpp
+        ├── map
+        │   ├── map.pgm
+        │   └── map.yaml
+        ├── my_robot
+        │   ├── CMakeLists.txt
+        │   ├── config
+        │   │   ├── costmap_common_params.yaml
+        │   │   ├── dwa_local_planner_params.yaml
+        │   │   ├── global_costmap_params.yaml
+        │   │   ├── local_costmap_params.yaml
+        │   │   ├── move_base_params.yaml
+        │   │   └── navfn_global_planner_params.yaml
+        │   ├── launch
+        │   │   ├── amcl.launch
+        │   │   ├── gmapping.launch
+        │   │   ├── includes
+        │   │   │   ├── amcl.launch.xml
+        │   │   │   ├── gmapping.launch.xml
+        │   │   │   └── move_base.launch.xml
+        │   │   ├── robot_description.launch
+        │   │   ├── teleop.launch
+        │   │   └── world.launch
+        │   ├── meshes
+        │   │   ├── hokuyo.dae
+        │   │   ├── my_coffee_table.dae
+        │   │   └── my_curtain.dae
+        │   ├── models
+        │   │   └── ...
+        │   ├── package.xml
+        │   ├── urdf
+        │   │   ├── my_robot.gazebo
+        │   │   └── my_robot.xacro
+        │   └── worlds
+        │       ├── empty.world
+        │       └── my_world.world
+        ├── pick_objects
+        │   ├── CMakeLists.txt
+        │   ├── include
+        │   │   └── pick_objects
+        │   │       └── pick_objects.h
+        │   ├── package.xml
+        │   └── src
+        │       └── pick_objects.cpp
+        ├── rvizConfig
+        │   └── homeservicerobot_config.rviz
+        └── scripts
+            ├── add_marker.sh
+            ├── pick_objects.sh
+            ├── test_navigation.sh
+            └── test_slam.sh
+```
+
 ## Challenges Faced
 
 As opposed to previous projects, in which the biggest hardship was to make them work locally on Ubuntu 20.04 and ROS Noetic (building RTAB-Map with SURF in Project 4 [was really painful](../p4/p4-preliminary-config.md)), this one did not pose significant challenges. Some small hurdles:
@@ -35,16 +103,16 @@ Faithful reproduction in my custom environment of all the RViz displays that com
 
 ### SLAM
 
-Mapping table and chair legs in the 2D occupancy grid was surprising problematic, since additional passes in the same spot tended to wipe out at least some of the marks left by previous scans (a behaviour probably caused by map updates frequency) [Figure 2.A]. In the final grid, this area is actually an offline collage of shots from single passes taken at different angles.
+Mapping table and chair legs in the 2D occupancy grid was surprising problematic, since additional passes in the same spot tended to wipe out at least some of the marks left by previous scans (a behaviour probably caused by map updates frequency) [Figure 3.A]. In the final grid, this area is actually an offline collage of shots from single passes taken at different angles.
 
 ### Localization and Navigation
 
-Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Fine tuning was luckily simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the availability of quality literature to review [3]. However, one major challenge came from the size of the cost cloud used for local planning: with 10 square meters (the original value for Project 3, calibrated for a much wider environment) the robot often got stuck when reaching the same y-coordinate of the goal but in a different room, with the red likelihood area spilling over to the inaccessible space and causing endless recalculation of the ideal trajectory [Figure 2.B]. It took me some time to understand how to resize the cloud and find the optimal value of 6 square meters.
+Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Fine tuning was luckily simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the availability of quality literature to review [3]. However, one major challenge came from the size of the cost cloud used for local planning: with 10 square meters (the original value for Project 3, calibrated for a much wider environment) the robot often got stuck when reaching the same y-coordinate of the goal but in a different room, with the red likelihood area spilling over to the inaccessible space and causing endless recalculation of the ideal trajectory [Figure 3.B]. It took me some time to understand how to resize the cloud and find the optimal value of 6 square meters.
 
 <table>
   <tr>
-  <td align="center"><b>Figure 2.A</b>: Wiped-out markers in the occupancy grid</td>
-  <td align="center"><b>Figure 2.B</b>: Cost cloud size and robot indecisiveness</td>
+  <td align="center"><b>Figure 3.A</b>: Wiped-out markers in the occupancy grid</td>
+  <td align="center"><b>Figure 3.B</b>: Cost cloud size and robot indecisiveness</td>
   <tr>
   </tr>
   <tr>
@@ -61,15 +129,13 @@ Understanding how to compile in the same node two `add_markers` files (time, odo
 
 URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully compatible and issues, mostly with objects pose, generally arise when retro-porting the Gazebo world ahead of project submission. Spawning the robot model inside the Gazebo world via ROS, saving the world including the robot, and manually removing the latter in the `.world` file helped resolve.
 
-## Packages Used
-
 ## Code Logic
 
 ### RQt Graph
 
-The RQt graph for the project appears in Figure 3. It is considerably more involved than those of the previous assignments, mainly due to the more complex navigation stack used.
+The RQt graph for the project appears in Figure 4. It is considerably more involved than those of the previous assignments, mainly due to the more complex navigation stack used.
 
-__Figure 3: RQt Graph__
+__Figure 4: RQt Graph__
 ![RQt Graph](./img/img3.png)
 
 ### Nodes
