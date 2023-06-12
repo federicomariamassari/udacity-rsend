@@ -48,7 +48,24 @@ __Figure 1: My "Real" Virtual Home__
         </tr>
         <tr>
             <td rowspan=1><code>turtlebot_apps/turtlebot_navigation</code></td>
-            <td>Selected files adapted for the project</td>
+            <td>Selected files adapted for the project:
+            <code>
+                config
+                ├── costmap_common_params.yaml
+                ├── dwa_local_planner_params.yaml
+                ├── global_costmap_params.yaml
+                ├── local_costmap_params.yaml
+                ├── move_base_params.yaml
+                └── navfn_global_planner_params.yaml
+                launch
+                ├── amcl.launch
+                ├── gmapping.launch
+                └── includes
+                    ├── amcl.launch.xml
+                    ├── gmapping.launch.xml
+                    └── move_base.launch.xml
+            </code>
+            </td>
             <td>
                 <ul>
                     <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks;</li>
@@ -57,7 +74,7 @@ __Figure 1: My "Real" Virtual Home__
             </td>
         </tr>
         <tr>
-            <td rowspan=1><code>turtlebot_interactios/turtlebot_rviz_launchers</code></td>
+            <td rowspan=1><code>turtlebot_interactions/turtlebot_rviz_launchers</code></td>
             <td>Selected files adapted for the project:
             <ul>
                 <li><code>view_navigation.launch</code></li>
@@ -75,21 +92,6 @@ __Figure 1: My "Real" Virtual Home__
 
 
 
-config
-├── costmap_common_params.yaml
-├── dwa_local_planner_params.yaml
-├── global_costmap_params.yaml
-├── local_costmap_params.yaml
-├── move_base_params.yaml
-└── navfn_global_planner_params.yaml
-
-launch
-├── amcl.launch
-├── gmapping.launch
-└── includes
-    ├── amcl.launch.xml
-    ├── gmapping.launch.xml
-    └── move_base.launch.xml
 
 Scrapped packages
 
