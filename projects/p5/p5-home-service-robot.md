@@ -17,7 +17,7 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
-Below is a list of the packages used for this project. The first three were installed via APT, while the others were cloned locally and had their content extracted and adapted. From `turtlebot_apps` come all configurations for the mapping, localization, and navigation stacks. `gmapping.launch`, `amcl.launch`, as well as all contents of `includes` and `config` folders were adapted from the repository. From `turtlebot_interactions` come most of the RViz display settings in `homeservicerobot_config.rviz`, adapted from `navigation.rviz`.
+Below is a list of the packages used for this project:
 
 <table width="100%">
     <thead>
@@ -59,7 +59,8 @@ Below is a list of the packages used for this project. The first three were inst
             <td>
                 <ul>
                     <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks [1];</li>
-                    <li>To save map data in the <code>map</code> folder.</li>
+                    <li>To save map data in the <code>map</code> folder;</li>
+                    <li>Cloned locally, with contents adapted for this project: <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code>.</li>
                 </ul>
             </td>
         </tr>
@@ -67,7 +68,8 @@ Below is a list of the packages used for this project. The first three were inst
             <td><code>turtlebot_interactions/turtlebot_rviz_launchers</code></td>
             <td>
                 <ul>
-                    <li>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan) [2].</li>
+                    <li>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan) [2];</li>
+                    <li>Cloned locally, with contents adapted for this project: <code>navigation.rviz</code></li>
                 </ul>
             </td>
         </tr>
