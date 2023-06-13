@@ -17,8 +17,6 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
-Below is a list of the packages used for this project. Some of them were fully installed, while others had content extracted and adapted to the project.
-
 <table width="100%">
     <thead>
         <tr>
@@ -70,6 +68,8 @@ Below is a list of the packages used for this project. Some of them were fully i
         </tr>
     </tbody>
 </table>
+
+`turtlebot_apps` and `turtlebot_interactions` were cloned locally and had their content extracted and adapted to the project. All files contained in `config` as well as `amcl.launch` and `gmapping.launch` come from the former. 
 
 __Figure 2: Directory Structure Tree__
 ```bash
