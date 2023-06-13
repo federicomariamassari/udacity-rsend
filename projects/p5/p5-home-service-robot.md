@@ -20,8 +20,8 @@ __Figure 1: My "Real" Virtual Home__
 <table width="100%">
     <thead>
         <tr>
-            <th align="left">Package</th>
-            <th align="left">Description</th>
+            <th align="left" width="150">Package</th>
+            <th align="left" width="750">Description</th>
         </tr>
     </thead>
     <tbody>
