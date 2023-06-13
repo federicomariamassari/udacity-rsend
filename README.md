@@ -166,9 +166,7 @@ __[Link to code](/projects/p5/catkin_ws/src/)__
 
 ### How to Build and Run the Project
 
-
-
-Required dependencies are `xterm`, `slam_gmapping` and `teleop_twist_keyboard`. Then, build via `catkin_make` and run following the instructions in the dedicated README file.
+Ensure `xterm`, `slam_gmapping`, and `teleop_twist_keyboard` are installed. Then, build via `catkin_make` and run following the instructions in the dedicated README file.
 
 ### Output
 
