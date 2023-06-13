@@ -65,7 +65,7 @@ Below is a list of the packages used for this project:
             </td>
         </tr>
         <tr>
-            <td><a href=https://github.com/turtlebot/turtlebot_interactions/tree/indigo/turtlebot_rviz_launchers></a><code>turtlebot_rviz_launchers</code></a></td>
+            <td><a href=https://github.com/turtlebot/turtlebot_interactions/tree/indigo/turtlebot_rviz_launchers><code>turtlebot_rviz_launchers</code></a></td>
             <td>
                 <ul>
                     <li>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan);</li>
