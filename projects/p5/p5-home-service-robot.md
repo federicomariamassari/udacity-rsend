@@ -31,7 +31,8 @@ Below is a list of the packages used for this project. The first three were inst
             <td><code>xterm</code></td>
             <td>
                 <ul>
-                    <li>To spawn multiple terminal windows from shell scripts.</li>
+                    <li>To spawn multiple terminal windows from shell scripts;</li>
+                    <li>Installed via APT.</li>
                 </ul>
             </td>
         </tr>
@@ -39,7 +40,8 @@ Below is a list of the packages used for this project. The first three were inst
             <td><code>teleop_twist_keyboard</code></td>
             <td>
                 <ul>
-                    <li>To manually teleoperate the robot during mapping via SLAM.</li>
+                    <li>To manually teleoperate the robot during mapping via SLAM;</li>
+                    <li>Installed via APT.</li>
                 </ul>
             </td>
         </tr>
@@ -47,7 +49,8 @@ Below is a list of the packages used for this project. The first three were inst
             <td><code>slam_gmapping</code></td>
             <td>
                 <ul>
-                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM.</li>
+                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM;</li>
+                    <li>Installed via APT.</li>
                 </ul>
             </td>
         </tr>
