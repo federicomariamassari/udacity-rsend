@@ -33,7 +33,8 @@ __Figure 1: My "Real" Virtual Home__
                 </ul>
             </td>
         </tr>
-
+    </tbody>
+</table>
 
 __Figure 2: Directory Structure Tree__
 ```bash
