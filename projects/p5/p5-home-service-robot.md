@@ -17,6 +17,10 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
+Below is a list of the packages used for this project. 
+
+Some were fully installed, like `xterm` and ROS Noetic versions of `teleop_twist_keyboard` and `slam_gmapping`, while others were locally cloned and 
+
 <table width="100%">
     <thead>
         <tr>
@@ -26,10 +30,18 @@ __Figure 1: My "Real" Virtual Home__
     </thead>
     <tbody>
         <tr>
+            <td><code>xterm</code></td>
+            <td>
+                <ul>
+                    <li>To spawn multiple terminal windows from shell scripts.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td><code>teleop_twist_keyboard</code></td>
             <td>
                 <ul>
-                    <li>Used to manually teleoperate the robot during mapping via SLAM</li>
+                    <li>Used to manually teleoperate the robot during mapping via SLAM.</li>
                 </ul>
             </td>
         </tr>
@@ -37,7 +49,7 @@ __Figure 1: My "Real" Virtual Home__
             <td><code>slam_gmapping</code></td>
             <td>
                 <ul>
-                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM</li>
+                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM.</li>
                 </ul>
             </td>
         </tr>
@@ -45,8 +57,8 @@ __Figure 1: My "Real" Virtual Home__
             <td><code>turtlebot_apps/turtlebot_navigation</code></td>
             <td>
                 <ul>
-                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</li>
-                    <li>To save map data in the <code>map</code> folder</li>
+                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks in the <code>launch</code> and <code>config</code> folders;</li>
+                    <li>To save map data in the <code>map</code> folder.</li>
                 </ul>
             </td>
         </tr>
@@ -54,7 +66,7 @@ __Figure 1: My "Real" Virtual Home__
             <td><code>turtlebot_interactions/turtlebot_rviz_launchers</code></td>
             <td>
                 <ul>
-                    <li>Used to set up RViz displays</li>
+                    <li>Used to set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan).</li>
                 </ul>
             </td>
         </tr>
