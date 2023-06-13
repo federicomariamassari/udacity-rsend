@@ -17,7 +17,7 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
-<table>
+<table width="100%">
     <thead>
         <tr>
             <th align="left">Package</th>
