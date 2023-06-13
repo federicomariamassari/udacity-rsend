@@ -17,6 +17,8 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
+Below is a list of the packages used for this project. The first three were installed via APT, while the others were cloned locally and had their content extracted and adapted. From `turtlebot_apps` come all configurations for the mapping, localization, and navigation stacks. `gmapping.launch`, `amcl.launch`, as well as all contents of `includes` and `config` folders were adapted from the repository. From `turtlebot_interactions` come most of the RViz display settings in `homeservicerobot_config.rviz`, adapted from `navigation.rviz`.
+
 <table width="100%">
     <thead>
         <tr>
@@ -37,7 +39,7 @@ __Figure 1: My "Real" Virtual Home__
             <td><code>teleop_twist_keyboard</code></td>
             <td>
                 <ul>
-                    <li>Used to manually teleoperate the robot during mapping via SLAM.</li>
+                    <li>To manually teleoperate the robot during mapping via SLAM.</li>
                 </ul>
             </td>
         </tr>
@@ -53,7 +55,7 @@ __Figure 1: My "Real" Virtual Home__
             <td><code>turtlebot_apps/turtlebot_navigation</code></td>
             <td>
                 <ul>
-                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks in the <code>launch</code> and <code>config</code> folders;</li>
+                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks [1];</li>
                     <li>To save map data in the <code>map</code> folder.</li>
                 </ul>
             </td>
@@ -62,14 +64,12 @@ __Figure 1: My "Real" Virtual Home__
             <td><code>turtlebot_interactions/turtlebot_rviz_launchers</code></td>
             <td>
                 <ul>
-                    <li>Used to set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan).</li>
+                    <li>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan) [2].</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
-
-`turtlebot_apps` and `turtlebot_interactions` were cloned locally and had their content extracted and adapted to the project. All files contained in `config` as well as `amcl.launch` and `gmapping.launch` come from the former. 
 
 __Figure 2: Directory Structure Tree__
 ```bash
