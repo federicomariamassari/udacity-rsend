@@ -22,8 +22,9 @@ Below is a list of the packages used for this project:
 <table width="100%">
     <thead>
         <tr>
-            <th align="left" width="350">Package</th>
-            <th align="left" width="750">Description</th>
+            <th align="left">Package</th>
+            <th align="left">Description</th>
+            <th align="left">Use</th>
         </tr>
     </thead>
     <tbody>
@@ -31,10 +32,12 @@ Below is a list of the packages used for this project:
             <td><code>xterm</code></td>
             <td>
                 <ul>
-                    <li>To spawn multiple terminal windows from shell scripts;</li>
-                    <li>Installed via APT.</li>
+                    <li>To spawn multiple terminal windows from shell scripts</li>
                 </ul>
             </td>
+        </tr>
+        <tr>
+            <td>Installed via APT</td>
         </tr>
         <tr>
             <td><code>teleop_twist_keyboard</code></td>
