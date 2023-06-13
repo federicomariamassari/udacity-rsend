@@ -31,8 +31,7 @@ Below is a list of the packages used for this project. Some of them were fully i
             <td><code>xterm</code></td>
             <td>
                 <ul>
-                    <li>To spawn multiple terminal windows from shell scripts;</li>
-                    <li>Installed.</li>
+                    <li>To spawn multiple terminal windows from shell scripts.</li>
                 </ul>
             </td>
         </tr>
@@ -40,8 +39,7 @@ Below is a list of the packages used for this project. Some of them were fully i
             <td><code>teleop_twist_keyboard</code></td>
             <td>
                 <ul>
-                    <li>Used to manually teleoperate the robot during mapping via SLAM;</li>
-                    <li>Installed (ROS Noetic)</li>
+                    <li>Used to manually teleoperate the robot during mapping via SLAM.</li>
                 </ul>
             </td>
         </tr>
@@ -49,8 +47,7 @@ Below is a list of the packages used for this project. Some of them were fully i
             <td><code>slam_gmapping</code></td>
             <td>
                 <ul>
-                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM;</li>
-                    <li>Installed (ROS Noetic).</li>
+                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM.</li>
                 </ul>
             </td>
         </tr>
