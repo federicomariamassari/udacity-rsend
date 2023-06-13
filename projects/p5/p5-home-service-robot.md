@@ -20,8 +20,8 @@ __Figure 1: My "Real" Virtual Home__
 <table width="100%">
     <thead>
         <tr>
-            <th align="left" width="150">Package</th>
-            <th align="left" width="750">Description</th>
+            <th align="left" width="250">Package</th>
+            <th align="left" width="650">Description</th>
         </tr>
     </thead>
     <tbody>
@@ -30,6 +30,14 @@ __Figure 1: My "Real" Virtual Home__
             <td>
                 <ul>
                     <li>Used to manually teleoperate the robot during mapping via SLAM</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>slam_gmapping</code></td>
+            <td>
+                <ul>
+                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM</li>
                 </ul>
             </td>
         </tr>
