@@ -17,91 +17,23 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
-
-
 <table>
     <thead>
         <tr>
             <th align="left">Package</th>
-            <th align="left">Method of Inclusion</th>
             <th align="left">Description</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan=1><code>teleop_twist_keyboard</code></td>
-            <td>Installed</td>
+            <td><code>teleop_twist_keyboard</code></td>
             <td>
                 <ul>
-                    <li>To manually teleoperate the robot during mapping via SLAM;</li>
+                    <li>Used to manually teleoperate the robot during mapping via SLAM</li>
                 </ul>
             </td>
         </tr>
-        <tr>
-            <td rowspan=1><code>slam_gmapping</code></td>
-            <td>Installed</td>
-            <td>
-                <ul>
-                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM;</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan=1><code>turtlebot_apps</code><br/><code>└── turtlebot_navigation</code></td>
-            <td>Selected files adapted for the project:
-            <code>
-                config
-                ├── costmap_common_params.yaml
-                ├── dwa_local_planner_params.yaml
-                ├── global_costmap_params.yaml
-                ├── local_costmap_params.yaml
-                ├── move_base_params.yaml
-                └── navfn_global_planner_params.yaml
-                launch
-                ├── amcl.launch
-                ├── gmapping.launch
-                └── includes
-                    ├── amcl.launch.xml
-                    ├── gmapping.launch.xml
-                    └── move_base.launch.xml
-            </code>
-            </td>
-            <td>
-                <ul>
-                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</li>
-                    <li>To save map data in the <code>map</code> folder</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan=1><code>turtlebot_interactions</code><br/><code>└── turtlebot_rviz_launchers</code></td>
-            <td>Selected files adapted for the project:
-            <ul>
-                <li><code>view_navigation.launch</code></li>
-                <li><code>rviz/navigation.rviz</code></li>
-            </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>To add RViz displays</li>
-                </ul>
-        </tr>
-    </tbody>
-</table>
 
-
-
-
-Scrapped packages
-
-
-
-
-
-
-demos of map building using gmapping and localization with amcl, while running the navigation stack.
-
-- `turtlebot_interactions/turtlebot_rviz_launchers` - [2]
 
 __Figure 2: Directory Structure Tree__
 ```bash
@@ -215,32 +147,6 @@ Understanding how to compile in the same node two `add_markers` files (time, odo
 
 URDF 1.7 (Gazebo 11, VM) and 1.6 (Gazebo 7, Udacity workspace) are not fully compatible and issues, mostly with objects pose, generally arise when retro-porting the Gazebo world ahead of project submission. Spawning the robot model inside the Gazebo world via ROS, saving the world including the robot, and manually removing the latter in the `.world` file helped resolve.
 
-## Building and Running the Project
-
-Install below dependencies, then build via `catkin_make`.
-
-```bash
-sudo apt-get install xterm
-sudo apt install ros-$ROS_DISTRO-teleop-twist-keyboard
-sudo apt install ros-$ROS_DISTRO-slam-gmapping
-```
-
-Shell scripts require execute permission:
-
-```bash
-cd src/scripts
-chmod +x test_slam.sh test_navigation.sh pick_objects.sh add_marker.sh home_service.sh
-```
-
-To execute individual scripts from inside `catkin_ws` run:
-
-```bash
-./src/scripts/test_slam.sh
-```
-
-Each script
-See individual script content
-
 ## Code Logic
 
 ### RQt Graph
@@ -260,23 +166,43 @@ __Figure 4: RQt Graph__
 
 - `/add_markers` contains the logic to show and hide markers representing object pick-ups and drop-offs. It subscribes to odometry data to synchronise with `/pick_objects` and publishes a marker (manually added) to RViz.
 
+## Building and Running the Project
+
+Install below dependencies, then build via `catkin_make`.
+
+```bash
+sudo apt-get install xterm
+sudo apt install ros-$ROS_DISTRO-teleop-twist-keyboard
+sudo apt install ros-$ROS_DISTRO-slam-gmapping
+```
+
+Shell scripts require execute permission:
+
+```bash
+cd src/scripts
+chmod +x test_slam.sh test_navigation.sh pick_objects.sh add_marker.sh home_service.sh
+```
+
 ### Phase 1: SLAM Testing
 
-- The logic is contained in `test_slam.sh`
+- `test_slam.sh`
 - 
 
 
 A satisfactory output can be saved into the `map` folder from the main terminal.
 
 __Figure 5: Environment Mapping__
-![Mapping Phase](./img/mov4.gif)
+![Mapping](./img/mov4.gif)
 
 ### Phase 2: Localization and Navigation Testing
 
 __Figure 6: Robot Navigation__
-![Mapping Phase](./img/mov5.gif)
+![Navigation](./img/mov5.gif)
 
 ### Phase 3: 
+
+__Figure 7: Object Pick-Up__
+![Pick-Up](./img/mov6.gif)
 
 ## Resources
 
