@@ -43,7 +43,7 @@ __Figure 1: My "Real" Virtual Home__
 </tr>
 <tr>
 <td><a href="https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation"><code>turtlebot_navigation</code></a></td>
-<td>Selected contents from repository adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code> folders</td>
+<td>Selected repository contents adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code></td>
 <td>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</td>
 </tr>
 <tr>
