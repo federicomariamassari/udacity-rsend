@@ -55,20 +55,20 @@ Below is a list of the packages used for this project:
             </td>
         </tr>
         <tr>
-            <td><code>turtlebot_apps/turtlebot_navigation</code></td>
+            <td><a href=https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation><code>turtlebot_navigation</code></a></td>
             <td>
                 <ul>
-                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks [1];</li>
+                    <li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks;</li>
                     <li>To save map data in the <code>map</code> folder;</li>
                     <li>Cloned locally, with contents adapted for this project: <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code>.</li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td><code>turtlebot_interactions/turtlebot_rviz_launchers</code></td>
+            <td><a href=https://github.com/turtlebot/turtlebot_interactions/tree/indigo/turtlebot_rviz_launchers></a><code>turtlebot_rviz_launchers</code></a></td>
             <td>
                 <ul>
-                    <li>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan) [2];</li>
+                    <li>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan);</li>
                     <li>Cloned locally, with contents adapted for this project: <code>navigation.rviz</code></li>
                 </ul>
             </td>
@@ -154,7 +154,7 @@ I was initially disappointed to find out the capstone project relied on Turtlebo
 
 2. Scrapping the idea of running the Turtlebot project locally, and only relying on the Udacity workspace.
 
-Finally, thanks to online posts, I realized it was feasible and actually encouraged to submit the project using my own world and robot [3] [4].
+Finally, thanks to online posts, I realized it was feasible and actually encouraged to submit the project using my own world and robot [1] [2].
 
 ### RViz Configuration
 
@@ -166,7 +166,7 @@ Mapping table and chair legs in the 2D occupancy grid was surprising problematic
 
 ### Localization and Navigation
 
-Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Fine tuning was luckily simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the availability of quality literature to review [5]. However, one major challenge came from the size of the cost cloud used for local planning: with 10 square meters (the original value for Project 3, calibrated for a much wider environment) the robot often got stuck when reaching the same y-coordinate of the goal but in a different room, with the red likelihood area spilling over to the inaccessible space and causing endless recalculation of the ideal trajectory [Figure 3.B]. It took me some time to understand how to resize the cloud and find the optimal value of 6 square meters.
+Adapting Turtlebot configurations to my project was an opportunity to experiment with different algorithms like Dynamic Window Approach (DWA), but it was also a challenge due to the much larger number of parameters to calibrate. Fine tuning was luckily simplified thanks to the work done as part of Project 3, the option to recycle some of Turtlebot's default parameter values, and the availability of quality literature to review [3]. However, one major challenge came from the size of the cost cloud used for local planning: with 10 square meters (the original value for Project 3, calibrated for a much wider environment) the robot often got stuck when reaching the same y-coordinate of the goal but in a different room, with the red likelihood area spilling over to the inaccessible space and causing endless recalculation of the ideal trajectory [Figure 3.B]. It took me some time to understand how to resize the cloud and find the optimal value of 6 square meters.
 
 <table>
   <tr>
@@ -182,7 +182,7 @@ Adapting Turtlebot configurations to my project was an opportunity to experiment
 
 ### Custom C++ ROS Nodes
 
-Understanding how to compile in the same node two `add_markers` files (time, odometry) each with its own `main` function but sharing the same header took some time, and came through close inspection of `CMakeLists.txt` in Project 2 as well as review of Udacity Knowledge answers [6].
+Understanding how to compile in the same node two `add_markers` files (time, odometry) each with its own `main` function but sharing the same header took some time, and came through close inspection of `CMakeLists.txt` in Project 2 as well as review of Udacity Knowledge answers [4].
 
 ### Testing in the Udacity Environment
 
@@ -247,11 +247,9 @@ __Figure 7: Object Pick-Up__
 
 ## Resources
 
-1. https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation
-2. https://github.com/turtlebot/turtlebot_interactions/tree/indigo/turtlebot_rviz_launchers
-3. https://knowledge.udacity.com/questions/903802
-4. https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
-5. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision) - [Link](https://kaiyuzheng.me/documents/navguide.pdf)
-6. https://knowledge.udacity.com/questions/922035
+1. https://knowledge.udacity.com/questions/903802
+2. https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
+3. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision) - [Link](https://kaiyuzheng.me/documents/navguide.pdf)
+4. https://knowledge.udacity.com/questions/922035
 
 [Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md)
