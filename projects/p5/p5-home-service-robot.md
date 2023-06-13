@@ -17,9 +17,7 @@ __Figure 1: My "Real" Virtual Home__
 
 ## Packages Used
 
-Below is a list of the packages used for this project. 
-
-Some were fully installed, like `xterm` and ROS Noetic versions of `teleop_twist_keyboard` and `slam_gmapping`, while others were locally cloned and 
+Below is a list of the packages used for this project. Some of them were fully installed, while others had content extracted and adapted to the project.
 
 <table width="100%">
     <thead>
@@ -33,7 +31,8 @@ Some were fully installed, like `xterm` and ROS Noetic versions of `teleop_twist
             <td><code>xterm</code></td>
             <td>
                 <ul>
-                    <li>To spawn multiple terminal windows from shell scripts.</li>
+                    <li>To spawn multiple terminal windows from shell scripts;</li>
+                    <li>Installed.</li>
                 </ul>
             </td>
         </tr>
@@ -41,7 +40,8 @@ Some were fully installed, like `xterm` and ROS Noetic versions of `teleop_twist
             <td><code>teleop_twist_keyboard</code></td>
             <td>
                 <ul>
-                    <li>Used to manually teleoperate the robot during mapping via SLAM.</li>
+                    <li>Used to manually teleoperate the robot during mapping via SLAM;</li>
+                    <li>Installed (ROS Noetic)</li>
                 </ul>
             </td>
         </tr>
@@ -49,7 +49,8 @@ Some were fully installed, like `xterm` and ROS Noetic versions of `teleop_twist
             <td><code>slam_gmapping</code></td>
             <td>
                 <ul>
-                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM.</li>
+                    <li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM;</li>
+                    <li>Installed (ROS Noetic).</li>
                 </ul>
             </td>
         </tr>
