@@ -99,6 +99,8 @@ __Figure 2: Directory Structure Tree__
 
 ## Packages Used
 
+Below is a list of packages used for the project:
+
 <table width="100%">
 <thead>
 <tr>
@@ -228,7 +230,7 @@ chmod +x test_slam.sh test_navigation.sh pick_objects.sh add_marker.sh home_serv
 
 - Launcher: `test_slam.sh`
 
-This script will initiate environment mapping via robot teleoperation. A satisfactory output can be saved into the `map` folder from the main terminal window (Y, y).
+This script initiates environment mapping via robot teleoperation. A satisfactory output can be saved into the `map` folder from the main terminal window (Y, y).
 
 __Figure 5: Environment Mapping__
 ![Mapping](./img/mov4.gif)
@@ -237,15 +239,33 @@ __Figure 5: Environment Mapping__
 
 - Launcher: `test_navigation.sh`
 
-This script will trigger robot localization (AMCL) and navigation to a single target (DWA).
+This script triggers robot localization (AMCL) and navigation to a single target (DWA).
 
 __Figure 6: Robot Navigation__
 ![Navigation](./img/mov5.gif)
 
-### Phase 3: 
+### Phase 3: Pick Objects
+
+- Launcher: `pick_objects.sh`
+
+This script sends two consecutive navigation goals to the robot and logs messages when target is reached.
 
 __Figure 7: Object Pick-Up__
 ![Pick-Up](./img/mov6.gif)
+
+### Phase 4: Add Markers
+
+- Launcher: `add_marker.sh`
+
+This script publishes a rotating marker at an object pick-up zone, pauses for 5 seconds, hides the marker, pauses again for 5 seconds, and displays it at a drop-off location.
+
+![Add Marker](./img/mov6.gif)
+
+### Phase 5: Home Service Robot
+
+- Launcher: `home_service.sh`
+
+This script — the final project — simulates an item fetching and delivering. The robot is sent to the pick-up zone.
 
 ## Resources
 
