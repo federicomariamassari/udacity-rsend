@@ -15,49 +15,18 @@ This capstone project combines SLAM, pure localization, navigation, and C++ prog
 __Figure 1: My "Real" Virtual Home__
 ![My Virtual Home](./img/img2.png)
 
-## Packages Used
+## Project Structure
 
-<table width="100%">
-<thead>
-<tr>
-<th align="left">Package</th>
-<th align="left">Use</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>xterm</code></td>
-<td>Installed package</td>
-<td>To spawn multiple terminal windows from shell scripts</td>
-</tr>
-<tr>
-<td><code>teleop_twist_keyboard</code></td>
-<td>Installed package</td>
-<td>To manually teleoperate the robot during mapping via SLAM</td>
-</tr>
-<tr>
-<td><code>slam_gmapping</code></td>
-<td>Installed package</td>
-<td>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM</td>
-</tr>
-<tr>
-<td><code>map_server</code></td>
-<td>Installed package</td>
-<td>To save SLAM-generated map and configurations</td>
-</tr>
-<tr>
-<td><a href="https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation"><code>turtlebot_navigation</code></a></td>
-<td>Selected repository contents adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code></td>
-<td>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</td>
-</tr>
-<tr>
-<td><a href="https://github.com/turtlebot/turtlebot_interactions/tree/indigo/turtlebot_rviz_launchers"><code>turtlebot_rviz_launchers</code></a></td>
-<td>Contents from <code>navigation.rviz</code> included in <code>homeservicerobot_config.rviz</code></td>
-<td>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan)</td>
-</tr>
-</tbody>
-</table>
+The directory structure tree for this project appears in Figure 2. Three packages are included:
+
+- `my_robot` contains specifications about the world, the robot, as well as configuration files for the mapping, localization, and navigation stack; 
+
+- 
+
+The `scripts` folder
+
+`launch` launches the file. These are not called directly, but via one of the script contained in `scripts`. Check the individual files for additional information.
+`config` holds the parameter configurations for the navigation stack, which comprises costmaps and global and local planners.
 
 __Figure 2: Directory Structure Tree__
 ```bash
@@ -72,7 +41,8 @@ __Figure 2: Directory Structure Tree__
         │   │       └── add_markers.h
         │   ├── package.xml
         │   └── src
-        │       └── add_markers.cpp
+        │       ├── add_markers.cpp
+        │       └── add_markers_timed.cpp
         ├── map
         │   ├── map.pgm
         │   └── map.yaml
@@ -120,10 +90,55 @@ __Figure 2: Directory Structure Tree__
         │   └── homeservicerobot_config.rviz
         └── scripts
             ├── add_marker.sh
+            ├── home_service.sh
             ├── pick_objects.sh
             ├── test_navigation.sh
             └── test_slam.sh
 ```
+
+## Packages Used
+
+<table width="100%">
+<thead>
+<tr>
+<th align="left">Package</th>
+<th align="left">Use</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>xterm</code></td>
+<td>Installed package</td>
+<td>To spawn multiple terminal windows from shell scripts</td>
+</tr>
+<tr>
+<td><code>teleop_twist_keyboard</code></td>
+<td>Installed package</td>
+<td>To manually teleoperate the robot during mapping via SLAM</td>
+</tr>
+<tr>
+<td><code>slam_gmapping</code></td>
+<td>Installed package</td>
+<td>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM</td>
+</tr>
+<tr>
+<td><code>map_server</code></td>
+<td>Installed package</td>
+<td>To save SLAM-generated map and configurations</td>
+</tr>
+<tr>
+<td><a href="https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation"><code>turtlebot_navigation</code></a></td>
+<td>Selected repository contents adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code></td>
+<td>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/turtlebot/turtlebot_interactions/tree/indigo/turtlebot_rviz_launchers"><code>turtlebot_rviz_launchers</code></a></td>
+<td>Contents from <code>navigation.rviz</code> included in <code>homeservicerobot_config.rviz</code></td>
+<td>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan)</td>
+</tr>
+</tbody>
+</table>
 
 ## Challenges Faced
 
@@ -198,6 +213,7 @@ Install below dependencies, then build via `catkin_make`.
 sudo apt-get install xterm
 sudo apt install ros-$ROS_DISTRO-teleop-twist-keyboard
 sudo apt install ros-$ROS_DISTRO-slam-gmapping
+sudo apt install ros-$ROS_DISTRO-map-server
 ```
 
 Shell scripts require execute permission:
