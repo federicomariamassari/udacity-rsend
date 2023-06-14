@@ -208,16 +208,16 @@ __Figure 4: RQt Graph__
 
 ## Building and Running the Project
 
-Install below dependencies, then build via `catkin_make`.
+Ensure below dependencies are installed:
 
 ```bash
-sudo apt-get install xterm
+sudo apt install xterm
 sudo apt install ros-$ROS_DISTRO-teleop-twist-keyboard
 sudo apt install ros-$ROS_DISTRO-slam-gmapping
 sudo apt install ros-$ROS_DISTRO-map-server
 ```
 
-Shell scripts require execute permission:
+Then, build via `catkin_make`. Shell scripts require execute permission:
 
 ```bash
 cd src/scripts
@@ -226,11 +226,9 @@ chmod +x test_slam.sh test_navigation.sh pick_objects.sh add_marker.sh home_serv
 
 ### Phase 1: SLAM Testing
 
-- `test_slam.sh`
-- 
+Launcher: `test_slam.sh`
 
-
-A satisfactory output can be saved into the `map` folder from the main terminal.
+A satisfactory output can be saved into the `map` folder from the main terminal window (Y, y).
 
 __Figure 5: Environment Mapping__
 ![Mapping](./img/mov4.gif)
