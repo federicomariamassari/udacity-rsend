@@ -226,14 +226,18 @@ chmod +x test_slam.sh test_navigation.sh pick_objects.sh add_marker.sh home_serv
 
 ### Phase 1: SLAM Testing
 
-Launcher: `test_slam.sh`
+- Launcher: `test_slam.sh`
 
-A satisfactory output can be saved into the `map` folder from the main terminal window (Y, y).
+This script will initiate environment mapping via robot teleoperation. A satisfactory output can be saved into the `map` folder from the main terminal window (Y, y).
 
 __Figure 5: Environment Mapping__
 ![Mapping](./img/mov4.gif)
 
 ### Phase 2: Localization and Navigation Testing
+
+- Launcher: `test_navigation.sh`
+
+This script will trigger robot localization (AMCL) and navigation to a single target (DWA).
 
 __Figure 6: Robot Navigation__
 ![Navigation](./img/mov5.gif)
