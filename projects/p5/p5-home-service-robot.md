@@ -23,9 +23,9 @@ The directory structure tree for this project appears in Figure 2. Three package
 
 - `add_markers` contains the logic to publish markers resembling objects to RViz;
 
--  `pick_objects` directs the robot to two different locations in the map, consecutively.
+- `pick_objects` directs the robot to two different locations in the map, consecutively.
 
-The `scripts` folder contains executable shell scripts to trigger all tasks in this assignment: mapping the environment and saving the outcome to file (`test_slam.sh`), manually sending a navigation goal to the robot (`test_navigation.sh`), imparting two consecutive goals (`pick_objects.sh`) automatically, timing marker visualization in RViz (`add_marker.sh`) and launching the final project (`home_service.sh`).
+The `scripts` folder contains executable shell scripts to trigger all tasks in this assignment: mapping the environment and saving the outcome to file (`test_slam.sh`), manually sending a navigation goal to the robot (`test_navigation.sh`), imparting two consecutive goals automatically(`pick_objects.sh`), timing marker visualization in RViz (`add_marker.sh`), and launching the final project (`home_service.sh`).
 
 Finally, `map` stores the 2D occupancy grid created with SLAM, and `rvizConfig` a custom collection of RViz displays.
 
@@ -90,11 +90,11 @@ __Figure 2: Directory Structure Tree__
         ├── rvizConfig
         │   └── homeservicerobot_config.rviz
         └── scripts
-            ├── add_marker.sh                   # Time marker visualization in RViz
-            ├── home_service.sh                 # Launch the full project
-            ├── pick_objects.sh                 # Automatically impart two consecutive goals
-            ├── test_navigation.sh              # Manually send a navigation goal to the robot
-            └── test_slam.sh                    # Map the environment and save outcome to file
+            ├── add_marker.sh
+            ├── home_service.sh
+            ├── pick_objects.sh
+            ├── test_navigation.sh
+            └── test_slam.sh
 ```
 
 ## Packages Used
