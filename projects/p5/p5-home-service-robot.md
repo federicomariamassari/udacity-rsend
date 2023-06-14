@@ -112,32 +112,32 @@ Below is a list of packages used for the project:
 <tbody>
 <tr>
 <td><code>xterm</code></td>
-<td>Installed package</td>
+<td><ul><li>Installed package</li></ul></td>
 <td><ul><li>To spawn multiple terminal windows from shell scripts</li></ul></td>
 </tr>
 <tr>
 <td><code>teleop_twist_keyboard</code></td>
-<td>Installed package</td>
+<td><ul><li>Installed package</li></ul></td>
 <td><ul><li>To manually teleoperate the robot during mapping via SLAM</li></ul></td>
 </tr>
 <tr>
 <td><code>slam_gmapping</code></td>
-<td>Installed package</td>
+<td><ul><li>Installed package</li></ul></td>
 <td><ul><li>To create of a 2D occupancy grid using laser and pose data during mapping via SLAM</li></ul></td>
 </tr>
 <tr>
 <td><code>map_server</code></td>
-<td>Installed package</td>
+<td><ul><li>Installed package</li></ul></td>
 <td><ul><li>To save SLAM-generated map and configurations</li></ul></td>
 </tr>
 <tr>
 <td><a href="https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation"><code>turtlebot_navigation</code></a></td>
-<td>Selected repository contents adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code></td>
+<td><ul><li>Selected repository contents adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code></li></ul></td>
 <td><ul><li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</li></ul></td>
 </tr>
 <tr>
 <td><a href="https://github.com/turtlebot/turtlebot_interactions/tree/indigo/turtlebot_rviz_launchers"><code>turtlebot_rviz_launchers</code></a></td>
-<td>Contents from <code>navigation.rviz</code> included in <code>homeservicerobot_config.rviz</code></td>
+<td><ul><li>Contents from <code>navigation.rviz</code> included in <code>homeservicerobot_config.rviz</code></li></ul></td>
 <td><ul><li>To set up RViz displays (Global Map: Global Costmap, Global Planner; Local Map: Local Costmap, Local Planner, Cost Cloud, Trajectory Cloud; Full Plan)</li></ul></td>
 </tr>
 </tbody>
