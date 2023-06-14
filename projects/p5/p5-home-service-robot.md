@@ -19,14 +19,13 @@ __Figure 1: My "Real" Virtual Home__
 
 The directory structure tree for this project appears in Figure 2. Three packages are included:
 
-- `my_robot` contains specifications about the world, the robot, as well as configuration files for the mapping, localization, and navigation stack; 
+- `my_robot` holds, as usual, specifications about the world, the robot model, as well as launch and configuration files for the mapping (`gmapping.launch`, `gmapping.launch.xml`), localization (`amcl.launch`, `amcl.launch.xml`), and navigation (`move_base.launch.xml`, all files in the `config` folder) stacks;
 
-- 
+- `add_markers` contains the logic to publish markers resembling objects to RViz;
 
-The `scripts` folder
+-  `pick_objects` directs the robot to two different locations in the map, consecutively.
 
-`launch` launches the file. These are not called directly, but via one of the script contained in `scripts`. Check the individual files for additional information.
-`config` holds the parameter configurations for the navigation stack, which comprises costmaps and global and local planners.
+The `scripts` folder contains executable shell scripts to trigger all tasks in this assignment: mapping the environment and saving the outcome to file (`test_slam.sh`), manually sending a navigation goal to the robot (`test_navigation.sh`), imparting two consecutive goals (`pick_objects.sh`) automatically, timing marker visualization in RViz (`add_marker.sh`) and launching the final project (`home_service.sh`).
 
 __Figure 2: Directory Structure Tree__
 ```bash
