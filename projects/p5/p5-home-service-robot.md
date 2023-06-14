@@ -230,7 +230,7 @@ chmod +x test_slam.sh test_navigation.sh pick_objects.sh add_marker.sh home_serv
 
 - Launcher: `test_slam.sh`
 
-This script initiates environment mapping via robot teleoperation. A satisfactory output can be saved into the `map` folder from the main terminal window (Y, y).
+This script initiates environment mapping via robot teleoperation. A satisfactory output can be saved into the `map` folder from the main terminal window (Y, y) [Figure 5].
 
 __Figure 5: Environment Mapping__
 ![Mapping](./img/mov4.gif)
@@ -239,7 +239,7 @@ __Figure 5: Environment Mapping__
 
 - Launcher: `test_navigation.sh`
 
-This script triggers robot localization (AMCL) and navigation to a single target (DWA).
+This script triggers robot localization (AMCL) and navigation to a single target (DWA) set manually [Figure 6].
 
 __Figure 6: Robot Navigation__
 ![Navigation](./img/mov5.gif)
@@ -248,7 +248,7 @@ __Figure 6: Robot Navigation__
 
 - Launcher: `pick_objects.sh`
 
-This script sends two consecutive navigation goals to the robot and logs messages when target is reached.
+This script sends two consecutive navigation goals to the robot, logging messages initially and when targets are reached [Figure 7].
 
 __Figure 7: Object Pick-Up__
 ![Pick-Up](./img/mov6.gif)
@@ -257,15 +257,17 @@ __Figure 7: Object Pick-Up__
 
 - Launcher: `add_marker.sh`
 
-This script publishes a rotating marker at an object pick-up zone, pauses for 5 seconds, hides the marker, pauses again for 5 seconds, and displays it at a drop-off location.
+This script publishes a rotating marker at an object pick-up zone, pauses for 5 seconds, hides the marker, pauses again for 5 seconds, and finally displays it at a drop-off location [Figure 8].
 
-![Add Marker](./img/mov6.gif)
+![Add Marker](./img/mov7.gif)
 
 ### Phase 5: Home Service Robot
 
 - Launcher: `home_service.sh`
 
-This script — the final project — simulates an item fetching and delivering. The robot is sent to the pick-up zone.
+This final script simulates an autonomous object pick-up and drop-off. A rotating marker is initially displayed at the collection point and a goal is sent to the robot to fetch the item. Once the target is reached (i.e., the vector distance between the robot's current pose and the goal is within 15 centimeters), the marker is hidden and the robot pauses for a few seconds to mimic a pick-up operation. After that, a new goal is imparted to the robot to go to the delivery area. When the bot arrives at destination, and after a few seconds, the marker is again displayed to reproduce an item drop-off.
+
+![Home Service Robot](./img/mov8.gif)
 
 ## Resources
 
