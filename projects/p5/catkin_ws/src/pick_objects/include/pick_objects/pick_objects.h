@@ -7,7 +7,7 @@
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
-void navigate_to_target(MoveBaseClient &ac, move_base_msgs::MoveBaseGoal &goal, 
-                        double position_x, double position_y, double orientation_w, char* location_name);
+void navigate_to_target(double position_x, double position_y, double orientation_w, char* location_name,
+                        MoveBaseClient &ac, move_base_msgs::MoveBaseGoal &goal);
 
 #endif /* PICK_OBJECTS_H */

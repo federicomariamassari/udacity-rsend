@@ -14,5 +14,8 @@ init "roslaunch my_robot world.launch"
 # Created my own file based on https://github.com/rst-tu-dortmund/teb_local_planner_tutorials/issues/6
 init "roslaunch my_robot amcl.launch"
 
-# Launch add_markers node to display timed markers (5 seconds) at pick-up and drop-off locations
-init "rosrun add_markers add_markers_timed"
+# Launch add_markers node to display markers at pick-up and drop-off locations
+init "rosrun add_markers add_markers"
+
+# Launch pick_objects node to move to pick-up and drop-off locations
+init "rosrun pick_objects pick_objects"

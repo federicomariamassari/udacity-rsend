@@ -3,8 +3,8 @@
 // https://answers.ros.org/question/262682/my-main-code-cannot-find-my-header-file
 #include "pick_objects/pick_objects.h"
 
-void navigate_to_target(MoveBaseClient &ac, move_base_msgs::MoveBaseGoal &goal, 
-                        double position_x, double position_y, double orientation_w, char* location_name)
+void navigate_to_target(double position_x, double position_y, double orientation_w, char* location_name,
+                        MoveBaseClient &ac, move_base_msgs::MoveBaseGoal &goal)
 {
   // Define a position and orientation for the robot to reach
   goal.target_pose.pose.position.x = position_x;
@@ -26,7 +26,7 @@ void navigate_to_target(MoveBaseClient &ac, move_base_msgs::MoveBaseGoal &goal,
     ROS_INFO("The robot failed to reach the %s zone for some reason", location_name);
 
   // Wait a few seconds before the terminal window disappears
-  sleep(5);
+  ros::Duration(5.0).sleep();
 }
 
 int main(int argc, char** argv)
@@ -49,8 +49,8 @@ int main(int argc, char** argv)
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Bring a glass of water from the kitchen (pick-up) to the bedroom (drop-off)
-  navigate_to_target(ac, goal, 3.60, 4.00, 3.14159, (char*) "pick-up");
-  navigate_to_target(ac, goal, -6.20, -4.50, -1.570796, (char*) "drop-off");
+  navigate_to_target(3.60, 4.00, 1.570796, (char*) "pick-up", ac, goal);
+  navigate_to_target(-6.40, -4.50, -1.570796, (char*) "drop-off", ac, goal);
 
   return 0;
 }
