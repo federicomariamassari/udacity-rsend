@@ -132,7 +132,7 @@ Below is a list of packages used for the project:
 </tr>
 <tr>
 <td><a href="https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation"><code>turtlebot_navigation</code></a></td>
-<td><ul><li>Selected repository contents adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code></li></ul></td>
+<td><ul><li>Selected repository contents adapted into <code>gmapping.launch</code>, <code>amcl.launch</code>, all files inside <code>includes</code> and <code>config</code> folders</li></ul></td>
 <td><ul><li>To configure parameters for the mapping, localization (AMCL) and navigation (DWA) stacks</li></ul></td>
 </tr>
 <tr>
