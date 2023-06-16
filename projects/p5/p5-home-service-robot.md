@@ -25,7 +25,7 @@ The directory structure tree for this project appears in Figure 2. Three package
 
 - `pick_objects` directs the robot to two different locations in the map, consecutively.
 
-The `scripts` folder contains executable shell scripts to trigger all tasks in this assignment: mapping the environment and saving the outcome to file (`test_slam.sh`), manually sending a navigation goal to the robot (`test_navigation.sh`), imparting two consecutive goals automatically(`pick_objects.sh`), timing marker visualization in RViz (`add_marker.sh`), and launching the final project (`home_service.sh`).
+The `scripts` folder contains executable shell scripts to trigger all tasks in this assignment: mapping the environment and saving the outcome to file (`test_slam.sh`), manually sending a navigation goal to the robot (`test_navigation.sh`), imparting two consecutive goals automatically (`pick_objects.sh`), timing marker visualization in RViz (`add_marker.sh`), and launching the final project (`home_service.sh`).
 
 Finally, `map` stores the 2D occupancy grid created with SLAM, and `rvizConfig` a custom collection of RViz displays.
 

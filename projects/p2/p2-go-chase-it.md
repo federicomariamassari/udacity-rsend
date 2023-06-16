@@ -161,7 +161,7 @@ __Figure 6: Ball Detection and Chasing__
 
 ### Robot Mechanics
 
-Robot configurations are included in folder `urdf`. The robot has a _skid-steer_ design, as opposed to the default _differential drive_. In skid-steer, a balancing caster is replaced by two driving wheels. The robot has therefore four wheels, the ones on the left (moving in sync) being autonomous from those of the right (also in sync). This setup allows for higher stability, more refined movement, and the ability of turning in place.
+Robot configurations are included in folder `urdf`. The robot has a _skid-steer_ design, as opposed to the default _differential drive_. In skid-steer, a balancing caster is replaced by two driving wheels. The robot has therefore four wheels, the ones on the left (moving in sync) being autonomous from those on the right (also in sync). This setup allows for higher stability, more refined movement, and the ability of turning in place.
 
 ## Resources
 
