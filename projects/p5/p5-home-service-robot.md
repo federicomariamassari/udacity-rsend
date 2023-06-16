@@ -257,7 +257,7 @@ __Figure 7: Simulated Object Pick-Up__
 
 - Launcher: `add_marker.sh`
 
-This script publishes a rotating marker at an object pick-up zone, pauses for 5 seconds, hides the marker, pauses again for 5 seconds, and finally displays it at a drop-off location [Figure 8].
+This script publishes a still marker at an object pick-up zone, pauses for 5 seconds, hides the marker, pauses again for 5 seconds, and finally displays it at a drop-off location [Figure 8].
 
 __Figure 8: Marker Display and Hiding__
 ![Add Marker](./img/mov7.gif)
