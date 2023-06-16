@@ -172,4 +172,10 @@ Ensure `xterm`, `slam_gmapping`, and `teleop_twist_keyboard` are installed. Then
 
 A simulated pick-up operation is displayed in the figure below. The item to fetch is represented by a rotating cyan cube. The robot moves towards the object and a message is shown once the target is reached. After a few seconds, the object marker disappears and a final message of successful collection is logged. Also visible in the image are a rainbow cost cloud depicting the likelihood of traversing a particular region of the map and a fan-spreading trajectory cloud showing the possible paths the robot could take to reach the goal.
 
+# Optional Projects
+
+## Project 1: Autonomous Systems Interview
+
+### Overiew
+
 ![Home Service Robot Output](./projects/p5/img/mov1.gif)
