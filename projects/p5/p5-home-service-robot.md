@@ -1,4 +1,4 @@
-[Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md) | Next: [Autonomous Systems Interview](../e1/e1-autonomous-systems-interview.md)
+[Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md) | Next: [Autonomous Systems Interview](../e1/e1-autonomous-systems-interview-practice.md)
 
 # Project 5: Home Service Robot
 
@@ -278,4 +278,4 @@ __Figure 9: Home Service Robot__
 3. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision) - [Link](https://kaiyuzheng.me/documents/navguide.pdf)
 4. https://knowledge.udacity.com/questions/922035
 
-[Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md) | Next: [Autonomous Systems Interview](../e1/e1-autonomous-systems-interview.md)
+[Home](../../README.md) | Previous: [Map My World](../p4/p4-map-my-world.md) | Next: [Autonomous Systems Interview](../e1/e1-autonomous-systems-interview-practice.md)
