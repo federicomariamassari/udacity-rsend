@@ -3,7 +3,7 @@
 init()
 {
   # https://askubuntu.com/questions/161652/how-to-change-the-default-font-size-of-xterm
-  xterm -fa "Monospace" -fs 11 -e "source ~/workspace/catkin_ws/devel/setup.bash ; $1" &
+  xterm -fa "Monospace" -fs 11 -e "source ~/workspace/udacity-rsend/projects/p5/catkin_ws/devel/setup.bash ; $1" &
   sleep 5
 }
 
