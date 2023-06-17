@@ -45,6 +45,8 @@ __Figure 2: Directory Structure Tree__
             │   └── world.launch
             ├── meshes
             │   └── hokuyo.dae
+            ├── models
+            │   └── ...
             ├── package.xml
             ├── urdf
             │   ├── my_robot.gazebo
