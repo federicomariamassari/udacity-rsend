@@ -178,4 +178,6 @@ A simulated pick-up operation is displayed in the figure below. The item to fetc
 
 ## Project 1: Autonomous Systems Interview
 
+_Prepare for a role as Perception and Sensor Engineer._
+
 ### Overview
