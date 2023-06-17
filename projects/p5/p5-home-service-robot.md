@@ -222,7 +222,7 @@ sudo apt install ros-$ROS_DISTRO-map-server
 Then, build via `catkin_make`. Shell scripts require execute permission:
 
 ```bash
-cd src/scripts
+cd /home/$whoami/workspace/udacity-rsend/projects/p5/catkin_ws/src/scripts
 chmod +x test_slam.sh test_navigation.sh pick_objects.sh add_marker.sh home_service.sh
 ```
 
