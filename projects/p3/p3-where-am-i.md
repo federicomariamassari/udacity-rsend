@@ -44,6 +44,9 @@ __Figure 2: Directory Structure Tree__
             │   └── map.yaml
             ├── meshes
             │   └── hokuyo.dae
+            │   └── my_coffee_table.dae
+            ├── models
+            │   └── ...
             ├── package.xml
             ├── urdf
             │   ├── my_robot.gazebo
