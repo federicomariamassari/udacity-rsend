@@ -23,7 +23,7 @@
         <pose>0 0 0.35 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/build-my-world/model/my_coffee_table.dae</uri>
+            <uri>../../meshes/my_coffee_table.dae</uri>
             <scale>0.6 0.6 0.15</scale>
           </mesh>
         </geometry>
@@ -50,7 +50,7 @@
         <pose>0 0 0.35 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/build-my-world/model/my_coffee_table.dae</uri>
+            <uri>../../meshes/my_coffee_table.dae</uri>
             <scale>0.6 0.6 0.15</scale>
           </mesh>
         </geometry>
@@ -123,7 +123,7 @@
         <pose>0 0 0.35 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/build-my-world/model/my_coffee_table.dae</uri>
+            <uri>../../meshes/my_coffee_table.dae</uri>
             <scale>0.6 0.6 0.15</scale>
           </mesh>
         </geometry>
@@ -150,7 +150,7 @@
         <pose>0 0 0.35 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/build-my-world/model/my_coffee_table.dae</uri>
+            <uri>../../meshes/my_coffee_table.dae</uri>
             <scale>0.6 0.6 0.15</scale>
           </mesh>
         </geometry>
