@@ -23,7 +23,7 @@
         <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
+            <uri>../../meshes/my_curtain.dae</uri>
             <scale>0.6 1 1.15</scale>
           </mesh>
         </geometry>
@@ -50,7 +50,7 @@
         <pose>0 0 1.28 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
+            <uri>../../meshes/my_curtain.dae</uri>
             <scale>0.6 1 1.15</scale>
           </mesh>
         </geometry>
@@ -123,7 +123,7 @@
         <pose>0 0 1.28 0 -0 1.5707</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
+            <uri>../../meshes/my_curtain.dae</uri>
             <scale>0.75 1 1.15</scale>
           </mesh>
         </geometry>
@@ -150,7 +150,7 @@
         <pose>0 0 1.28 0 -0 1.5707</pose>
         <geometry>
           <mesh>
-            <uri>/home/massari/workspace/catkin_ws/src/my_robot/models/my_curtains/../../meshes/my_curtain.dae</uri>
+            <uri>../../meshes/my_curtain.dae</uri>
             <scale>0.75 1 1.15</scale>
           </mesh>
         </geometry>
