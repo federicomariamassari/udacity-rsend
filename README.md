@@ -176,7 +176,7 @@ A simulated pick-up operation is displayed in the figure below. The item to fetc
 
 # Optional Projects
 
-## Project 1: Autonomous Systems Interview
+## [Elective 1: Autonomous Systems Interview](projects/e1/e1-autonomous-systems-interview.md)
 
 ### Overview
 
