@@ -2,7 +2,7 @@
 
 # Elective 1: Autonomous Systems Interview Practice
 
-Path: Perception/Sensor Engineer
+- Path: __Perception/Sensor Engineer__
 
 ## Required Question
 
