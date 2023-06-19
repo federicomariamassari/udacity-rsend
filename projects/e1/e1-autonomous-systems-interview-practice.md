@@ -8,7 +8,7 @@
 
 _Explain a recent project you've worked on. Why did you choose this project? What difficulties did you run into this project that you did not expect, and how did you solve them?_
 
-As a required project of Udacity's Robotics Software Engineer Nanodegree, I recently deployed an autonomous robot that could fetch and deliver items in a Gazebo environment using ROS.
+As the capstone project of Udacity's Robotics Software Engineer Nanodegree, I recently deployed an autonomous robot that could fetch and deliver items in a Gazebo environment using ROS and C++.
 
 ## Perception/Sensor Engineer Questions
 
