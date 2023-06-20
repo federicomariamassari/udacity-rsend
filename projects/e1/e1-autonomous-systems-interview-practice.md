@@ -18,7 +18,17 @@ Another issue occurred while mapping the environment via SLAM. Even after fine-t
 
 One more challenge, when testing the navigation stack, came from setting the optimal ratio between the size of the cost cloud used for local planning and that of the world map.
 
-Finally, communication between publisher and subscriber (via odometry distance).
+<table>
+  <tr>
+  <td align="center"><b>Figure 2.A</b>: Cost cloud size: 1 meter</td>
+  <td align="center"><b>Figure 2.B</b>: Cost cloud size: 10 meters</td>
+  <tr>
+  </tr>
+  <tr>
+    <td align="center"><img align="center" src="img/mov1.gif" width="475"/></td>
+    <td align="center"><img align="center" src="../p5/img/mov3.gif" width="475"/></td>
+  </tr>
+</table>
 
 #### Follow-up
 
