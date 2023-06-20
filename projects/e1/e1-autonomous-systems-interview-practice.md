@@ -14,11 +14,7 @@ Although the project was not as hard as I initially foresaw, as it built on the 
 
 The first one was designing a Gazebo world feature-rich enough for robust mapping and localization. In this regard, I decided to reproduce my real home, but this meant I could not rely on stock Gazebo models to populate the environment. All CADs (computer-aided designs) had to be created from scratch, using the basic components Gazebo provides (cube, cylinder, sphere) and experimenting with colour as well as translation and rotation properties. For more complex models (wavy curtains and an oval coffee table) I relied on Blender. The whole process took around three days, but the outcome was realistic and very pleasing.
 
-Another issue occurred while mapping the environment via SLAM. Even after fine-tuning the parameter values to reduce distortion at loop closure, drawing table and chair legs in the 2D occupancy grid was surprisingly difficult.
-
-
-
-when loop closure in the 2d occupancy grid produced some distortion which meant several passes had to be made and for small details, a collage of multiple images had to be made. Some calibration of parameters to reduce distortion, but in post-processing.
+Another issue occurred while mapping the environment via SLAM. Even after fine-tuning the parameter values to reduce distortion at loop closure, sketching table and chair legs in the 2D occupancy grid proved surprisingly difficult in one go, since additional passes in the same spots tended to wipe out at least some of the marks left by previous scans. Hence, for a small portion of the final map I took snapshots from various angles in repeated attempts, and then collate the frames in post-processing.
 
 #### Follow-up
 
