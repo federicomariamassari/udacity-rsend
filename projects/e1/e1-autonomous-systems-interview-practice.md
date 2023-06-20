@@ -12,7 +12,7 @@ As a requirement of Udacity's Robotics Software Engineer Nanodegree, I recently 
 
 The project was not as hard as I initially foresaw, as it built on the experience I acquired from working on similar tasks previously. Nevertheless, it still posed some challenges.
 
-The first one was designing a Gazebo world feature-rich enough for robust mapping and localization. In this regard, I decided to reproduce my real home, but this meant I could not rely on stock Gazebo models to populate the environment. All model CADs (computer-aided designs) had to be created from scratch, using the basic components Gazebo provides (cube, cylinder, sphere) and experimenting with colour as well as translation and rotation properties. I also relied on Blender for more complex models, an oval coffee table and wavy curtains. The whole process took around three days, but the outcome was realistic and very pleasing.
+The first one was designing a Gazebo world feature-rich enough for robust mapping and localization. In this regard, I decided to reproduce my real home, but this meant I could not rely on stock Gazebo models to populate the environment. All model CADs (computer-aided designs) had to be created from scratch, using the basic components Gazebo provides (cube, cylinder, sphere) and experimenting with colour as well as translation and rotation properties. For more complex models (wavy curtains and an oval coffee table) I relied on Blender. The whole process took around three days, but the outcome was realistic and very pleasing.
 
 Another issue occurred during the mapping phase when loop closure in the 2d occupancy grid produced some distortion which meant several passes had to be made and for small details, a collage of multiple images had to be made.
 
