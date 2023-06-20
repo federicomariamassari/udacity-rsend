@@ -10,7 +10,7 @@ _Explain a recent project you've worked on. Why did you choose this project? Wha
 
 As a requirements to graduate from Udacity's Robotics Software Engineer Nanodegree, I recently deployed an autonomous robot that can fetch and deliver items in a Gazebo environment using ROS (Robot Operating System) and C++. The project combined SLAM (Simultaneous Localization and Mapping), Navigation, and programming of custom ROS nodes, and was developed in Ubuntu Linux.
 
-The project built on the experience gained from working on similar tasks, so overall it felt easier than the assignments I completed earlier; however, it still had its fair share of challenges.
+The project built on the experience gained from working on similar tasks, so overall it felt easier than the assignments I had completed earlier. However, it still had its fair share of challenges.
 
 The first one was designing a realistic environment that the robot could navigate.
 
