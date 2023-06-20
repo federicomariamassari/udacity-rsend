@@ -10,7 +10,7 @@ _Explain a recent project you've worked on. Why did you choose this project? Wha
 
 As a requirement of Udacity's Robotics Software Engineer Nanodegree, I recently deployed a skid-steer robot that can autonomously fetch and deliver items in a Gazebo environment using ROS (Robot Operating System) and C++. The project combined SLAM (Simultaneous Localization and Mapping), navigation, and programming of custom ROS nodes, and was developed in Ubuntu Linux.
 
-The project was not as hard as I initially foresaw, as it built on the experience I acquired from working on similar tasks previously. Nevertheless, it still posed some challenges.
+Although the project was not as hard as I initially foresaw, as it built on the experience I acquired from working on similar tasks previously, it still posed some challenges.
 
 The first one was designing a Gazebo world feature-rich enough for robust mapping and localization. In this regard, I decided to reproduce my real home, but this meant I could not rely on stock Gazebo models to populate the environment. All model CADs (computer-aided designs) had to be created from scratch, using the basic components Gazebo provides (cube, cylinder, sphere) and experimenting with colour as well as translation and rotation properties. For more complex models (wavy curtains and an oval coffee table) I relied on Blender. The whole process took around three days, but the outcome was realistic and very pleasing.
 
