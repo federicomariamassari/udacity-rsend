@@ -14,11 +14,9 @@ While the project itself was not as hard as originally expected thanks to the ex
 
 The first one was designing a Gazebo world feature-rich enough for robust mapping and localization. In this regard, I decided to reproduce my real home, but this meant I could not rely on stock Gazebo models to populate the environment. All CADs (computer-aided designs) had to be created from scratch, using the basic components Gazebo provides (cube, cylinder, sphere) and experimenting with colour as well as translation and rotation properties. For more complex models (wavy curtains and an oval coffee table) I relied on Blender. The whole process was very time-consuming, but the outcome was realistic and very pleasing.
 
-Another issue occurred while mapping the environment via SLAM. Even after fine-tuning the parameter values to reduce distortion at loop closure, sketching table and chair legs in the 2D occupancy grid proved surprisingly difficult to do in one go, since additional passes in the same spots tended to wipe out at least some of the marks left by previous scans. For this reason, for a small portion of the final map I had to take snapshots from various angles through repeated attempts, and then collate the frames in post-processing.
+Another issue occurred while mapping the environment via SLAM. Even after fine-tuning the parameter values to reduce distortion at loop closure, sketching table and chair legs in the 2D occupancy grid proved surprisingly difficult to complete in one go, since additional passes in the same spots tended to wipe out at least some of the marks left by previous scans. For this reason, for a small portion of the final map I had to take snapshots from various angles through repeated attempts, and then collate the frames in post-processing.
 
-Third, 
-
- while testing the navigation stack after configuration.
+One more challenge, when testing the navigation stack, came from setting the optimal ratio between the size of the cost cloud used for local planning and that of the world map.
 
 Finally, communication between publisher and subscriber (via odometry distance).
 
