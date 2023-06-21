@@ -50,6 +50,18 @@ _You mentioned your robot had a skid-steer design. Can you explain what this mea
 
 Sure!
 
+<table>
+  <tr>
+  <td align="center"><b>Figure 3.A</b>: Skid-steer robot model in Gazebo</td>
+  <td align="center"><b>Figure 3.B</b>: Skid-steer robot design</td>
+  <tr>
+  </tr>
+  <tr>
+    <td align="center"><img align="center" src="img/mov2.gif" width="475"/></td>
+    <td align="center"><img align="center" src="img/img2.png" width="475"/></td>
+  </tr>
+</table>
+
 ## Perception/Sensor Engineer Questions
 
 ### Question 1
