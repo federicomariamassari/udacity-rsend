@@ -22,6 +22,18 @@ Finally,
 
 <table>
   <tr>
+  <td align="center"><b>Figure 1.A</b>: The Gazebo environment</td>
+  <td align="center"><b>Figure 1.B</b>: Wiped-out markers in the 2D occupancy grid</td>
+  <tr>
+  </tr>
+  <tr>
+    <td align="center"><img align="center" src="img/img1.png" width="475"/></td>
+    <td align="center"><img align="center" src="../p5/img/mov2.gif" width="475"/></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
   <td align="center"><b>Figure 2.A</b>: Excessive slowness with cost cloud too small (1 sqm)</td>
   <td align="center"><b>Figure 2.B</b>: Indecisiveness with cost cloud too large (10 sqm)</td>
   <tr>
