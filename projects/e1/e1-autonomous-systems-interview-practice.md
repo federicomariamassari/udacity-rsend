@@ -18,7 +18,7 @@ Another issue occurred while mapping the environment via SLAM. Even after fine-t
 
 One more challenge, when testing the navigation stack, came from setting the optimal size of the cost cloud used for local planning. With a size too small (side: 1 meter), the robot showed excessive slowness and an occasional off-map behaviour [Figure 2.A]. With a size too large, instead (side: 10 meters), it often got stuck when reaching the same y-coordinate of the goal but in a different room, with the red likelihood area spilling over to the inaccessible space and causing endless recalculation of the ideal trajectory [Figure 2.B]. Through trial and error, I found 6 square meters to be an ideal size.
 
-A final hurdle to solve was 
+A final hurdle to overcome was ensuring that the robot would only pick up or drop off an item after reaching the target point. This problem boiled down to efficient communication between a ROS publisher and a subscriber. The node in charge of showing and hiding the object would continuously monitor the odometry topic, and only perform an action when the vector distance of the robot from the target is smaller than a set threshold. Again through trial and error, the optimal distance was found to be approximately 15 centimeters.
 
 <table>
   <tr>
@@ -52,13 +52,25 @@ Sure!
 
 <table>
   <tr>
-  <td align="center"><b>Figure 3.A</b>: Skid-steer robot model in Gazebo</td>
-  <td align="center"><b>Figure 3.B</b>: Skid-steer robot design</td>
+      <td align="center" colspan="2"><b>Figure 3: Skid-steer robot design</b></td>
+  </tr>
+  <tr>
+  <td align="center"><b>Figure 3.A</b>: Left-turn in Gazebo</td>
+  <td align="center"><b>Figure 3.B</b>: Left-turn schematics</td>
   <tr>
   </tr>
   <tr>
     <td align="center"><img align="center" src="img/mov2.gif" width="475"/></td>
     <td align="center"><img align="center" src="img/img2.png" width="475"/></td>
+  </tr>
+    <tr>
+  <td align="center"><b>Figure 3.C</b>: In-place rotation in Gazebo</td>
+  <td align="center"><b>Figure 3.D</b>: In-place rotation schematics</td>
+  <tr>
+  </tr>
+  <tr>
+    <td align="center"><img align="center" src="img/mov3.gif" width="475"/></td>
+    <td align="center"><img align="center" src="img/img3.png" width="475"/></td>
   </tr>
 </table>
 
@@ -77,3 +89,8 @@ _How do features from algorithms like SIFT, SURF and HOG differ? Explain how the
 __[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md)
+
+## Resources
+
+1. 
+2. 
