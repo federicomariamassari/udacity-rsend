@@ -50,7 +50,7 @@ _You mentioned your robot had a skid-steer design. Can you explain what this mea
 
 Sure! I am familiar with two classes of mobile robot design, holonomic and non-holonomic. Holonomic robots are free to move across any dimensions in the configuration space, whereas non-holonomic ones are constrained in their movement to some directions only. A robot built entirely on casters (such as spheric wheels) or omni-wheels is a good example of holonomic robot [1]. A skid-steer robot, and its related variant differential drive, are instead non-holonomic.
 
-A skid-steer vehicle usually has four or six wheels (unable to turn), and the wheels on the left side move in sync and independently of those on the right side. Steering is achieved by operating each pair at different speed [2], causing the robot to slide, or skid. For example, to turn right the left pair must rotate faster than the right one, and in the same direction [Figures 3.A-B]. To turn in-place, the pairs must move in opposite directions [Figures 3.C-D].
+A skid-steer vehicle usually has four or six wheels (unable to turn), and the wheels on the left side move in sync and independently of those on the right side. Steering is achieved by operating each pair at different speed [2], causing the robot to slide, or skid. For example, to turn right, the left pair must spin faster than the right one, in the same direction [Figures 3.A-B]. To rotate in-place, the pairs must move in opposite directions [Figures 3.C-D].
 
 A differential drive robot replaces a pair of wheels with a caster that balances.
 
