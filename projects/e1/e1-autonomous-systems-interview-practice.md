@@ -48,7 +48,13 @@ A final hurdle to overcome was ensuring that the robot would only pick up or dro
 
 _You mentioned your robot had a skid-steer design. Can you explain what this means, and how this setup differs from other available options?_
 
-Sure!
+Sure! I am familiar with two classes of mobile robot design, holonomic and non-holonomic. 
+
+The distinction is based on the degrees of freedom of movement for the robot.
+
+A robot built entirely on casters or omni-wheels is a good example of holonomic robot.
+
+In a skid-steer setup, there is no steering mechanism, so this is achieved by operating "each side at a different rate or in a different direction" [1].
 
 <table>
   <tr>
