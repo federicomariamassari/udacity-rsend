@@ -50,10 +50,9 @@ _You mentioned your robot had a skid-steer design. Can you explain what this mea
 
 Sure! I am familiar with two classes of mobile robot design, holonomic and non-holonomic. Holonomic robots are free to move across any dimensions in the configuration space, whereas non-holonomic ones are constrained in their movement to some directions only. A robot built entirely on casters (such as spheric wheels) or omni-wheels is a good example of holonomic robot [1]. A skid-steer robot, and its related variant differential drive, are instead non-holonomic.
 
-A skid-steer vehicle usually has four or six wheels (unable to turn), and the wheels on the left side move in sync and independently of those on the right side. Steering is achieved by operating each pair at different speed [2], causing the robot to slide, or skid. For example, to turn right, the left pair must spin faster than the right one, in the same direction [Figures 3.A-B]. To rotate in-place, instead, the pairs must move in opposite directions [Figures 3.C-D].
+A skid-steer vehicle usually has four or six wheels (unable to turn), and the wheels on the left side move in sync and independently of those on the right side. Steering is achieved by operating each pair at different speed [2], causing the robot to slide, or skid. For example, to turn right, the left pair must spin faster than the right one, in the same direction. To rotate in-place, instead, the pairs must move in opposite directions [Figure 3].
 
-A differential drive robot replaces a pair of wheels with a caster that balances.
-
+A differential drive robot, instead, has two wheels (one on each side, also unable to turn and independent of the other), as well as one or more casters that balance the vehicle and prevent it from tilting [4].
 
 <table>
   <tr>
@@ -100,3 +99,4 @@ __[Code]__ _Describe how a particle filter works, where it is useful, and how it
 1. http://www.robotplatform.com/knowledge/Classification_of_Robots/Holonomic_and_Non-Holonomic_drive.html
 2. https://en.wikipedia.org/wiki/Skid-steer_loader
 3. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
+4. https://en.wikipedia.org/wiki/Differential_wheeled_robot
