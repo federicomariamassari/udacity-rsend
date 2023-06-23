@@ -48,13 +48,9 @@ A final hurdle to overcome was ensuring that the robot would only pick up or dro
 
 _You mentioned your robot had a skid-steer design. Can you explain what this means, and how this setup differs from other available options?_
 
-Sure! I am familiar with two classes of mobile robot design, holonomic and non-holonomic. 
+Sure! I am familiar with two classes of mobile robot design, holonomic and non-holonomic. Holonomic robots are free to move across any dimensions in the configuration space, whereas non-holonomic ones are constrained in their movement to some directions only. A robot built entirely on casters (such as spheric wheels) or omni-wheels is a good example of holonomic robot [1]. A skid-steer robot, and its related variant differential drive, are instead non-holonomic.
 
-The distinction is based on the degrees of freedom of movement for the robot.
-
-A robot built entirely on casters or omni-wheels is a good example of holonomic robot.
-
-In a skid-steer setup, there is no steering mechanism, so this is achieved by operating "each side at a different rate or in a different direction" [1].
+In a skid-steer setup
 
 <table>
   <tr>
@@ -98,5 +94,5 @@ __[Code]__ _Describe how a particle filter works, where it is useful, and how it
 
 ## Resources
 
-1. 
+1. http://www.robotplatform.com/knowledge/Classification_of_Robots/Holonomic_and_Non-Holonomic_drive.html
 2. 
