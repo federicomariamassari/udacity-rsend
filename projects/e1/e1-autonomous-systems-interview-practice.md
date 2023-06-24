@@ -92,11 +92,11 @@ _How do features from algorithms like SIFT, SURF and HOG differ? Explain how the
 
 __[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
 
-[Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md)
-
 ## Resources
 
 1. http://www.robotplatform.com/knowledge/Classification_of_Robots/Holonomic_and_Non-Holonomic_drive.html
 2. https://en.wikipedia.org/wiki/Skid-steer_loader
 3. https://en.wikipedia.org/wiki/Differential_wheeled_robot
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
+
+[Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md)
