@@ -2,6 +2,10 @@
 
 My Udacity Robotics Software Engineer Nanodegree projects, in C++.
 
+## [Certificate of Completion](https://graduation.udacity.com/confirm/e/09bdb2c2-ac50-11ed-a26c-bbb0f4f4767a)
+
+![Certificate of Completion](certificate-of-completion.pdf)
+
 ## Environment
 
 * Ubuntu 20.04-5 LTS Focal Fossa running on UTM Virtual Machine on MacBook Pro M1 Max (aarch64)

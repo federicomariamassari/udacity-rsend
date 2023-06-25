@@ -84,9 +84,21 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 _How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
 
-SIFT, SURF, and HOG are feature extraction and object detection algorithms widely used in image processing and computer vision, which play a key role in robotics.
+SIFT, SURF, and HOG are feature extraction and object recognition algorithms used in image processing and computer vision.
 
-SIFT (Scale-Invariant Feature Transform)
+SIFT (Scale-Invariant Feature Transform) 
+
+[5], 
+
+reduce image contents to a set of points plus descriptions. find again in other images if same object. Take local neighborhood of a point and create a vector from gradients (change in intensity values) to turn into a descriptor vector. Keypoint in the image, descriptor describes local surrounding around that point. If multiple images, we can find corresponding points and data associations among them.
+
+For visual SLAM, visual odometry, Bag of Words, etc. loop closure.
+
+Keypoints found through DoG approach. Blur image with a Gaussian blur at different magnitudes. The more the blur, the fewer the edges you get. Then you subtract the (with different level of Gaussian blur) blurred images, stack them and look for extrema that stand out.
+
+build an image pyramid with resampling at each level.
+
+Descriptor vector: take local neighborhood, compute gradients (as robust to illumination or viewpoint changes) in small areas, then collect gradients in local regions into histograms
 
 ## Resources
 
@@ -94,5 +106,7 @@ SIFT (Scale-Invariant Feature Transform)
 2. https://en.wikipedia.org/wiki/Skid-steer_loader
 3. https://en.wikipedia.org/wiki/Differential_wheeled_robot
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
+5. Lowe, D. G.: Object Recognition from Scale-Invariant Features - [Link](https://www.cs.ubc.ca/~lowe/papers/iccv99.pdf)
+
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md)
