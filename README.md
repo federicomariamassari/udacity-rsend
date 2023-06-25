@@ -185,3 +185,10 @@ A simulated pick-up operation is displayed in the figure below. The item to fetc
 ### Overview
 
 _Prepare for a role as a Perception/Sensor Engineer._
+
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./projects/e1/img/img3.png" width="500"/></td>
+    <td align="center"><img align="center" src="./projects/e1/img/img4.png" width="500"/></td>
+  </tr>
+</table>
