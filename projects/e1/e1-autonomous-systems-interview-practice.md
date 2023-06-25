@@ -88,6 +88,10 @@ _What are some of the advantages & disadvantages of cameras, lidar and radar? Wh
 
 _How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
 
+SIFT, SURF, and HOG are computer vision algorithms for image feature extractions.
+
+SIFT (Scale-Invariant Feature Transform) 
+
 ### Question 3
 
 __[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
