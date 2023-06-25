@@ -186,6 +186,10 @@ A simulated pick-up operation is displayed in the figure below. The item to fetc
 
 _Prepare for a role as a Perception/Sensor Engineer._
 
+Describe a recent project taken, then test your knowledge of concepts in this optional project. 
+
+In preparation for Sensor Fusion Nanodegree.
+
 <table>
   <tr>
     <td align="center"><img align="center" src="./projects/e1/img/img2.png" width="500"/></td>

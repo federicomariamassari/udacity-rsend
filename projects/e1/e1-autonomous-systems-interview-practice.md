@@ -82,9 +82,19 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 ### Question 1
 
+_What are some of the advantages & disadvantages of cameras, lidar and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
+
+#### Follow-up
+
+### Question 2
+
 _How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
 
 SIFT, SURF, and HOG are feature extraction and object recognition algorithms used in image processing and computer vision.
+
+#### Question 3
+
+__[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
 
 ## Resources
 
@@ -93,6 +103,5 @@ SIFT, SURF, and HOG are feature extraction and object recognition algorithms use
 3. https://en.wikipedia.org/wiki/Differential_wheeled_robot
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
 5. Lowe, D. G.: Object Recognition from Scale-Invariant Features - [Link](https://www.cs.ubc.ca/~lowe/papers/iccv99.pdf)
-
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md)
