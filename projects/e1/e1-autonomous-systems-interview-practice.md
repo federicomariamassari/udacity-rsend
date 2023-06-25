@@ -82,19 +82,11 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 ### Question 1
 
-_What are some of the advantages & disadvantages of cameras, lidar and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
-
-### Question 2
-
 _How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
 
-SIFT, SURF, and HOG are computer vision algorithms for image feature extractions.
+SIFT, SURF, and HOG are feature extraction and object detection algorithms widely used in image processing and computer vision, which play a key role in robotics.
 
-SIFT (Scale-Invariant Feature Transform) 
-
-### Question 3
-
-__[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
+SIFT (Scale-Invariant Feature Transform)
 
 ## Resources
 
