@@ -94,7 +94,7 @@ SIFT, SURF, and HOG are feature extraction and object recognition algorithms use
 
 #### Follow-up
 
-#### Question 3
+### Question 3
 
 __[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
 
