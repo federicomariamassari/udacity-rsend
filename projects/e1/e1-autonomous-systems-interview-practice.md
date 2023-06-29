@@ -92,6 +92,8 @@ _How do features from algorithms like SIFT, SURF and HOG differ? Explain how the
 
 SIFT, SURF, and HOG are feature extraction and object recognition algorithms used in image processing and computer vision.
 
+#### Follow-up
+
 #### Question 3
 
 __[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
