@@ -186,11 +186,4 @@ A simulated pick-up operation is displayed in the figure below. The item to fetc
 
 _Prepare for a role as a Perception/Sensor Engineer._
 
-In this optional project I answer, among the others, three interview-style questions related to autonomous systems engineering, focusing on the perception/sensor path. Each question has a follow-up, to demonstrate in-depth knowledge of the topic discussed. It is a good exercise in preparation for the Sensor Fusion Nanodegree (coming soon).
-
-<table>
-  <tr>
-    <td align="center"><img align="center" src="./projects/e1/img/img2.png" width="500"/></td>
-    <td align="center"><img align="center" src="./projects/e1/img/img3.png" width="500"/></td>
-  </tr>
-</table>
+In this optional project I answer, among the others, three interview-style questions related to autonomous systems engineering, focusing on the perception/sensor path. Each question has a follow-up, to demonstrate in-depth knowledge of the topic discussed.
