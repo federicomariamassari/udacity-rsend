@@ -288,11 +288,8 @@ __Figure 6: Global and Local (Pixelated) Costmaps__
 ## Resources
 
 1. [Monte Carlo Localization, Mathworks](https://www.mathworks.com/help/nav/ug/monte-carlo-localization-algorithm.html)
-
 2. Zheng, Kaiyu: "ROS Navigation Tuning Guide" (2019 revision) - [Link](https://kaiyuzheng.me/documents/navguide.pdf)
-
 3. McLeod, Haidyn: "ROS Localization and Navigation using Gazebo" (2018) - [Link](https://343b0276-a0ea-43f6-852b-d6db8e3570ce.filesusr.com/ugd/850e97_94ec4844112e483d91dc27f7e0604d7d.pdf)
-
 4. [AMCL Official Documentation (Noetic)](http://wiki.ros.org/amcl?distro=noetic)
 
 ## Notes
