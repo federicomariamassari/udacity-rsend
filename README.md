@@ -11,6 +11,7 @@ My Udacity Robotics Software Engineer Nanodegree projects, in C++.
 ## Environment
 
 * Ubuntu 20.04-5 LTS Focal Fossa running on UTM Virtual Machine on MacBook Pro M1 Max (aarch64)
+* Emulated Display Card: `virtio-ramfb-gl` (Apple Silicon, GPU-Accelerated)
 * ROS Noetic Desktop-Full Install on Ubuntu (<http://wiki.ros.org/noetic/Installation/Ubuntu>)
 * Gazebo Classic 11.0 (<https://classic.gazebosim.org/tutorials?tut=install_ubuntu&cat=install>)
 
