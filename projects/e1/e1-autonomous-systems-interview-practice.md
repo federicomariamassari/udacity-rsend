@@ -1,4 +1,4 @@
-[Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md)
+[Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md) | Next: [LiDAR Obstacle Detection](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-lidar-obstacle-detection.md)
 
 # Elective 1: Autonomous Systems Interview Practice
 
@@ -108,4 +108,4 @@ __[Code]__ _Describe how a particle filter works, where it is useful, and how it
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
 5. Lowe, D. G.: Object Recognition from Scale-Invariant Features - [Link](https://www.cs.ubc.ca/~lowe/papers/iccv99.pdf)
 
-[Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md)
+[Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md) | Next: [LiDAR Obstacle Detection](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-lidar-obstacle-detection.md)
