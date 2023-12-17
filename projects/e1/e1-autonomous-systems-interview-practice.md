@@ -88,15 +88,15 @@ _What are some of the advantages & disadvantages of cameras, lidar and radar? Wh
 
 ### Question 2
 
-_How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
-
-SIFT, SURF, and HOG are feature extraction and object recognition algorithms used in image processing and computer vision.
+__[Code]__ _3D point clouds are sometimes processed into "voxels" as one step into object detection. What is a voxel, what is the process behind converting point cloud data into voxels (code this), and why would we want to perform this step with our point cloud data?_
 
 #### Follow-up
 
 ### Question 3
 
-__[Code]__ _Describe how a particle filter works, where it is useful, and how it performs against similar algorithms. Code an example of how you update the weights of the particles between steps._
+_How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
+
+SIFT, SURF, and HOG are feature extraction and object recognition algorithms used in image processing and computer vision.
 
 #### Follow-up
 
