@@ -90,6 +90,10 @@ _What are some of the advantages & disadvantages of cameras, lidar and radar? Wh
 
 __[Code]__ _3D point clouds are sometimes processed into "voxels" as one step into object detection. What is a voxel, what is the process behind converting point cloud data into voxels (code this), and why would we want to perform this step with our point cloud data?_
 
+Reducing the density of a point cloud is essential in applications that require real-time handling of data, such as SLAM or collision avoidance in self-driving cars. The "voxel grid" technique helps achieve this purpose by downsampling, hence simplifying, the input cloud, optimizing data storage and processing requirements.
+
+A voxel (short for volumetric pixel) is a cube that encapsulates and represents a single point in the three-dimensional space. The raw point cloud is divided into a cubic grid, and all points belonging to a particular cube are proxied by their centroid, a unique point with coordinates the means of all coordinates of the enclosed points: filtering is thus obtained by replacing the cloud of points in each cube with the corresponding centroid.
+
 #### Follow-up
 
 ### Question 3
