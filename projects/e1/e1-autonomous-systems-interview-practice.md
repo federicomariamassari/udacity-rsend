@@ -137,6 +137,8 @@ The directory structure tree is as follows:
 
 _How does the voxel size affect the accuracy and efficiency of object detection?_
 
+Choosing the right voxel size is a trade-off between accurate object detection and computational efficiency.
+
 ### Question 3
 
 _How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
