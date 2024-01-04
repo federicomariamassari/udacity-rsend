@@ -106,7 +106,11 @@ A voxel (short for volumetric pixel) is a cube that encapsulates and represents 
   </tr>
 </table>
 
-#### Follow-up
+#### Follow-up (Udacity GPT)
+
+_How does the voxel size affect the accuracy and efficiency of object detection?_
+
+
 
 ### Question 3
 
