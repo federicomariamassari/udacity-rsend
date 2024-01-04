@@ -125,7 +125,7 @@ The directory structure tree is as follows:
 ```bash
 .
 ├── build
-    ├── ...
+│   ├── ...
 │   └── voxel
 ├── CMakeLists.txt
 └── src
