@@ -106,11 +106,11 @@ A voxel (short for volumetric pixel) is a cube that encapsulates and represents 
   </tr>
 </table>
 
+[`voxel.cpp`](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/e1/src/voxel.cpp) contains an example of voxel grid filtering using Point Cloud Library (PCL). We first generate 1000 uniformly-distributed points in the 3D space and push them back in a point cloud structure. The points' coordinates are in the interval $[0; 4]$ cm, so the enclosing cube is anchored to the origin $(0, 0, 0)$. We then set the side of the voxel to 2 cm, which subdivides the wireframe into 8 smaller cubes (the voxels' boundaries), each containing ~125 points. One sample cube is colored magenta. We finally perform the filtering, which swaps all points in each smaller cube with a single centroid, and push the results (8 points) into a new cloud.
+
 #### Follow-up (Udacity GPT)
 
 _How does the voxel size affect the accuracy and efficiency of object detection?_
-
-
 
 ### Question 3
 
