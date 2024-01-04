@@ -94,6 +94,18 @@ Reducing the density of a point cloud is essential in applications that require 
 
 A voxel (short for volumetric pixel) is a cube that encapsulates and represents a single point in the three-dimensional space. The raw point cloud is divided into a cubic grid, and all points belonging to a particular cube are proxied by their centroid, a unique point with coordinates the means of all coordinates of the enclosed points: filtering is thus obtained by replacing the cloud of points in each cube [Figure 4.A] with the corresponding centroid [Figure 4.B].
 
+<table>
+  <tr>
+  <td align="center"><b>Figure 4.A</b>: Input Point Cloud</td>
+  <td align="center"><b>Figure 4.B</b>: Voxel Grid Filtering</td>
+  <tr>
+  </tr>
+  <tr>
+    <td align="center"><img align="center" src="img/img4a.jpg" width="475"/></td>
+    <td align="center"><img align="center" src="img/img4b.jpg" width="475"/></td>
+  </tr>
+</table>
+
 #### Follow-up
 
 ### Question 3
