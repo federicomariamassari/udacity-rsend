@@ -188,3 +188,10 @@ A simulated pick-up operation is displayed in the figure below. The item to fetc
 _Prepare for a role as a Perception/Sensor Engineer._
 
 In this optional project, I describe an assignment I recently worked on and answer three interview-style questions related to autonomous system engineering, focusing on the perception/sensor path. Each question has a follow-up, to demonstrate in-depth knowledge of the topic discussed. I cover the assignment as part of this Nanodegree, and the remaining questions as part of the [Sensor Fusion Engineer Nanodegree](https://github.com/federicomariamassari/udacity-sfend) program.
+
+<table>
+  <tr>
+    <td align="center"><img align="center" src="./projects/e1/img/img4a.jpg" width="500"/></td>
+    <td align="center"><img align="center" src="./projects/e1/img/img4b.jpg" width="500"/></td>
+  </tr>
+</table>
