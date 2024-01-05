@@ -143,9 +143,7 @@ In general, if an input point cloud is uniformly spread out within a cube, and w
 
 ### Question 3
 
-_How do features from algorithms like SIFT, SURF and HOG differ? Explain how these algorithms work, and how you would use them within a perception pipeline._
-
-SIFT, SURF, and HOG are feature extraction and object recognition algorithms used in image processing and computer vision.
+__[Code]__ _What approach would you take if the various sensors you are using have different refresh rates?_
 
 #### Follow-up
 
