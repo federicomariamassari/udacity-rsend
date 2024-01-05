@@ -133,7 +133,7 @@ The directory structure tree is as follows:
     └── voxel.h
 ```
 
-#### Follow-up (Udacity GPT)
+#### Follow-up (suggested by Udacity GPT)
 
 _How does the voxel size affect the accuracy and efficiency of object detection?_
 
