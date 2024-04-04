@@ -156,7 +156,7 @@ __Imputation.__ This is the process of replacing missing data with substituted v
 _Interpolation_ (linear, spline) allows to estimate the value of an intermediate point based on two endpoints. For example, if data from camera refreshes at time $t$ and $t+2$, and data from LiDAR does so at $t+1$, one can (linearly) interpolate the camera value at $t+1$ via [7]:
 
 $$
-y_{t+1} = y_{t+2} - y_t \times \frac{x_{t+1}-x_t}{x_{t+2}-x_t}
+y_{t+1} = y_t + (y_{t+2} - y_t) \times \frac{x_{t+1}-x_t}{x_{t+2}-x_t}
 $$
 
 with $x$ the timestamp and $y$ the corresponding data point from camera. Because interpolation requires two endpoints (one in the past, the other in the future), I would argue that, to prevent delays, this technique is mainly used in post-processing, when the entire history of the sensors is available and one just needs to fill the gaps.
@@ -165,11 +165,7 @@ _Extrapolation_ [8] allows to infer the future value of an observation based on 
 
 _Fill-forward_ simply fills out any missing entries with the most recent available data point. In the camera example, the sensor value at time $t+2$ would be extended to $t+3$. Fill-forward is plausible when speed is of essence, but often too simplistic for real-world scenarios.
 
-__Buffering.__ In contrast to imputation, whose focus is to "catch up" with the fastest sensor, 
-
-In a sense, this means catching up with the 
-While imputation was about catching up with the fastest sensor estimate, buffering is the opposite.
-This gives the opposite, by catching up with the slowest refreshed 
+__Buffering.__ While imputation focuses on "catching up" with the fastest sensor, buffering involves matching the slower sensor by storing the data from the former into a buffer, until the latter is ready to process them.
 
 #### Follow-up
 
