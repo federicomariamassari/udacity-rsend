@@ -165,7 +165,9 @@ _Extrapolation_ [8] allows to infer the future value of an observation based on 
 
 _Fill-forward_ simply fills out any missing entries with the most recent available data point. In the camera example, the sensor value at time $t+2$ would be extended to $t+3$. Fill-forward is plausible when speed is of essence, but often too simplistic for real-world scenarios.
 
-__Buffering.__ While imputation focuses on "catching up" with the fastest sensor, buffering involves matching the slower sensor by storing the data from the former into a buffer, until the latter is ready to process them.
+__Buffering.__ While imputation focuses on "catching up" with the fastest sensor, buffering involves matching the slower sensor by storing the data from the former into a buffer, until the latter is ready to process them. In this case, the camera value at $t$ could be buffered until $t+1$, when the LiDAR observation becomes available, and then released. Similarly, the value at $t+2$ could be stored until $t+3$, and so on.
+
+__Sensor Fusion Techniques.__ The most reliable way to deal with measurements from sensors with different refresh rates is via sensor fusion algorithms such as Kálmán filters (parametric) or particle filtering (non-parametric). These methods can handle
 
 #### Follow-up
 
