@@ -82,7 +82,7 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 ### Question 1
 
-_What are some of the advantages & disadvantages of cameras, lidar and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
+_What are some of the advantages & disadvantages of cameras, LiDAR and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
 
 #### Follow-up
 
@@ -145,6 +145,14 @@ In general, if an input point cloud is uniformly spread out within a cube, and w
 
 __[Code]__ _What approach would you take if the various sensors you are using have different refresh rates?_
 
+There are several ways to handle measurements from sensors with different refresh rates. Popular approaches are:
+
+- Imputation [6] techniques (interpolation, extrapolation, fill-forward)
+- Buffering
+- Sensor fusion techniques (e.g., various flavours of Kálmán Filter)
+
+__Imputation.__ 
+
 #### Follow-up
 
 ## Resources
@@ -154,5 +162,6 @@ __[Code]__ _What approach would you take if the various sensors you are using ha
 3. https://en.wikipedia.org/wiki/Differential_wheeled_robot
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
 5. Lowe, D. G.: Object Recognition from Scale-Invariant Features - [Link](https://www.cs.ubc.ca/~lowe/papers/iccv99.pdf)
+6. https://en.wikipedia.org/wiki/Imputation_(statistics)
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md) | Next: [LiDAR Obstacle Detection](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-lidar-obstacle-detection.md)
