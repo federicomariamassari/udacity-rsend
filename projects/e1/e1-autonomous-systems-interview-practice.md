@@ -147,11 +147,23 @@ __[Code]__ _What approach would you take if the various sensors you are using ha
 
 There are several ways to handle measurements from sensors with different refresh rates. Popular approaches are:
 
-- Imputation [6] techniques (interpolation, extrapolation, fill-forward)
+- Data imputation (e.g., interpolation, extrapolation, fill-forward)
 - Buffering
 - Sensor fusion techniques (e.g., various flavours of Kálmán Filter)
 
-__Imputation.__ 
+__Imputation.__ This is the process of replacing missing data with substituted values [6], and the goal is to ensure that, for all the timestamps coming from the various sensors, an observation is always available for each sensor. We can distinguish among interpolation, extrapolation, and fill-forward.
+
+_Interpolation_ (linear, spline) allows to estimate the value of an intermediate point based on two endpoints. For example, if data from camera refreshes at time $t$ and $t+2$, and data from LiDAR does so at $t+1$, one can (linearly) interpolate the camera value at $t+1$ via [7]:
+
+$$
+y_{t+1} = y_{t+2} - y_t \times \frac{x_{t+1}-x_t}{y_{t+2}-y_t}
+$$
+
+with $x$ the timestamp and $y$ the corresponding data point from camera. Because interpolation requires two endpoints (one in the past, the other in the future), I would argue that, to prevent delays, this technique is mainly used in post-processing, when the entire history of the sensors is available and one just needs to fill the gaps.
+
+_Extrapolation_ [8] allows to infer the future value of an observation based on a single endpoint (usually, the most recent entry) and a model calibrated on some history of the data. For instance, if we are at $t+2$ and expect LiDAR to produce a data point at $t+3$, while camera only at $t+4$, we can estimate the camera value in advance, so when $t+3$ comes, entries for both sensors will be at hand. Extrapolation could be used in real-time applications if the data point to predict is not too far into the future, and the estimate relies on a model that is lightweight in terms of assumptions and computational complexity.
+
+_Fill-forward_ simply fills out any missing entries with the most recent available data point. In the camera example, the sensor value at time $t+2$ would be extended to $t+3$. Fill-forward is plausible when speed is of essence, but often too simplistic for real-world scenarios.
 
 #### Follow-up
 
@@ -163,5 +175,7 @@ __Imputation.__
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
 5. Lowe, D. G.: Object Recognition from Scale-Invariant Features - [Link](https://www.cs.ubc.ca/~lowe/papers/iccv99.pdf)
 6. https://en.wikipedia.org/wiki/Imputation_(statistics)
+7. https://en.wikipedia.org/wiki/Interpolation
+8. https://en.wikipedia.org/wiki/Extrapolation
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md) | Next: [LiDAR Obstacle Detection](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-lidar-obstacle-detection.md)
