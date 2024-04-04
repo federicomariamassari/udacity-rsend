@@ -82,7 +82,7 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 ### Question 1
 
-_What are some of the advantages & disadvantages of cameras, LiDAR and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
+_What are some of the advantages and disadvantages of cameras, LiDAR and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
 
 #### Follow-up
 
@@ -156,7 +156,7 @@ __Imputation.__ This is the process of replacing missing data with substituted v
 _Interpolation_ (linear, spline) allows to estimate the value of an intermediate point based on two endpoints. For example, if data from camera refreshes at time $t$ and $t+2$, and data from LiDAR does so at $t+1$, one can (linearly) interpolate the camera value at $t+1$ via [7]:
 
 $$
-y_{t+1} = y_{t+2} - y_t \times \frac{x_{t+1}-x_t}{y_{t+2}-y_t}
+y_{t+1} = y_{t+2} - y_t \times \frac{x_{t+1}-x_t}{x_{t+2}-x_t}
 $$
 
 with $x$ the timestamp and $y$ the corresponding data point from camera. Because interpolation requires two endpoints (one in the past, the other in the future), I would argue that, to prevent delays, this technique is mainly used in post-processing, when the entire history of the sensors is available and one just needs to fill the gaps.
@@ -164,6 +164,12 @@ with $x$ the timestamp and $y$ the corresponding data point from camera. Because
 _Extrapolation_ [8] allows to infer the future value of an observation based on a single endpoint (usually, the most recent entry) and a model calibrated on some history of the data. For instance, if we are at $t+2$ and expect LiDAR to produce a data point at $t+3$, while camera only at $t+4$, we can estimate the camera value in advance, so when $t+3$ comes, entries for both sensors will be at hand. Extrapolation could be used in real-time applications if the data point to predict is not too far into the future, and the estimate relies on a model that is lightweight in terms of assumptions and computational complexity.
 
 _Fill-forward_ simply fills out any missing entries with the most recent available data point. In the camera example, the sensor value at time $t+2$ would be extended to $t+3$. Fill-forward is plausible when speed is of essence, but often too simplistic for real-world scenarios.
+
+__Buffering.__ In contrast to imputation, whose focus is to "catch up" with the fastest sensor, 
+
+In a sense, this means catching up with the 
+While imputation was about catching up with the fastest sensor estimate, buffering is the opposite.
+This gives the opposite, by catching up with the slowest refreshed 
 
 #### Follow-up
 
