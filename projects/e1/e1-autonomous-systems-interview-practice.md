@@ -167,7 +167,9 @@ _Fill-forward_ simply fills out any missing entries with the most recent availab
 
 __Buffering.__ While imputation focuses on "catching up" with the fastest sensor, buffering involves matching the slower sensor by storing the data from the former into a buffer, until the latter is ready to process them. In this case, the camera value at $t$ could be buffered until $t+1$, when the LiDAR observation becomes available, and then released. Similarly, the value at $t+2$ could be stored until $t+3$, and so on.
 
-__Sensor Fusion Techniques.__ The most reliable way to deal with measurements from sensors with different refresh rates is via sensor fusion algorithms such as Kálmán filters (parametric) or particle filtering (non-parametric). These methods can handle
+__Sensor Fusion Techniques.__ The most reliable way to deal with measurements from sensors with different refresh rates is via sensor fusion algorithms such as Kálmán filters (parametric) or particle filtering (non-parametric). These methods incorporate asynchronous data points as they arrive, in a series of predict and update steps that make the estimation of the state of the system being tracked increasingly sound.
+
+[`ukf.cpp`](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/e1/src/ukf.cpp) showcases the Unscented Kálmán Filter (UKF).
 
 #### Follow-up
 
