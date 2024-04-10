@@ -84,6 +84,8 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 _What are some of the advantages and disadvantages of cameras, LiDAR and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
 
+Camera, LiDAR, and radar are all important sensors that help us get an understanding of the world surrounding us in different ways and are, therefore, complementary. __Cameras__ are passive sensors which generate high-resolution images from ambient light reflecting off of objects into the camera lens. They are unique in their ability to capture and interpret 2D information (e.g., road signs and lane markings) as well as color (e.g., traffic lights), which are important in object recognition and classification tasks, especially because cameras see the world as we see it. Moreover, they are relatively cheap and widely available, and are getting increasingly sophisticated at night vision.
+
 #### Follow-up
 
 ### Question 2
