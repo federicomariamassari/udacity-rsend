@@ -84,9 +84,17 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 _What are some of the advantages and disadvantages of cameras, LiDAR and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
 
-Camera, LiDAR, and radar are all important sensors that help us get an understanding of the world surrounding us in different ways and are, therefore, complementary. __Cameras__ are passive sensors which generate high-resolution images from ambient light reflecting off of objects into the camera lens. They are relatively cheap and widespread, and because they see the world as we see it, they are unique in their ability to capture and interpret 2D information (e.g., road signs and lane markings) as well as color (e.g., traffic lights), which could be important in object recognition and classification tasks. For this reason, however, cameras are subject to the same drawbacks that affect the human eye: they perform poorly under bad weather conditions such as fog or heavy rain, darkness (although they are getting increasingly sophisticated at night vision), and extreme light or glare, such as snow reflection. Mono cameras are also unable to measure distance and velocity of a target from a single picture; to do so, one can rely on a stereo setup or compare matched features' heights across consecutive frames, but the process is computationally expensive and, in the case of stereo cameras, also costly.
+Camera, LiDAR, and radar are all important sensors that help us get an understanding of the world surrounding us in different ways and are, therefore, complementary.
+
+__Cameras__ are passive sensors which generate high-resolution images from ambient light reflecting off of objects into the camera lens. They are relatively cheap and widespread, and because they see the world as we see it, they are unique in their ability to capture and interpret 2D information (e.g., road signs and lane markings) and colour (e.g., traffic lights), which are important in object recognition and classification tasks. For this reason, however, cameras are subject to the same drawbacks that affect the human eye: they perform poorly under bad weather conditions such as fog or heavy rain, darkness (although they are getting increasingly sophisticated at night vision), and extreme light or glare, such as snow reflection. Mono cameras are also unable to measure distance and velocity of a target from a single picture; to do so, one can rely on a stereo setup or compare matched features' heights across consecutive frames, but the process is computationally expensive and, in the case of stereo cameras, also costly.
+
+__LiDAR__ (Light Detection And Ranging) is commonly used as a way to accurately measure distances and create detailed 3D maps of the surrounding environment. LiDAR targets surfaces with laser beams (photon pulses of a few nanoseconds) and measures the time it takes for the beams to bounce back; when surfaces are hit, Point Cloud Data (PCD) are generated. LiDAR excels at tracking position, shape, and depth of objects, and the clouds of points it returns can be processed using algorithms such as RanSaC (Random Sample Consensus) and Euclidean clustering, and grouped into bounding boxes. It is, however, a very pricey sensor (a unit could cost up to $100,000), it cannot measure velocity directly, and due to its short wavelength, it fails in bad weather conditions such as heavy rain or hail.
+
+__Radar__ (Radio Detection And Ranging) propagates electromagnetic waves into the environment, and these waves are reflected back to the sensor if an object is found. The difference between the transmitted and the received radar signals is the beat frequency, which is used to infer a target's radial distance _rho_ ($\rho$), bearing or azimuth _phi_ ($\phi$) [5], and radial velocity _rho dot_ ($\dot{\rho}$) via signal processing. Radar is the only sensor that can estimate velocity in a single pass (based on Doppler effect). It is unaffected by darkness, and highly accurate in adverse weather conditions like heavy rain or fog thanks to its longer wavelength, which is not easily absorbed or deflected by those atmospheric phenomena. Finally, radar is now very cheap (~$100), robust, and compact, as it can easily fit under the grille of a car. The main drawback or radar is its low resolution imaging (it cannot determine the shape of objects), which makes it unsuitable for classification tasks, unlike camera and LiDAR.
 
 #### Follow-up
+
+_If you had to design a budget-friendly autonomous system (robot, self-driving car, or UAV), would you still include LiDAR in your stack of sensors?_
 
 ### Question 2
 
@@ -181,7 +189,7 @@ __Sensor Fusion Techniques.__ The most reliable way to deal with measurements fr
 2. https://en.wikipedia.org/wiki/Skid-steer_loader
 3. https://en.wikipedia.org/wiki/Differential_wheeled_robot
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
-5. Lowe, D. G.: Object Recognition from Scale-Invariant Features - [Link](https://www.cs.ubc.ca/~lowe/papers/iccv99.pdf)
+5. https://en.wikipedia.org/wiki/Bearing_(angle)
 6. https://en.wikipedia.org/wiki/Imputation_(statistics)
 7. https://en.wikipedia.org/wiki/Interpolation
 8. https://en.wikipedia.org/wiki/Extrapolation
