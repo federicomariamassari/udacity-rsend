@@ -100,6 +100,8 @@ The adoption of multiple units of the same or different sensors is called _redun
 
 _If you had to design a budget-friendly autonomous system (robot, self-driving car, or UAV), would you still include LiDAR in your stack of sensors?_
 
+Yes, I would still add LiDAR to my sensor stack, with the idea that the more sensors are included, the more robust the understanding of the environment becomes. However, I would incorporate a cheaper version of LiDAR, and use it in a clever way as a sensor auxiliary to another one. For example, an interesting paper by You _et al._ [8] showcases the concept of "pseudo-LiDAR", a camera-based approach that relies on a sparse 4-beam LiDAR, which alone would not be able to provide enough information for 3D detection, but when paired with stereo camera images significantly improves the location estimate of objects, especially far away.
+
 ### Question 2
 
 __[Code]__ _3D point clouds are sometimes processed into "voxels" as one step into object detection. What is a voxel, what is the process behind converting point cloud data into voxels (code this), and why would we want to perform this step with our point cloud data?_
@@ -177,7 +179,7 @@ with $x$ the timestamp and $y$ the corresponding data point from camera. Because
 
 _Extrapolation_ [11] allows to infer the future value of an observation based on a single endpoint (usually, the most recent entry) and a model calibrated on some history of the data. For instance, if we are at $t+2$ and expect LiDAR to produce a data point at $t+3$, while camera only at $t+4$, we can estimate the camera value in advance, so when $t+3$ comes, entries for both sensors will be at hand. Extrapolation could be used in real-time applications if the data point to predict is not too far into the future, and the estimate relies on a model that is lightweight in terms of assumptions and computational complexity.
 
-_Fill-forward_ simply fills out any missing entries with the most recent available data point. In the camera example, the sensor value at time $t+2$ would be extended to $t+3$. Fill-forward is plausible when speed is of essence, but often too simplistic for real-world scenarios.
+_Fill-forward_ simply fills out any missing entries with the most recent available data point. In the camera example, the sensor value at time $t+2$ would be extended to $t+3$. Fill-forward is plausible when speed is of essence, but it is often too simplistic for real-world scenarios.
 
 __Buffering.__ While imputation focuses on "catching up" with the fastest sensor, buffering involves matching the slower sensor by storing the data from the former into a buffer, until the latter is ready to process them. In this case, the camera value at $t$ could be buffered until $t+1$, when the LiDAR observation becomes available, and then released. Similarly, the value at $t+2$ could be stored until $t+3$, and so on.
 
