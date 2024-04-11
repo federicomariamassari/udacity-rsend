@@ -126,7 +126,10 @@ A voxel (short for volumetric pixel) is a cube that encapsulates and represents 
 
 #### How to Build and Run
 
-Required dependencies are CMake 2.8+, Point Cloud Library 1.11 ([built from source](https://pcl.readthedocs.io/projects/tutorials/en/latest/compiling_pcl_posix.html#stable)), and Eigen. If you opt for cloning the repository:
+- Requirements: C++14, CMake 2.8+, Point Cloud Library 1.11 ([built from source](https://pcl.readthedocs.io/projects/tutorials/en/latest/compiling_pcl_posix.html#stable)), Eigen 3.1+.
+- If running on UTM Virtual Machine, [disable GPU acceleration](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-preliminary-configs.md).
+
+If you opt for cloning the repository:
 
 ```bash
 cd /home/$whoami/workspace/udacity-rsend/projects/e1
