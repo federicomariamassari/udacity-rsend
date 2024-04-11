@@ -92,6 +92,8 @@ __LiDAR__ (Light Detection And Ranging) is commonly used as a way to accurately 
 
 __Radar__ (Radio Detection And Ranging) propagates electromagnetic waves into the environment, and these waves are reflected back to the sensor if an object is found. The difference between the transmitted and the received radar signals is the beat frequency, which is used to infer a target's radial distance _rho_ ($\rho$), bearing or azimuth _phi_ ($\phi$) [5], and radial velocity _rho dot_ ($\dot{\rho}$) via signal processing. Radar is the only sensor that can estimate velocity in a single pass (based on Doppler effect). It is unaffected by darkness, and highly accurate in adverse weather conditions like heavy rain or fog thanks to its longer wavelength, which is not easily absorbed or deflected by those atmospheric phenomena. Finally, radar is now very cheap (~$100), robust, and compact, as it can easily fit under the grille of a car. The main drawback or radar is its low resolution imaging (it cannot determine the shape of objects), which makes it unsuitable for classification tasks, unlike camera and LiDAR.
 
+In my view, the complementary nature of the above sensors makes it important to rely on all of them, possibly in multiple units, to ensure an accurate perception of the environment. For example, inexpensive cameras and radars (both short- and long- range) could be placed on all sides of an ego vehicle to give a 360° perspective on its surroundings (complete 2D imaging, speed of nearby cars), while LiDAR could sit atop of ego (rotating scanner) or even on flanks (MEMS scanning mirrors version, [6]). To this stack of sensors, I would also add an __IMU__ (Inertial Measurement Unit) [7] for motion tracking and orientation estimation.
+
 #### Follow-up
 
 _If you had to design a budget-friendly autonomous system (robot, self-driving car, or UAV), would you still include LiDAR in your stack of sensors?_
@@ -161,9 +163,9 @@ There are several ways to handle measurements from sensors with different refres
 - Buffering
 - Sensor fusion techniques (e.g., various flavours of Kálmán Filter)
 
-__Imputation.__ This is the process of replacing missing data with substituted values [6], and the goal is to ensure that, for all the timestamps coming from the various sensors, an observation is always available for each sensor. We can distinguish among interpolation, extrapolation, and fill-forward.
+__Imputation.__ This is the process of replacing missing data with substituted values [9], and the goal is to ensure that, for all the timestamps coming from the various sensors, an observation is always available for each sensor. We can distinguish among interpolation, extrapolation, and fill-forward.
 
-_Interpolation_ (linear, spline) allows to estimate the value of an intermediate point based on two endpoints. For example, if data from camera refreshes at time $t$ and $t+2$, and data from LiDAR does so at $t+1$, one can (linearly) interpolate the camera value at $t+1$ via [7]:
+_Interpolation_ (linear, spline) allows to estimate the value of an intermediate point based on two endpoints. For example, if data from camera refreshes at time $t$ and $t+2$, and data from LiDAR does so at $t+1$, one can (linearly) interpolate the camera value at $t+1$ via [10]:
 
 $$
 y_{t+1} = y_t + (y_{t+2} - y_t) \times \frac{x_{t+1}-x_t}{x_{t+2}-x_t}
@@ -171,7 +173,7 @@ $$
 
 with $x$ the timestamp and $y$ the corresponding data point from camera. Because interpolation requires two endpoints (one in the past, the other in the future), I would argue that, to prevent delays, this technique is mainly used in post-processing, when the entire history of the sensors is available and one just needs to fill the gaps.
 
-_Extrapolation_ [8] allows to infer the future value of an observation based on a single endpoint (usually, the most recent entry) and a model calibrated on some history of the data. For instance, if we are at $t+2$ and expect LiDAR to produce a data point at $t+3$, while camera only at $t+4$, we can estimate the camera value in advance, so when $t+3$ comes, entries for both sensors will be at hand. Extrapolation could be used in real-time applications if the data point to predict is not too far into the future, and the estimate relies on a model that is lightweight in terms of assumptions and computational complexity.
+_Extrapolation_ [11] allows to infer the future value of an observation based on a single endpoint (usually, the most recent entry) and a model calibrated on some history of the data. For instance, if we are at $t+2$ and expect LiDAR to produce a data point at $t+3$, while camera only at $t+4$, we can estimate the camera value in advance, so when $t+3$ comes, entries for both sensors will be at hand. Extrapolation could be used in real-time applications if the data point to predict is not too far into the future, and the estimate relies on a model that is lightweight in terms of assumptions and computational complexity.
 
 _Fill-forward_ simply fills out any missing entries with the most recent available data point. In the camera example, the sensor value at time $t+2$ would be extended to $t+3$. Fill-forward is plausible when speed is of essence, but often too simplistic for real-world scenarios.
 
@@ -190,8 +192,11 @@ __Sensor Fusion Techniques.__ The most reliable way to deal with measurements fr
 3. https://en.wikipedia.org/wiki/Differential_wheeled_robot
 4. https://groups.csail.mit.edu/drl/courses/cs54-2001s/skidsteer.html
 5. https://en.wikipedia.org/wiki/Bearing_(angle)
-6. https://en.wikipedia.org/wiki/Imputation_(statistics)
-7. https://en.wikipedia.org/wiki/Interpolation
-8. https://en.wikipedia.org/wiki/Extrapolation
+6. Yoo _et al._, [MEMS-based lidar for autonomous driving](https://publik.tuwien.ac.at/files/publik_273071.pdf), 2018, Elektrotechnik und Informationstechnik
+7. https://en.wikipedia.org/wiki/Inertial_measurement_unit
+8. You _et al._, [Pseudo-LiDAR++: Accurate Depth for 3D Object Detection in Autonomous Driving](https://arxiv.org/pdf/1906.06310.pdf), 2020, ICLR
+9. https://en.wikipedia.org/wiki/Imputation_(statistics)
+10. https://en.wikipedia.org/wiki/Interpolation
+11. https://en.wikipedia.org/wiki/Extrapolation
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md) | Next: [LiDAR Obstacle Detection](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-lidar-obstacle-detection.md)
