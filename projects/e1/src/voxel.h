@@ -1,3 +1,6 @@
+#ifndef VOXEL_H
+#define VOXEL_H
+
 #include <iostream>
 #include <random>
 #include <string>
@@ -20,3 +23,5 @@
  */
 void renderEnvironment(pcl::visualization::PCLVisualizer& viewer, pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud, int side, 
   float cameraDistance, float cameraRotation, int& id);
+
+#endif  /* VOXEL_H */
