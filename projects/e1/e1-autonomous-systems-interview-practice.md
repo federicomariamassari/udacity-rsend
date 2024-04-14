@@ -204,7 +204,7 @@ _In your extrapolation example, you mentioned the Constant Velocity Model. Is th
 
 The Constant Velocity Model (CVM) is a very simplistic model which assumes the target (for example, a tracked vehicle) will keep moving in a straight line and at the same speed indefinitely. Because these assumptions are hardly met in practice, alternatives exist that address this model's drawbacks. Popular ones are the Constant Acceleration Model (CAM) and the Constant Turn Rate and Velocity Magnitude Model (CRTV), which are not as computationally-intensive as to be considered impractical in real-time applications.
 
-The __Constant Acceleration Model__ [12] assumes velocity changes at a constant rate (i.e., constant acceleration) over time.
+The __Constant Acceleration Model__ [12] assumes velocity changes at a constant rate (i.e., constant acceleration $a$) with the passing of time. That is, the underlying vehicle can increase or decrease speed, by the same amount, over time. The distance travelled in the interval $\Delta t$ is approximated by a second-order Taylor expansion, with acceleration entering the higher-order term. CAM is widely used in commercially-available collision detection and avoidance systems, and its mathematics can be simplified if Doppler estimates from radar are used in order to determine $a$.
 
 $$
 d (t + \Delta t) = d(t) + v(t) \times \Delta t + \frac{1}{2!} a \times (\Delta t)^2
