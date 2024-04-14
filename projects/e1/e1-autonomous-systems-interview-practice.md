@@ -129,7 +129,7 @@ A voxel (short for volumetric pixel) is a cube that encapsulates and represents 
 - Requirements: C++14, CMake 2.8+, Point Cloud Library 1.11 ([built from source](https://pcl.readthedocs.io/projects/tutorials/en/latest/compiling_pcl_posix.html#stable)), Eigen 3.1+.
 - If running on UTM Virtual Machine, [disable GPU acceleration](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-preliminary-configs.md).
 
-If you opt for cloning the repository:
+Cloning the whole repository is an expensive operation, but if you opt to do so:
 
 ```bash
 cd /home/$whoami/workspace/udacity-rsend/projects/e1
@@ -148,6 +148,7 @@ The directory structure tree is as follows:
 │   └── voxel
 ├── CMakeLists.txt
 └── src
+    ├── ...
     ├── voxel.cpp
     └── voxel.h
 ```
@@ -188,7 +189,9 @@ __Buffering.__ While imputation focuses on "catching up" with the fastest sensor
 
 __Sensor Fusion Techniques.__ The most reliable way to deal with measurements from sensors with different refresh rates is via sensor fusion algorithms such as Kálmán filters (parametric) or particle filtering (non-parametric). These methods incorporate asynchronous data points as they arrive, in a series of predict and update steps that make the estimation of the state of the system being tracked increasingly sound.
 
-[`ukf.cpp`](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/e1/src/ukf.cpp) showcases the Unscented Kálmán Filter (UKF).
+[`refresh_rates.cpp`](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/e1/src/refresh_rates.cpp) showcases the concept of data imputation. The code simulates alternatively incoming data from LiDAR ("L") and radar ("R"), each sensor producing an output every two seconds, and out-of-phase by one second. Only LiDAR data is accounted for, while the radar slot is used to impute the value of LiDAR using interpolation, extrapolation, and fill-forward. The measurement considered is a position in the Cartesian space $(x, y)$. Each coordinate of the initial location of an autonomous agent is randomly generated based on a continuous uniform distribution $U(0, 0.5)$ and any subsequent step is added the starting point, so the agent keeps walking forward in both directions but by an unknown amount every time. Extrapolation relies on Constant Velocity Model (CVM): $m_{t+\Delta t} = m_t + v \times \Delta t, \\ \forall m = p_x, p_y$.
+
+The tabulated output from running the program displays the pros and cons of each imputation technique: interpolation is more precise but critically delayed by one time period; extrapolation is forward-looking but it may miss, at times consistently, due to its strong assumptions; fill-forward is the most conservative but unrealistic if the agent is moving.
 
 #### Follow-up
 
