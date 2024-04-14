@@ -80,6 +80,40 @@ A differential drive robot, instead, has two wheels (one on each side, also unab
 
 ## Perception/Sensor Engineer Questions
 
+### How to Build and Run
+
+- Minimum requirements: C++11 (°), CMake 2.8, Point Cloud Library 1.2 (°), Eigen 3.1.
+- Default requirements: C++14, CMake 2.8+, Point Cloud Library 1.11 ([built from source](https://pcl.readthedocs.io/projects/tutorials/en/latest/compiling_pcl_posix.html#stable)), Eigen 3.1+.
+- If running on UTM Virtual Machine, [disable GPU acceleration](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-preliminary-configs.md).
+
+(°) Must change default requirements in `CMakeLists.txt`.
+
+Cloning the whole repository is an expensive operation, but if you opt to do so:
+
+```bash
+cd /home/$whoami/workspace/udacity-rsend/projects/e1
+mkdir build && cd build
+cmake ..
+make
+./{voxel|refresh_rates}  # Choose one or the other
+```
+
+The directory structure tree is as follows:
+
+```bash
+.
+├── build
+│   ├── ...
+│   ├── refresh_rates
+│   └── voxel
+├── CMakeLists.txt
+└── src
+    ├── refresh_rates.cpp
+    ├── refresh_rates.h
+    ├── voxel.cpp
+    └── voxel.h
+```
+
 ### Question 1
 
 _What are some of the advantages and disadvantages of cameras, LiDAR and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
@@ -123,35 +157,6 @@ A voxel (short for volumetric pixel) is a cube that encapsulates and represents 
 </table>
 
 [`voxel.cpp`](https://github.com/federicomariamassari/udacity-rsend/blob/main/projects/e1/src/voxel.cpp) contains an example of voxel grid filtering using Point Cloud Library (PCL). We first generate 1000 uniformly-distributed points in the 3D space and push them back in a point cloud structure. The points' coordinates are in the interval $[0; 4]$ cm, so the enclosing cube is anchored to the origin $(0, 0, 0)$. We then set the side of the voxel to 2 cm, which subdivides the wireframe into 8 smaller cubes (the voxels' boundaries), each containing ~125 points. One sample cube is colored magenta. We finally perform the filtering, which swaps all points in each smaller cube with a single centroid, and push the results (8 points) into a new cloud.
-
-#### How to Build and Run
-
-- Requirements: C++14, CMake 2.8+, Point Cloud Library 1.11 ([built from source](https://pcl.readthedocs.io/projects/tutorials/en/latest/compiling_pcl_posix.html#stable)), Eigen 3.1+.
-- If running on UTM Virtual Machine, [disable GPU acceleration](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-preliminary-configs.md).
-
-Cloning the whole repository is an expensive operation, but if you opt to do so:
-
-```bash
-cd /home/$whoami/workspace/udacity-rsend/projects/e1
-mkdir build && cd build
-cmake ..
-make
-./voxel
-```
-
-The directory structure tree is as follows:
-
-```bash
-.
-├── build
-│   ├── ...
-│   └── voxel
-├── CMakeLists.txt
-└── src
-    ├── ...
-    ├── voxel.cpp
-    └── voxel.h
-```
 
 #### Follow-up (suggested by Udacity GPT)
 
