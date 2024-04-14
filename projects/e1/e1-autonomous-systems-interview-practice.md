@@ -214,6 +214,8 @@ $$
 v(t + \Delta t) = v(t) + a \times \Delta t
 $$
 
+The __Constant Turn Rate and Velocity Magnitude Model__ [13] assumes constant velocity, but also accounts for the possibility to steer at a constant yaw rate. The following parameters enter the model: the two-dimensional position of the target $(p_x, p_y)$, velocity $v$, yaw angle $\psi$ (_psi_, the vehicle's orientation) and yaw rate $\dot{\psi}$ (_psi dot_, the speed at which the vehicle turns). CTRV is also widely adopted, as it is a good model for a car's behaviour in real traffic scenarios.
+
 ## Resources
 
 1. http://www.robotplatform.com/knowledge/Classification_of_Robots/Holonomic_and_Non-Holonomic_drive.html
@@ -228,5 +230,6 @@ $$
 10. https://en.wikipedia.org/wiki/Interpolation
 11. https://en.wikipedia.org/wiki/Extrapolation
 12. Lesson 1: Collision Detection Basics, Engineering a Collision Detection System, Camera module, Udacity Sensor Fusion Nanodegree
+13. Lesson 3: The CTRV Model State Vector, Unscented Kálmán Filters, Kálmán Filters module, Udacity Sensor Fusion Nanodegree
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md) | Next: [LiDAR Obstacle Detection](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-lidar-obstacle-detection.md)
