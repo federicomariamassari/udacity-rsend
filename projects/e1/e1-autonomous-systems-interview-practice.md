@@ -200,6 +200,20 @@ The tabulated output from running the program displays the pros and cons of each
 
 #### Follow-up
 
+_In your extrapolation example, you mentioned the Constant Velocity Model. Is this model considered realistic, or are there more accurate alternatives available?_
+
+The Constant Velocity Model (CVM) is a very simplistic model which assumes the target (for example, a tracked vehicle) will keep moving in a straight line and at the same speed indefinitely. Because these assumptions are hardly met in practice, alternatives exist that address this model's drawbacks. Popular ones are the Constant Acceleration Model (CAM) and the Constant Turn Rate and Velocity Magnitude Model (CRTV), which are not as computationally-intensive as to be considered impractical in real-time applications.
+
+The __Constant Acceleration Model__ [12] assumes velocity changes at a constant rate (i.e., constant acceleration) over time.
+
+$$
+d (t + \Delta t) = d(t) + v(t) \times \Delta t + \frac{1}{2!} a \times (\Delta t)^2
+$$
+
+$$
+v(t + \Delta t) = v(t) + a \times \Delta t
+$$
+
 ## Resources
 
 1. http://www.robotplatform.com/knowledge/Classification_of_Robots/Holonomic_and_Non-Holonomic_drive.html
@@ -213,5 +227,6 @@ The tabulated output from running the program displays the pros and cons of each
 9. https://en.wikipedia.org/wiki/Imputation_(statistics)
 10. https://en.wikipedia.org/wiki/Interpolation
 11. https://en.wikipedia.org/wiki/Extrapolation
+12. Lesson 1: Collision Detection Basics, Engineering a Collision Detection System, Camera module, Udacity Sensor Fusion Nanodegree
 
 [Home](../../README.md) | Previous: [Home Service Robot](../p5/p5-home-service-robot.md) | Next: [LiDAR Obstacle Detection](https://github.com/federicomariamassari/udacity-sfend/blob/main/projects/p1/p1-lidar-obstacle-detection.md)
