@@ -5,7 +5,7 @@ add_definitions(-std=c++14)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
-project(playback)
+project(e1)
 
 find_package(PCL 1.11 REQUIRED)
 
@@ -18,3 +18,5 @@ list(REMOVE_ITEM PCL_LIBRARIES "vtkproj4")
 add_executable (voxel src/voxel.cpp)
 target_link_libraries (voxel ${PCL_LIBRARIES})
 
+add_executable (refresh_rates src/refresh_rates.cpp)
+target_link_libraries (voxel ${PCL_LIBRARIES})
