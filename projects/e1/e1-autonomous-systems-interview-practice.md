@@ -118,7 +118,7 @@ The directory structure tree is as follows:
 
 _What are some of the advantages and disadvantages of cameras, LiDAR and radar? What combination of these (and other sensors) would you use to ensure appropriate and accurate perception of the environment?_
 
-Camera, LiDAR, and radar are all important sensors that help us get an understanding of the world surrounding us in different ways and are, therefore, complementary [].
+Camera, LiDAR, and radar are all important sensors that help us get an understanding of the world surrounding us in different ways and are, therefore, complementary [5].
 
 __Cameras__ are passive sensors which generate high-resolution images from ambient light reflecting off of objects into the camera lens. They are relatively cheap and widespread, and because they see the world as we see it, they are unique in their ability to capture and interpret 2D information (e.g., road signs and lane markings) and colour (e.g., traffic lights), which are important in object recognition and classification tasks. For this reason, however, cameras are subject to the same drawbacks that affect the human eye: they perform poorly under bad weather conditions such as fog or heavy rain, darkness (although they are getting increasingly sophisticated at night vision), and extreme light or glare, such as snow reflection. Mono cameras are also unable to measure distance and velocity of a target from a single picture; to do so, one can rely on a stereo setup or compare matched features' heights across consecutive frames, but the process is computationally expensive and, in the case of stereo cameras, also costly.
 
