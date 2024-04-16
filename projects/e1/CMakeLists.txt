@@ -19,4 +19,3 @@ add_executable (voxel src/voxel.cpp)
 target_link_libraries (voxel ${PCL_LIBRARIES})
 
 add_executable (refresh_rates src/refresh_rates.cpp)
-target_link_libraries (voxel ${PCL_LIBRARIES})
